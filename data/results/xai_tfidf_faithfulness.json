@@ -1,0 +1,846 @@
+{
+  "pearson_r": 0.356,
+  "n": 120,
+  "per_row": [
+    {
+      "text_id": "zh_gvz_elementarschaden",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5857,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_gvz_elementarschaden",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.6486,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_gvz_elementarschaden",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.5118,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_gvz_elementarschaden",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5453,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "be_steuererklaerung_frist",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3622,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "be_steuererklaerung_frist",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.394,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "be_steuererklaerung_frist",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3633,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "be_steuererklaerung_frist",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3239,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "lu_praemienverbilligung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3934,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "lu_praemienverbilligung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.302,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "lu_praemienverbilligung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4525,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "lu_praemienverbilligung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3828,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "ag_betreibungsregisterauszug",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3932,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "ag_betreibungsregisterauszug",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.0651,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "ag_betreibungsregisterauszug",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2341,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "ag_betreibungsregisterauszug",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2844,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "sg_c_bewilligung_verlaengerung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7702,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "sg_c_bewilligung_verlaengerung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.6821,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "sg_c_bewilligung_verlaengerung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.7191,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "sg_c_bewilligung_verlaengerung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5579,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bs_handelsregisteramt",
+      "model_id": "claude",
+      "tfidf_similarity": 0.1536,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bs_handelsregisteramt",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1575,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bs_handelsregisteramt",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2097,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bs_handelsregisteramt",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1897,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "so_stipendien",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5815,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "so_stipendien",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3836,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "so_stipendien",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.218,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "so_stipendien",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4081,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "tg_praemienverbilligung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3778,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "tg_praemienverbilligung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1587,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "tg_praemienverbilligung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2814,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "tg_praemienverbilligung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.304,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bag_krankenversicherung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6555,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bag_krankenversicherung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1544,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bag_krankenversicherung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4153,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bag_krankenversicherung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4049,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_quellensteuer",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3618,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_quellensteuer",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4743,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_quellensteuer",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.5197,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_quellensteuer",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4841,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "astra_fuehrerausweis",
+      "model_id": "claude",
+      "tfidf_similarity": 0.8195,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "astra_fuehrerausweis",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3311,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "astra_fuehrerausweis",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2307,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "astra_fuehrerausweis",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4817,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bsv_familienzulagen",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5712,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bsv_familienzulagen",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4049,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bsv_familienzulagen",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2991,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bsv_familienzulagen",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4603,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "sva_zh_beitragspflicht",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6577,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "sva_zh_beitragspflicht",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.674,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "sva_zh_beitragspflicht",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.6263,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "sva_zh_beitragspflicht",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5705,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bj_erwachsenenschutz",
+      "model_id": "claude",
+      "tfidf_similarity": 0.2653,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bj_erwachsenenschutz",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1854,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bj_erwachsenenschutz",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2241,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bj_erwachsenenschutz",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1278,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "stzh_baubewilligungsverfahren",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6826,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "stzh_baubewilligungsverfahren",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.0,
+      "judge_faithfulness": 2,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "stzh_baubewilligungsverfahren",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.508,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "stzh_baubewilligungsverfahren",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3615,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bern_kehricht",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7488,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bern_kehricht",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.7212,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bern_kehricht",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4333,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bern_kehricht",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4798,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "luzern_kindergarten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6344,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "luzern_kindergarten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.301,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "luzern_kindergarten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3302,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "luzern_kindergarten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4123,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "stgallen_aufenthalt_niederlassung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6196,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "stgallen_aufenthalt_niederlassung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.5595,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "stgallen_aufenthalt_niederlassung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.587,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "stgallen_aufenthalt_niederlassung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4507,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "winterthur_rechtsmittelverfahren",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4181,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "winterthur_rechtsmittelverfahren",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2891,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "winterthur_rechtsmittelverfahren",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3884,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "winterthur_rechtsmittelverfahren",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2472,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "aarau_inventuraufnahme_todesfall",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5106,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "aarau_inventuraufnahme_todesfall",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4454,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "aarau_inventuraufnahme_todesfall",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3777,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "aarau_inventuraufnahme_todesfall",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4151,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "frauenfeld_zivilstandsmutation",
+      "model_id": "claude",
+      "tfidf_similarity": 0.338,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "frauenfeld_zivilstandsmutation",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2278,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "frauenfeld_zivilstandsmutation",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2212,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "frauenfeld_zivilstandsmutation",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2374,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zg_praemienverbilligung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5732,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zg_praemienverbilligung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.523,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zg_praemienverbilligung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3033,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zg_praemienverbilligung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4336,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bl_betreibungsregisterauszug",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3582,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bl_betreibungsregisterauszug",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4553,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bl_betreibungsregisterauszug",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2398,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bl_betreibungsregisterauszug",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4748,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "gl_betreibungskosten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.2672,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "gl_betreibungskosten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2429,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "gl_betreibungskosten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2786,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "gl_betreibungskosten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1417,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "seco_kurzarbeitsentschaedigung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.385,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "seco_kurzarbeitsentschaedigung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2988,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "seco_kurzarbeitsentschaedigung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1559,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "seco_kurzarbeitsentschaedigung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.0707,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bazg_einfuhr_schweiz",
+      "model_id": "claude",
+      "tfidf_similarity": 0.48,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bazg_einfuhr_schweiz",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3174,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bazg_einfuhr_schweiz",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4081,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bazg_einfuhr_schweiz",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1807,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bwo_formularpflicht_mietzins",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3524,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bwo_formularpflicht_mietzins",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2703,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "bwo_formularpflicht_mietzins",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2309,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "bwo_formularpflicht_mietzins",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1348,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "chur_hundewesen",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6525,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "chur_hundewesen",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.367,
+      "judge_faithfulness": 2,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "chur_hundewesen",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3701,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "chur_hundewesen",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3694,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "schaffhausen_umzug",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5885,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "schaffhausen_umzug",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.6518,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "schaffhausen_umzug",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.5937,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "schaffhausen_umzug",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5175,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "thun_anmeldung_zuzug",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4574,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "thun_anmeldung_zuzug",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3948,
+      "judge_faithfulness": 2,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "thun_anmeldung_zuzug",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3653,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "thun_anmeldung_zuzug",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.381,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    }
+  ]
+}

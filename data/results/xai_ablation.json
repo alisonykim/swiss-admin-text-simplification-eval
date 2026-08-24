@@ -1,0 +1,1334 @@
+[
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "claude",
+    "sentences": [
+      "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+      "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+      "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+      "Juli für Steuererklärungen von juristischen Personen",
+      "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+      "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen"
+    ],
+    "full_simplified_text": "Sie müssen Ihre Steuererklärung zu bestimmten Terminen abgeben.\nEs gibt drei Fristen:\n1. Personen mit einer Anstellung: bis 15. März.\n2. Personen mit einem eigenen Geschäft: bis 15. Mai.\n3. Firmen: bis 31. Juli.\nGeben Sie die Steuererklärung zu spät ab, kostet das 60 Franken Gebühr.\nDeshalb sollten Sie die Steuererklärung rechtzeitig abgeben.\nOder beantragen Sie früh genug mehr Zeit für die Abgabe.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+        "similarity_to_full": 0.194,
+        "attribution": 0.806
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+        "similarity_to_full": 0.4265,
+        "attribution": 0.5735
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+        "similarity_to_full": 0.448,
+        "attribution": 0.552
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Juli für Steuererklärungen von juristischen Personen",
+        "similarity_to_full": 0.3622,
+        "attribution": 0.6378
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+        "similarity_to_full": 0.281,
+        "attribution": 0.719
+      },
+      {
+        "removed_sentence_index": 5,
+        "removed_sentence": "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen",
+        "similarity_to_full": 0.3333,
+        "attribution": 0.6667
+      }
+    ]
+  },
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "deepseek",
+    "sentences": [
+      "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+      "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+      "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+      "Juli für Steuererklärungen von juristischen Personen",
+      "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+      "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen"
+    ],
+    "full_simplified_text": "Sie müssen die Steuererklärung bis zu diesen Terminen abgeben:\n- 15. März: für Personen mit einem Job als Angestellte oder Angestellter.\n- 15. Mai: für Personen mit einem eigenen Geschäft oder freiberuflicher Tätigkeit.\n- 31. Juli: für Firmen und Organisationen.\n\nWenn Sie die Steuererklärung zu spät abgeben, kostet das 60 Franken Strafe. Geben Sie sie deshalb rechtzeitig ab. Sie können auch früher eine längere Frist beantragen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+        "similarity_to_full": 0.3802,
+        "attribution": 0.6198
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+        "similarity_to_full": 0.5812,
+        "attribution": 0.4188
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+        "similarity_to_full": 0.5932,
+        "attribution": 0.4068
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Juli für Steuererklärungen von juristischen Personen",
+        "similarity_to_full": 0.5882,
+        "attribution": 0.4118
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+        "similarity_to_full": 0.5818,
+        "attribution": 0.4182
+      },
+      {
+        "removed_sentence_index": 5,
+        "removed_sentence": "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen",
+        "similarity_to_full": 0.3725,
+        "attribution": 0.6275
+      }
+    ]
+  },
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "mistral",
+    "sentences": [
+      "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+      "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+      "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+      "Juli für Steuererklärungen von juristischen Personen",
+      "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+      "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen"
+    ],
+    "full_simplified_text": "\nDie Steuererklärung muss bis zu folgenden Terminen eingereicht werden:\n\n- 15. März für Angestellte und Arbeitnehmer.\n- 15. Mai für Selbstständige.\n- 31. Juli für Firmen und Vereine.\n\nReichen Sie die Erklärung zu spät ein, müssen Sie 60 Franken Gebühr zahlen.\nEs ist besser, pünktlich abzugeben oder frühzeitig eine Verlängerung zu beantragen.\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+        "similarity_to_full": 0.3478,
+        "attribution": 0.6522
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+        "similarity_to_full": 0.7048,
+        "attribution": 0.2952
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+        "similarity_to_full": 0.7358,
+        "attribution": 0.2642
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Juli für Steuererklärungen von juristischen Personen",
+        "similarity_to_full": 0.4107,
+        "attribution": 0.5893
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+        "similarity_to_full": 0.5684,
+        "attribution": 0.4316
+      },
+      {
+        "removed_sentence_index": 5,
+        "removed_sentence": "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen",
+        "similarity_to_full": 0.7708,
+        "attribution": 0.2292
+      }
+    ]
+  },
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "qwen",
+    "sentences": [
+      "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+      "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+      "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+      "Juli für Steuererklärungen von juristischen Personen",
+      "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+      "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen"
+    ],
+    "full_simplified_text": "Geben Sie Ihre Steuererklärung rechtzeitig ab. Für Angestellte: bis 15. März. Für Selbstständige: bis 15. Mai. Für Firmen: bis 31. Juli. Spätere Einreichung kostet 60 Franken. Beantragen Sie rechtzeitig eine Fristverlängerung, wenn Sie mehr Zeit brauchen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die Steuererklärung muss bis spätestens an den folgenden Daten abgegeben werden: 15",
+        "similarity_to_full": 0.3077,
+        "attribution": 0.6923
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "März für natürliche Personen, die einer unselbstständigen Erwerbstätigkeit nachgehen; 15",
+        "similarity_to_full": 0.2727,
+        "attribution": 0.7273
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Mai für natürliche Personen, die einer selbstständigen Erwerbstätigkeit nachgehen; 31",
+        "similarity_to_full": 0.3582,
+        "attribution": 0.6418
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Juli für Steuererklärungen von juristischen Personen",
+        "similarity_to_full": 0.3333,
+        "attribution": 0.6667
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Reichen Sie Ihre Steuererklärung verspätet ein, müssen Sie eine Mahngebühr von 60 Franken zahlen",
+        "similarity_to_full": 0.2466,
+        "attribution": 0.7534
+      },
+      {
+        "removed_sentence_index": 5,
+        "removed_sentence": "Es lohnt sich also, sie rechtzeitig zu übermitteln oder frühzeitig eine Fristverlängerung zu beantragen",
+        "similarity_to_full": 0.2727,
+        "attribution": 0.7273
+      }
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "claude",
+    "sentences": [
+      "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+      "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+      "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+      "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse"
+    ],
+    "full_simplified_text": "Ob Sie Anspruch auf Prämienverbilligung haben, hängt vor allem von Ihrem Einkommen und Ihrem Vermögen ab. Zusätzlich müssen Sie diese Grundvoraussetzungen erfüllen:\n\n- Sie wohnen am 1. Januar des Anspruchsjahres im Kanton Luzern. Dort zahlen Sie auch Ihre Steuern.\n- Sie sind obligatorisch krankenversichert. Diese Versicherung heisst Grundversicherung nach KVG.\n\nWir prüfen für jede Person einzeln, ob sie Anspruch auf Prämienverbilligung hat. Dabei schauen wir auf die persönliche und finanzielle Situation.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+        "similarity_to_full": 0.4132,
+        "attribution": 0.5868
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+        "similarity_to_full": 0.5839,
+        "attribution": 0.4161
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+        "similarity_to_full": 0.2439,
+        "attribution": 0.7561
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse",
+        "similarity_to_full": 0.4348,
+        "attribution": 0.5652
+      }
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "deepseek",
+    "sentences": [
+      "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+      "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+      "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+      "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse"
+    ],
+    "full_simplified_text": "Sie können Geld für Ihre Krankenkassen-Prämien bekommen.\nDas hängt vor allem von Ihrem Einkommen und Ihrem Vermögen ab.\nSie müssen auch einige Bedingungen erfüllen:\n- Sie wohnen am 1. Januar im Kanton Luzern.\n- Sie haben eine obligatorische Krankenversicherung.\nWir berechnen für jede Person einzeln, wie viel Geld sie bekommt.\nDas hängt von ihrer persönlichen und finanziellen Situation ab.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+        "similarity_to_full": 0.5049,
+        "attribution": 0.4951
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+        "similarity_to_full": 0.3438,
+        "attribution": 0.6562
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+        "similarity_to_full": 0.3881,
+        "attribution": 0.6119
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse",
+        "similarity_to_full": 0.4211,
+        "attribution": 0.5789
+      }
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "mistral",
+    "sentences": [
+      "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+      "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+      "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+      "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse"
+    ],
+    "full_simplified_text": "\nUm eine Prämienverbilligung zu bekommen, schauen wir vor allem auf Ihr Einkommen und Ihr Vermögen. Damit Sie Anspruch haben, müssen Sie folgende Punkte erfüllen:\n\n1. Sie müssen am 1. Januar des betreffenden Jahres Ihren steuerlichen Wohnsitz im Kanton Luzern haben.\n2. Sie müssen bei einer Krankenkasse angemeldet sein, die nach dem Krankenversicherungsgesetz (KVG) arbeitet.\n\nFür jeden Antrag prüfen wir Ihre persönlichen und finanziellen Verhältnisse. Die Prämienverbilligung wird dann pro Person berechnet.\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+        "similarity_to_full": 0.6,
+        "attribution": 0.4
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+        "similarity_to_full": 0.368,
+        "attribution": 0.632
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+        "similarity_to_full": 0.4286,
+        "attribution": 0.5714
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse",
+        "similarity_to_full": 0.4833,
+        "attribution": 0.5167
+      }
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "qwen",
+    "sentences": [
+      "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+      "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+      "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+      "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse"
+    ],
+    "full_simplified_text": "Für Prämienverbilligung zählt Ihr Einkommen und Ihr Vermögen. Sie müssen auch andere Bedingungen erfüllen. Sie wohnen am 1. Januar des Jahres in Luzern. Sie sind bei einer Pflichtkrankenversicherung angemeldet. Wir rechnen den Anspruch für jede Person einzeln aus.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Für einen Anspruch auf Prämienverbilligung ist vor allem Ihr Einkommen und Ihr Vermögen entscheidend",
+        "similarity_to_full": 0.48,
+        "attribution": 0.52
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Zudem müssen Sie einige Grundvoraussetzungen erfüllen: Sie haben Ihren steuerrechtlichen Wohnsitz am 1",
+        "similarity_to_full": 0.4211,
+        "attribution": 0.5789
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Januar des Anspruchsjahres im Kanton Luzern, und Sie sind bei einer obligatorischen Krankenversicherung nach KVG angeschlossen",
+        "similarity_to_full": 0.5758,
+        "attribution": 0.4242
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Wir berechnen den Anspruch auf Prämienverbilligung für jede Person anhand ihrer persönlichen und finanziellen Verhältnisse",
+        "similarity_to_full": 0.4848,
+        "attribution": 0.5152
+      }
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "claude",
+    "sentences": [
+      "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+      "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+      "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons"
+    ],
+    "full_simplified_text": "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich. Sie schützt gegen Feuerschäden und Elementarschäden. Elementarschäden sind zum Beispiel Schäden durch Hochwasser oder Sturm.\n\nDie GVZ arbeitet mit den Gemeinden zusammen. Gemeinsam kümmern sie sich um den vorbeugenden Brandschutz. Das heisst: Sie verhindern Brände, bevor sie entstehen.\n\nDie GVZ ist auch verantwortlich für die Feuerwehren in den Gemeinden. Sie plant deren Arbeit, bildet sie aus und stattet sie mit Ausrüstung aus. Zudem sorgt sie für die Alarmierung der Feuerwehren.\n\nDie GVZ finanziert sich selbst. Das Geld kommt aus den Versicherungsprämien und aus Gewinnen ihres Kapitals. Der Kanton gibt der GVZ keine finanzielle Garantie.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+        "similarity_to_full": 0.3394,
+        "attribution": 0.6606
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+        "similarity_to_full": 0.4431,
+        "attribution": 0.5569
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons",
+        "similarity_to_full": 0.4886,
+        "attribution": 0.5114
+      }
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "deepseek",
+    "sentences": [
+      "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+      "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+      "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons"
+    ],
+    "full_simplified_text": "Die GVZ ist eine Versicherung für Gebäude im Kanton Zürich.\nSie gibt es seit mehr als 200 Jahren.\nDie GVZ versichert Gebäude gegen Schäden durch Feuer und Naturkatastrophen.\n\nDie GVZ arbeitet mit den Gemeinden zusammen.\nZusammen sorgen sie dafür, dass Brände verhindert werden.\nDie GVZ ist auch verantwortlich für die Feuerwehren in den Gemeinden.\nSie kümmert sich um die Planung, die Ausbildung, die Ausrüstung und den Einsatz der Feuerwehren.\n\nDie GVZ bekommt kein Geld vom Kanton.\nSie finanziert sich nur durch die Beiträge der Versicherten und durch Erträge aus ihren Rücklagen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+        "similarity_to_full": 0.4626,
+        "attribution": 0.5374
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+        "similarity_to_full": 0.4397,
+        "attribution": 0.5603
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons",
+        "similarity_to_full": 0.5125,
+        "attribution": 0.4875
+      }
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "mistral",
+    "sentences": [
+      "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+      "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+      "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons"
+    ],
+    "full_simplified_text": "\nDie GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Brände und Schäden durch Naturgewalten wie Hochwasser oder Erdbeben.\n\nZusammen mit den Gemeinden sorgt die GVZ dafür, dass Brände verhindert werden. Sie leitet auch die Feuerwehren der Gemeinden. Dazu gehört:\n- die Planung und Führung\n- die Ausbildung der Feuerwehrleute\n- die Ausstattung mit Geräten\n- die Alarmierung im Notfall\n\nDie GVZ finanziert sich nur durch die Prämien, die sie von den Versicherten erhält, und durch Gewinne aus ihren Rücklagen. Der Kanton Zürich gibt ihr keine finanziellen Zusagen oder Garantien.\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+        "similarity_to_full": 0.4596,
+        "attribution": 0.5404
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+        "similarity_to_full": 0.4615,
+        "attribution": 0.5385
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons",
+        "similarity_to_full": 0.6182,
+        "attribution": 0.3818
+      }
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "qwen",
+    "sentences": [
+      "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+      "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+      "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons"
+    ],
+    "full_simplified_text": "Die GVZ schützt seit über 200 Jahren alle Gebäude im Kanton Zürich. Sie sorgt mit den Gemeinden für Brandschutz. Die GVZ ist für Strategie, Ausbildung, Ausrüstung und Alarmierung der Feuerwehren zuständig. Sie finanziert sich aus Versicherungsprämien und Gewinnen von Rückstellungen. Der Kanton gibt ihr keine finanziellen Garantien.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die GVZ versichert seit über 200 Jahren alle Gebäude im Kanton Zürich gegen Feuer- und Elementarschäden",
+        "similarity_to_full": 0.2708,
+        "attribution": 0.7292
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die GVZ sorgt gemeinsam mit den Gemeinden für den vorbeugenden Brandschutz und ist verantwortlich für die strategische Führung, die Ausbildung, die Ausrüstung und die Alarmierung der kommunalen Feuerwehren",
+        "similarity_to_full": 0.4,
+        "attribution": 0.6
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die GVZ finanziert sich ausschliesslich über Prämieneinnahmen und Kapitalgewinne aus ihren Rückstellungen und verfügt über keine finanziellen Garantien des Kantons",
+        "similarity_to_full": 0.4356,
+        "attribution": 0.5644
+      }
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "claude",
+    "sentences": [
+      "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+      "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+      "Ab dem 1",
+      "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt"
+    ],
+    "full_simplified_text": "Hier erfahren Sie, welche Regeln bei der Einfuhr von Waren in die Schweiz gelten. Das betrifft zum Beispiel Mehrwertsteuer und Zölle.\n\nFür Ferienlager gilt: Lebensmittelvorräte zählen als Handelswaren. Sie müssen deshalb verzollt und versteuert werden. Die Einfuhr kann aber auf einfache Weise erfolgen.\n\nAb dem 1. Januar 2025 ändert sich eine Regel für die Einreise in die Schweiz. Bisher mussten Sie erst ab einem Warenwert von 300 Franken Mehrwertsteuer bezahlen. Neu liegt diese Grenze bei 150 Franken.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+        "similarity_to_full": 0.4783,
+        "attribution": 0.5217
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+        "similarity_to_full": 0.375,
+        "attribution": 0.625
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Ab dem 1",
+        "similarity_to_full": 0.6712,
+        "attribution": 0.3288
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt",
+        "similarity_to_full": 0.5,
+        "attribution": 0.5
+      }
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "deepseek",
+    "sentences": [
+      "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+      "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+      "Ab dem 1",
+      "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt"
+    ],
+    "full_simplified_text": "Hier finden Sie Infos darüber, welche Regeln für das Einführen von Waren in die Schweiz gelten. Dazu gehören auch Steuern und Gebühren.\nFalls Sie Lebensmittel für ein Ferienlager einführen: Diese gelten als Waren für den Handel. Dafür müssen Sie Steuern zahlen. Aber es gibt einfachere Regeln für die Einfuhr.\nAb dem 1. Januar 2025 ändert sich eine wichtige Regel: Bisher mussten Sie für Waren ab 300 Franken Steuern zahlen. Ab dann gilt diese Grenze schon bei 150 Franken.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+        "similarity_to_full": 0.1818,
+        "attribution": 0.8182
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+        "similarity_to_full": 0.4333,
+        "attribution": 0.5667
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Ab dem 1",
+        "similarity_to_full": 0.5532,
+        "attribution": 0.4468
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt",
+        "similarity_to_full": 0.4553,
+        "attribution": 0.5447
+      }
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "mistral",
+    "sentences": [
+      "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+      "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+      "Ab dem 1",
+      "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt"
+    ],
+    "full_simplified_text": "\n\tHier erfahren Sie, wie Sie verschiedene Waren in die Schweiz einführen dürfen.\n\tDas gilt auch für Mehrwertsteuer und Zölle.\n\n\tFür Lebensmittel, die Sie für ein Ferienlager besorgen, gelten besondere Regeln.\n\tDiese Waren gelten als Handelsware und müssen versteuert werden.\n\tAber Sie können sie vereinfacht einführen.\n\n\tAb dem 1. Januar 2025 ändert sich die Regel für die Mehrwertsteuer bei der Einreise:\n\tDie Freigrenze sinkt von 300 auf 150 Franken.\n\tDas bedeutet: Wenn Sie weniger als 150 Franken an Waren einführen, müssen Sie keine Mehrwertsteuer zahlen.\n\n\t",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+        "similarity_to_full": 0.4286,
+        "attribution": 0.5714
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+        "similarity_to_full": 0.4416,
+        "attribution": 0.5584
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Ab dem 1",
+        "similarity_to_full": 0.5714,
+        "attribution": 0.4286
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt",
+        "similarity_to_full": 0.4429,
+        "attribution": 0.5571
+      }
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "qwen",
+    "sentences": [
+      "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+      "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+      "Ab dem 1",
+      "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt"
+    ],
+    "full_simplified_text": "Mehr über die Einfuhr von Waren in die Schweiz erfahren. Lebensmittel für Ferienlager zahlen Steuern, aber es gibt eine einfache Einweisung. Ab dem 1. Januar 2025 sinkt der Freibetrag für Steuer auf 150 Franken.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Erfahren Sie mehr über die Regelungen zur Einfuhr verschiedenster Waren in die Schweiz, einschliesslich Mehrwertsteuer und Zölle",
+        "similarity_to_full": 0.3448,
+        "attribution": 0.6552
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Lebensmittelvorräte für Ferienlager müssen als Handelswaren veranlagt und besteuert werden, können jedoch vereinfacht eingeführt werden",
+        "similarity_to_full": 0.2857,
+        "attribution": 0.7143
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Ab dem 1",
+        "similarity_to_full": 0.4096,
+        "attribution": 0.5904
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Januar 2025 wird die Wertfreigrenze für die Mehrwertsteuer bei der Einreise in die Schweiz von 300 auf 150 Franken gesenkt",
+        "similarity_to_full": 0.3514,
+        "attribution": 0.6486
+      }
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "claude",
+    "sentences": [
+      "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+      "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+      "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert"
+    ],
+    "full_simplified_text": "Die obligatorische Krankenpflegeversicherung schützt Sie bei Krankheit, Mutterschaft und Unfall. Alle Versicherten erhalten die gleichen Leistungen. Der Versicherer muss alle Versicherten gleich behandeln. Er darf dabei nicht auf den Gesundheitszustand schauen. Auch Hinweise auf den Gesundheitszustand darf er nicht berücksichtigen.\n\nDie Versicherung wird auf drei Arten finanziert:\n1. Durch Beiträge der Versicherten. Diese Beiträge heissen Prämien.\n2. Durch Kostenbeteiligungen der Versicherten. Dazu gehören die Franchise, der Selbstbehalt und der Spitalbeitrag.\n3. Durch Gelder von Bund und Kantonen. Dieses Geld nennt man Prämienverbilligung.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+        "similarity_to_full": 0.6316,
+        "attribution": 0.3684
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+        "similarity_to_full": 0.7034,
+        "attribution": 0.2966
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert",
+        "similarity_to_full": 0.4959,
+        "attribution": 0.5041
+      }
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "deepseek",
+    "sentences": [
+      "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+      "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+      "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert"
+    ],
+    "full_simplified_text": "Die Krankenversicherung ist für alle Pflicht.\nSie schützt bei Krankheit, bei der Geburt eines Kindes und nach Unfällen.\nAlle Versicherten bekommen die gleichen Leistungen.\nDie Versicherung darf niemanden anders behandeln, auch nicht wegen Krankheiten oder anderen Gründen.\nDie Versicherung wird bezahlt durch:\n- Die Beiträge der Versicherten (Prämien).\n- Die Kosten, die die Versicherten selbst bezahlen (z.B. Franchise, Selbstbehalt).\n- Geld vom Bund und von den Kantonen (Prämienverbilligung).",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+        "similarity_to_full": 0.4587,
+        "attribution": 0.5413
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+        "similarity_to_full": 0.6721,
+        "attribution": 0.3279
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert",
+        "similarity_to_full": 0.4486,
+        "attribution": 0.5514
+      }
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "mistral",
+    "sentences": [
+      "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+      "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+      "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert"
+    ],
+    "full_simplified_text": "\nDie Krankenversicherung ist für alle Pflicht. Sie hilft bei Krankheit, nach der Geburt eines Kindes und bei Unfällen. Alle Versicherten erhalten die gleichen Leistungen.\n\nDie Versicherung darf niemanden wegen seines Gesundheitszustandes oder wegen einer Krankheit anders behandeln.\n\nDie Krankenversicherung finanziert sich aus:\n- Prämien, die die Versicherten zahlen müssen.\n- Eigenanteilen der Versicherten wie Franchise, Selbstbehalt oder Spitalkosten.\n- Geldern des Bundes und der Kantone, die helfen, die Prämien zu senken (Prämienverbilligung).\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+        "similarity_to_full": 0.1569,
+        "attribution": 0.8431
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+        "similarity_to_full": 0.768,
+        "attribution": 0.232
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert",
+        "similarity_to_full": 0.3158,
+        "attribution": 0.6842
+      }
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "qwen",
+    "sentences": [
+      "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+      "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+      "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert"
+    ],
+    "full_simplified_text": "Die Krankenpflegeversicherung hilft jedem, der krank oder verletzt ist. Der Versicherer behandelt alle gleich. Niemand wird benachteiligt. Die Versicherung wird von Prämien, Teilzahlungen und Geld vom Bund und den Kantonen bezahlt.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung schützt die Versicherten bei Krankheit, Mutterschaft und Unfall und bietet allen Versicherten denselben Leistungsumfang an",
+        "similarity_to_full": 0.2424,
+        "attribution": 0.7576
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Der Versicherer muss die Versicherten alle gleich behandeln, ohne eine Unterscheidung zu machen beim Gesundheitszustand oder bei einem Hinweis darauf",
+        "similarity_to_full": 0.1935,
+        "attribution": 0.8065
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die obligatorische Krankenpflegeversicherung wird über Beiträge der Versicherten (Prämien), Kostenbeteiligungen der Versicherten (Franchise, Selbstbehalt, Spitalbeitrag) und Gelder des Bundes und der Kantone (Prämienverbilligung) finanziert",
+        "similarity_to_full": 0.1379,
+        "attribution": 0.8621
+      }
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "claude",
+    "sentences": [
+      "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+      "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+      "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr"
+    ],
+    "full_simplified_text": "Selbständigerwerbende zahlen Beiträge an die AHV, IV und EO. Die Höhe der Beiträge hängt vom Erwerbseinkommen ab. Sie müssen sich bei einer Ausgleichskasse anmelden. Nur so können sie die Beiträge abrechnen. Der Beitrag beträgt 5,371 bis 10 Prozent des jährlichen Einkommens. Er beträgt mindestens 530 Franken pro Jahr.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+        "similarity_to_full": 0.4146,
+        "attribution": 0.5854
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+        "similarity_to_full": 0.619,
+        "attribution": 0.381
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr",
+        "similarity_to_full": 0.4444,
+        "attribution": 0.5556
+      }
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "deepseek",
+    "sentences": [
+      "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+      "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+      "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr"
+    ],
+    "full_simplified_text": "Selbständige Personen zahlen Beiträge. Die Höhe hängt vom Einkommen ab. Sie müssen sich bei einer Ausgleichskasse anmelden. Dann können die Beiträge berechnet werden. Die Beiträge für AHV, IV und EO sind zwischen 5,371 Prozent und 10 Prozent vom Jahreseinkommen. Der Mindestbetrag ist 530 Franken pro Jahr.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+        "similarity_to_full": 0.5714,
+        "attribution": 0.4286
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+        "similarity_to_full": 0.6429,
+        "attribution": 0.3571
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr",
+        "similarity_to_full": 0.4507,
+        "attribution": 0.5493
+      }
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "mistral",
+    "sentences": [
+      "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+      "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+      "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr"
+    ],
+    "full_simplified_text": "Wer selbstständig arbeitet, zahlt Beiträge an die AHV, IV und EO.\nDiese Beiträge hängen von der Höhe des Einkommens ab. Um die Beiträge berechnen zu können, muss man sich bei einer Ausgleichskasse anmelden.\n\nDie Beiträge betragen zwischen 5,371 Prozent und 10 Prozent des jährlichen Einkommens. Mindestens muss man aber 530 Franken pro Jahr zahlen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+        "similarity_to_full": 0.3696,
+        "attribution": 0.6304
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+        "similarity_to_full": 0.6087,
+        "attribution": 0.3913
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr",
+        "similarity_to_full": 0.2532,
+        "attribution": 0.7468
+      }
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "qwen",
+    "sentences": [
+      "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+      "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+      "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr"
+    ],
+    "full_simplified_text": "Selbstständige bezahlen Beiträge, je nach Verdienst. Dafür müssen sie sich bei einer Kasse anmelden. Die Beiträge an AHV, IV und EO betragen 5,371 bis 10 Prozent des jährlichen Einkommens. Mindestens 530 Franken im Jahr.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Selbständigerwerbende bezahlen Beiträge je nach Höhe des Erwerbseinkommens",
+        "similarity_to_full": 0.6349,
+        "attribution": 0.3651
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Um die Beiträge abrechnen zu können, müssen sie bei einer Ausgleichskasse angemeldet sein",
+        "similarity_to_full": 0.5172,
+        "attribution": 0.4828
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Die Beiträge an AHV, IV und EO betragen 5,371 Prozent bis 10 Prozent des jährlichen Arbeitseinkommens, mindestens aber 530 Franken im Jahr",
+        "similarity_to_full": 0.3043,
+        "attribution": 0.6957
+      }
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "claude",
+    "sentences": [
+      "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+      "Das Migrationsamt des Kantons St",
+      "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+      "Ausländische Staatsangehörigen, die in St",
+      "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen"
+    ],
+    "full_simplified_text": "Das Freizügigkeitsabkommen erleichtert Bürgerinnen und Bürgern aus der EU oder EFTA den Start in der Schweiz. Sie können damit einfacher hier arbeiten oder wohnen. Das Migrationsamt des Kantons St.Gallen stellt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer aus. Möchten Sie das Schweizer Bürgerrecht beantragen und wohnen in St.Gallen? Dann wenden Sie sich an die Bevölkerungsdienste, Administration Einbürgerungen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+        "similarity_to_full": 0.3864,
+        "attribution": 0.6136
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Das Migrationsamt des Kantons St",
+        "similarity_to_full": 0.4037,
+        "attribution": 0.5963
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+        "similarity_to_full": 0.4685,
+        "attribution": 0.5315
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Ausländische Staatsangehörigen, die in St",
+        "similarity_to_full": 0.5124,
+        "attribution": 0.4876
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen",
+        "similarity_to_full": 0.5053,
+        "attribution": 0.4947
+      }
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "deepseek",
+    "sentences": [
+      "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+      "Das Migrationsamt des Kantons St",
+      "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+      "Ausländische Staatsangehörigen, die in St",
+      "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen"
+    ],
+    "full_simplified_text": "Das Freizügigkeits-Abkommen macht es einfacher für Menschen aus EU- und EFTA-Ländern. Sie können in der Schweiz arbeiten oder wohnen. Das Migrationsamt im Kanton St.Gallen gibt die Aufenthalts-Bewilligungen für Ausländerinnen und Ausländer. Wer aus dem Ausland kommt, in St.Gallen wohnt und Schweizer Bürger oder Bürgerin werden will, muss sich an die Bevölkerungsdienste wenden. Dort ist die Abteilung für Einbürgerungen zuständig.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+        "similarity_to_full": 0.4375,
+        "attribution": 0.5625
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Das Migrationsamt des Kantons St",
+        "similarity_to_full": 0.5714,
+        "attribution": 0.4286
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+        "similarity_to_full": 0.5138,
+        "attribution": 0.4862
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Ausländische Staatsangehörigen, die in St",
+        "similarity_to_full": 0.5872,
+        "attribution": 0.4128
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen",
+        "similarity_to_full": 0.5,
+        "attribution": 0.5
+      }
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "mistral",
+    "sentences": [
+      "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+      "Das Migrationsamt des Kantons St",
+      "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+      "Ausländische Staatsangehörigen, die in St",
+      "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen"
+    ],
+    "full_simplified_text": "\nDas Freizügigkeitsabkommen zwischen der Schweiz und der EU/EFTA erlaubt Menschen aus diesen Ländern, in der Schweiz leichter eine Arbeit zu finden oder sich hier niederzulassen.\n\nDas Migrationsamt des Kantons St.Gallen entscheidet über Aufenthaltsbewilligungen für Ausländerinnen und Ausländer.\n\nWer aus dem Ausland kommt, in St.Gallen wohnt und sich für das Schweizer Bürgerrecht bewerben möchte, muss sich an die Bevölkerungsdienste, Abteilung Einbürgerungen, wenden.\n\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+        "similarity_to_full": 0.3689,
+        "attribution": 0.6311
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Das Migrationsamt des Kantons St",
+        "similarity_to_full": 0.6555,
+        "attribution": 0.3445
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+        "similarity_to_full": 0.3471,
+        "attribution": 0.6529
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Ausländische Staatsangehörigen, die in St",
+        "similarity_to_full": 0.4678,
+        "attribution": 0.5322
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen",
+        "similarity_to_full": 0.4685,
+        "attribution": 0.5315
+      }
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "qwen",
+    "sentences": [
+      "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+      "Das Migrationsamt des Kantons St",
+      "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+      "Ausländische Staatsangehörigen, die in St",
+      "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen"
+    ],
+    "full_simplified_text": "EU- und EFTA-Bürger können einfach in der Schweiz arbeiten oder wohnen. Das Migrationsamt in St. Gallen gibt die Aufenthaltsgenehmigungen. Ausländer, die in St. Gallen leben und sich zum Schweizer Bürger bewerben möchten, wenden sich an die Bevölkerungsabteilung für Einbürgerungen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Durch das Freizügigkeitsabkommen können EU/EFTA-Bürgerinnen und -Bürger in der Schweiz vereinfacht eine Arbeit aufnehmen oder sich niederlassen",
+        "similarity_to_full": 0.3662,
+        "attribution": 0.6338
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Das Migrationsamt des Kantons St",
+        "similarity_to_full": 0.6582,
+        "attribution": 0.3418
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Gallen erteilt die Aufenthaltsbewilligungen für Ausländerinnen und Ausländer",
+        "similarity_to_full": 0.3889,
+        "attribution": 0.6111
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Ausländische Staatsangehörigen, die in St",
+        "similarity_to_full": 0.4348,
+        "attribution": 0.5652
+      },
+      {
+        "removed_sentence_index": 4,
+        "removed_sentence": "Gallen wohnhaft sind und sich um das Schweizer Bürgerrecht bewerben, wenden sich an die Bevölkerungsdienste, Administration Einbürgerungen",
+        "similarity_to_full": 0.5714,
+        "attribution": 0.4286
+      }
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "claude",
+    "sentences": [
+      "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+      "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+      "Diese sind zwingend einzuhalten",
+      "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden"
+    ],
+    "full_simplified_text": "In der Stadt Bern gilt eine Regel für Hauskehricht. Sie dürfen Hauskehricht nur in offiziellen Gebührensäcken entsorgen. Diese Säcke müssen von der Stadt Bern sein. Für Container und Gebührensäcke gibt es feste Bereitstellungszeiten. Sie müssen diese Zeiten unbedingt einhalten. In einen Container für Hauskehricht dürfen Sie nur die offiziellen Gebührensäcke der Stadt Bern werfen.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+        "similarity_to_full": 0.5366,
+        "attribution": 0.4634
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+        "similarity_to_full": 0.5882,
+        "attribution": 0.4118
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Diese sind zwingend einzuhalten",
+        "similarity_to_full": 0.5714,
+        "attribution": 0.4286
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden",
+        "similarity_to_full": 0.5823,
+        "attribution": 0.4177
+      }
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "deepseek",
+    "sentences": [
+      "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+      "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+      "Diese sind zwingend einzuhalten",
+      "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden"
+    ],
+    "full_simplified_text": "In der Stadt Bern dürfen Sie Hausabfall nur in den offiziellen Abfallsäcken wegwerfen. Die Abholzeiten gelten für Container und Abfallsäcke. Sie müssen diese Zeiten einhalten. Im Container für Hausabfall dürfen nur die offiziellen Abfallsäcke der Stadt Bern sein.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+        "similarity_to_full": 0.4571,
+        "attribution": 0.5429
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+        "similarity_to_full": 0.6765,
+        "attribution": 0.3235
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Diese sind zwingend einzuhalten",
+        "similarity_to_full": 0.6053,
+        "attribution": 0.3947
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden",
+        "similarity_to_full": 0.5079,
+        "attribution": 0.4921
+      }
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "mistral",
+    "sentences": [
+      "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+      "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+      "Diese sind zwingend einzuhalten",
+      "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden"
+    ],
+    "full_simplified_text": "\nIn der Stadt Bern dürfen Sie Hausmüll nur in den offiziellen Müllsäcken der Stadt Bern entsorgen.\n\nSie müssen die Abholzeiten für die Müllcontainer und die Müllsäcke einhalten.\n\nIm Hausmüllcontainer dürfen nur die offiziellen Müllsäcke der Stadt Bern verwendet werden.\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+        "similarity_to_full": 0.3611,
+        "attribution": 0.6389
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+        "similarity_to_full": 0.6667,
+        "attribution": 0.3333
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Diese sind zwingend einzuhalten",
+        "similarity_to_full": 0.7,
+        "attribution": 0.3
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden",
+        "similarity_to_full": 0.6269,
+        "attribution": 0.3731
+      }
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "qwen",
+    "sentences": [
+      "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+      "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+      "Diese sind zwingend einzuhalten",
+      "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden"
+    ],
+    "full_simplified_text": "In Bern darf Hausmüll nur in offiziellen Gebührensäcken entsorgt werden.\nHalten Sie die Zeiten für Container und Gebührensäcke ein.\nIm Hausmüll-Container dürfen nur die offiziellen Gebührensäcke von Bern entsorgt werden.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Hauskehricht darf in der Stadt Bern nur in den offiziellen Gebührensäcken entsorgt werden",
+        "similarity_to_full": 0.52,
+        "attribution": 0.48
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Bereitstellungszeiten gelten für Container und Gebührensäcke",
+        "similarity_to_full": 0.4151,
+        "attribution": 0.5849
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Diese sind zwingend einzuhalten",
+        "similarity_to_full": 0.4478,
+        "attribution": 0.5522
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Im Container für Hauskehricht dürfen nur die offiziellen Gebührensäcke der Stadt Bern entsorgt werden",
+        "similarity_to_full": 0.5714,
+        "attribution": 0.4286
+      }
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "claude",
+    "sentences": [
+      "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+      "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+      "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+      "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen"
+    ],
+    "full_simplified_text": "Die Einwohnerdienste führen das Einwohnerregister. Das ist eine ihrer Hauptaufgaben. Verschiedene Verwaltungsstellen brauchen diese Daten für ihre Arbeit. Wenn in der Schweiz ein Zivilstandsereignis passiert, zum Beispiel eine Heirat oder ein Todesfall, meldet das zuständige Zivilstandsamt dies den Einwohnerdiensten. Die Einwohnerdienste passen dann das Einwohnerregister entsprechend an.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+        "similarity_to_full": 0.58,
+        "attribution": 0.42
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+        "similarity_to_full": 0.5747,
+        "attribution": 0.4253
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+        "similarity_to_full": 0.5205,
+        "attribution": 0.4795
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen",
+        "similarity_to_full": 0.4944,
+        "attribution": 0.5056
+      }
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "deepseek",
+    "sentences": [
+      "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+      "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+      "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+      "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen"
+    ],
+    "full_simplified_text": "Die Einwohnerdienste führen das Einwohnerregister.\nDas Einwohnerregister ist wichtig für andere Ämter.\nSie nutzen die Daten für ihre Arbeit.\nWenn jemand heiratet oder stirbt, meldet das Standesamt das den Einwohnerdiensten.\nDie Einwohnerdienste passen dann das Register an.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+        "similarity_to_full": 0.2133,
+        "attribution": 0.7867
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+        "similarity_to_full": 0.2941,
+        "attribution": 0.7059
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+        "similarity_to_full": 0.3235,
+        "attribution": 0.6765
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen",
+        "similarity_to_full": 0.2466,
+        "attribution": 0.7534
+      }
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "mistral",
+    "sentences": [
+      "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+      "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+      "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+      "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen"
+    ],
+    "full_simplified_text": "\nDas Einwohnerregister zu führen, ist eine wichtige Aufgabe der Einwohnerdienste.\n\nDaten aus dem Einwohnerregister helfen anderen Behörden bei ihrer Arbeit.\n\nWenn sich etwas im Zivilstand ändert (z. B. Geburt, Heirat oder Tod), teilt das zuständige Zivilstandsamt das den Einwohnerdiensten mit. Dann aktualisieren die Einwohnerdienste das Register entsprechend.\n",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+        "similarity_to_full": 0.5542,
+        "attribution": 0.4458
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+        "similarity_to_full": 0.3544,
+        "attribution": 0.6456
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+        "similarity_to_full": 0.3218,
+        "attribution": 0.6782
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen",
+        "similarity_to_full": 0.2316,
+        "attribution": 0.7684
+      }
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "qwen",
+    "sentences": [
+      "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+      "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+      "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+      "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen"
+    ],
+    "full_simplified_text": "Die Einwohnerdienste führen das Einwohnerregister. Viele Ämter benutzen die Daten daraus. Das.zuständige Zivilstandsamt teil dem Einwohnerdienst Tattoos und Ehen mit. Dann passen die Einwohnerdienste die Daten an.",
+    "ablations": [
+      {
+        "removed_sentence_index": 0,
+        "removed_sentence": "Das Führen des Einwohnerregisters gehört zu den Hauptaufgaben der Einwohnerdienste",
+        "similarity_to_full": 0.0741,
+        "attribution": 0.9259
+      },
+      {
+        "removed_sentence_index": 1,
+        "removed_sentence": "Die Daten des Einwohnerregisters dienen verschiedenen Verwaltungsstellen als Grundlage oder Indiz für ihre Tätigkeiten",
+        "similarity_to_full": 0.2353,
+        "attribution": 0.7647
+      },
+      {
+        "removed_sentence_index": 2,
+        "removed_sentence": "Zivilstandsereignisse in der Schweiz werden vom zuständigen Zivilstandsamt den Einwohnerdiensten mitgeteilt",
+        "similarity_to_full": 0.1277,
+        "attribution": 0.8723
+      },
+      {
+        "removed_sentence_index": 3,
+        "removed_sentence": "Daraufhin erfolgen im Einwohnerregister die entsprechenden Anpassungen",
+        "similarity_to_full": 0.1091,
+        "attribution": 0.8909
+      }
+    ]
+  }
+]

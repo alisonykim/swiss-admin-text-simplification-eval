@@ -1,0 +1,434 @@
+[
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.3636,
+    "wstf_std": 1.5946,
+    "wstf_values": [
+      9.71,
+      5.9,
+      7.06
+    ]
+  },
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5737,
+    "wstf_std": 1.4705,
+    "wstf_values": [
+      5.98,
+      9.55,
+      8.18
+    ]
+  },
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7187,
+    "wstf_std": 0.7466,
+    "wstf_values": [
+      9.01,
+      7.32,
+      8.77
+    ]
+  },
+  {
+    "text_id": "be_steuererklaerung_frist",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.299,
+    "wstf_std": 1.6543,
+    "wstf_values": [
+      11.19,
+      7.38,
+      8.09
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5673,
+    "wstf_std": 0.3653,
+    "wstf_values": [
+      7.93,
+      7.05,
+      7.63
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5364,
+    "wstf_std": 1.0498,
+    "wstf_values": [
+      5.61,
+      7.78,
+      5.5
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.6283,
+    "wstf_std": 1.1421,
+    "wstf_values": [
+      7.82,
+      7.14,
+      9.83
+    ]
+  },
+  {
+    "text_id": "lu_praemienverbilligung",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.491,
+    "wstf_std": 0.6446,
+    "wstf_values": [
+      6.04,
+      7.17,
+      7.56
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.6015,
+    "wstf_std": 0.3462,
+    "wstf_values": [
+      8.58,
+      8.9,
+      8.06
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7299,
+    "wstf_std": 0.9135,
+    "wstf_values": [
+      6.59,
+      8.27,
+      8.71
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7935,
+    "wstf_std": 1.3396,
+    "wstf_values": [
+      11.56,
+      8.44,
+      9.12
+    ]
+  },
+  {
+    "text_id": "zh_gvz_elementarschaden",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5549,
+    "wstf_std": 1.4758,
+    "wstf_values": [
+      7.23,
+      10.76,
+      9.67
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.6069,
+    "wstf_std": 0.3151,
+    "wstf_values": [
+      5.49,
+      6.23,
+      5.67
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.4085,
+    "wstf_std": 0.7014,
+    "wstf_values": [
+      4.84,
+      4.43,
+      6.08
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5707,
+    "wstf_std": 0.7269,
+    "wstf_values": [
+      5.53,
+      6.46,
+      4.68
+    ]
+  },
+  {
+    "text_id": "bazg_einfuhr_schweiz",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.4775,
+    "wstf_std": 0.9213,
+    "wstf_values": [
+      5.29,
+      7.02,
+      7.41
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7459,
+    "wstf_std": 0.8691,
+    "wstf_values": [
+      9.22,
+      11.33,
+      10.03
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.6385,
+    "wstf_std": 0.8764,
+    "wstf_values": [
+      9.04,
+      6.96,
+      8.46
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.683,
+    "wstf_std": 0.6391,
+    "wstf_values": [
+      9.81,
+      8.48,
+      8.43
+    ]
+  },
+  {
+    "text_id": "bag_krankenversicherung",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.4877,
+    "wstf_std": 0.5807,
+    "wstf_values": [
+      9.38,
+      8.08,
+      8.23
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.8058,
+    "wstf_std": 0.4654,
+    "wstf_values": [
+      8.78,
+      8.2,
+      9.34
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7708,
+    "wstf_std": 0.7505,
+    "wstf_values": [
+      9.2,
+      7.86,
+      9.62
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.8607,
+    "wstf_std": 0.2525,
+    "wstf_values": [
+      9.94,
+      9.97,
+      9.42
+    ]
+  },
+  {
+    "text_id": "sva_zh_beitragspflicht",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.6815,
+    "wstf_std": 0.794,
+    "wstf_values": [
+      12.51,
+      10.76,
+      10.9
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.6399,
+    "wstf_std": 0.2698,
+    "wstf_values": [
+      7.98,
+      7.62,
+      7.32
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.8078,
+    "wstf_std": 0.6148,
+    "wstf_values": [
+      5.13,
+      6.18,
+      6.59
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5875,
+    "wstf_std": 0.5072,
+    "wstf_values": [
+      6.31,
+      6.26,
+      7.36
+    ]
+  },
+  {
+    "text_id": "stgallen_aufenthalt_niederlassung",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5503,
+    "wstf_std": 1.2973,
+    "wstf_values": [
+      8.81,
+      6.28,
+      5.88
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.9058,
+    "wstf_std": 0.3827,
+    "wstf_values": [
+      9.37,
+      10.28,
+      10.02
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.8467,
+    "wstf_std": 0.1087,
+    "wstf_values": [
+      8.05,
+      8.13,
+      8.31
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.8658,
+    "wstf_std": 0.2254,
+    "wstf_values": [
+      8.77,
+      9.14,
+      8.6
+    ]
+  },
+  {
+    "text_id": "bern_kehricht",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.4206,
+    "wstf_std": 2.0803,
+    "wstf_values": [
+      6.76,
+      7.28,
+      11.41
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "claude",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7981,
+    "wstf_std": 0.4341,
+    "wstf_values": [
+      9.67,
+      8.9,
+      9.92
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "deepseek",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.5355,
+    "wstf_std": 0.3936,
+    "wstf_values": [
+      6.69,
+      7.61,
+      7.4
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "mistral",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.7501,
+    "wstf_std": 0.9901,
+    "wstf_values": [
+      6.44,
+      6.2,
+      8.41
+    ]
+  },
+  {
+    "text_id": "frauenfeld_zivilstandsmutation",
+    "model_id": "qwen",
+    "n_samples": 3,
+    "mean_pairwise_similarity": 0.2116,
+    "wstf_std": 2.2813,
+    "wstf_values": [
+      14.37,
+      10.91,
+      8.84
+    ]
+  }
+]
