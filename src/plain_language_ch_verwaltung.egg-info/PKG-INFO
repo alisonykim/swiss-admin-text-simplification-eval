@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: plain-language-ch-verwaltung
+Version: 0.1.0
+Summary: Comparing LLMs on plain-language simplification (Sprachvereinfachung) of Swiss administrative texts
+Requires-Python: >=3.10
+Requires-Dist: anthropic>=0.40
+Requires-Dist: openai>=1.50
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: pandas>=2.2
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Provides-Extra: analysis
+Requires-Dist: shap>=0.45; extra == "analysis"
+Requires-Dist: scikit-learn>=1.4; extra == "analysis"

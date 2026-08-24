@@ -1,0 +1,4 @@
+[console_scripts]
+plz-explain = plain_language_ch_verwaltung.explain:main
+plz-run = plain_language_ch_verwaltung.pipeline:main
+plz-xai = plain_language_ch_verwaltung.xai:main
