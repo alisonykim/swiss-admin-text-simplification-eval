@@ -31,8 +31,13 @@ end-user app:
 - **A model-agnostic, rule-based diff tagger** that cross-checks what a model *claims* it
   changed (sentence splits, passive→active, jargon removed/kept) against an independent,
   non-LLM signal — a self-reported rationale isn't proof the edit happened.
-- **A judge model that never evaluates its own output** — deliberately using a different
-  model than any being scored, to avoid a model grading its own homework.
+- **A fixed, separate judge model** (Qwen) scoring all four models — including itself, since
+  Qwen is also one of the four being compared. That self-judging case (30 of 120 rows) is
+  surfaced explicitly rather than hidden: the interactive dashboard's Vergleich tab has a
+  toggle to include/exclude those rows from Qwen's aggregate score, and the Erklärbarkeit
+  tab's self-consistency analysis found Qwen is *also* the least reproducible of the four
+  models under repeated sampling — a second, independent reason to read its self-judged rows
+  with extra skepticism, beyond the self-grading concern alone.
 
 ## What it does
 
@@ -51,12 +56,25 @@ For each source text, the pipeline:
    This is deliberately independent of each model's self-reported rationale — one LLM
    describing its own edits is not proof those edits happened; the rule-based diff is a
    reproducible cross-check.
-4. **Judges faithfulness and simplicity** with a separate LLM-as-judge call (defaults to
-   Qwen2.5-72B-Instruct — the strongest open model — judging all four, including Claude, so
-   Claude isn't grading its own output, and judging stays free).
+4. **Judges faithfulness, simplicity, and fluency** with a separate LLM-as-judge call
+   (defaults to Qwen2.5-72B-Instruct — the strongest open model — judging all four; judging
+   stays free this way). Qwen is also one of the four models being scored, so its own 30
+   rows are self-judged — flagged per-row (`is_self_judged`) rather than hidden; see
+   "Related work" above.
 
-Results are written to `data/results/results.json` (full, including simplified texts and
-rationale) and `data/results/results.csv` (flattened, for quick comparison across models).
+Results are written to `data/results/results.json` (full, including simplified texts,
+rationale, and per-row `is_self_judged`) and `data/results/results.csv` (flattened, for
+quick comparison across models).
+
+On top of the core 120-row comparison, `plz-xai` runs four further black-box
+explainability analyses (none need white-box model access — still unavailable for all
+four models, see below): sentence-level ablation attribution, a TF-IDF faithfulness
+cross-check against the judge, DeepSeek per-token confidence, and self-consistency under
+repeated sampling. `plz-explain` fits a small SHAP-explained proxy model over the
+diff-tag features to test whether they predict readability improvement (they don't,
+robustly — see Methodology notes). All of this is explorable interactively in a
+published dashboard (Vergleich / Text-Explorer / Erklärbarkeit tabs) built from the
+same `data/results/*.json` files.
 
 ### Why not "real" model-internals explainability?
 
@@ -67,6 +85,29 @@ API rather than run locally, so there's no local access to internals either. The
 rule-based diff approach above is the model-agnostic alternative: it doesn't explain *why* a
 model produced a given token, but it does give a comparable, auditable account of *what
 changed* across all four models on equal footing.
+
+`plz-xai` pushes further within that same constraint, using four different techniques:
+
+- **Sentence-ablation attribution** — remove one sentence from the source at a time,
+  re-simplify, measure how much the output changes. This is the actual mechanism LIME/SHAP
+  use for black-box models (perturb input, observe output), so it works identically across
+  all four models without needing internals.
+- **TF-IDF faithfulness cross-check** — an independent, deterministic lexical-overlap signal
+  compared against the LLM judge's faithfulness score (Pearson r = 0.356 across all 120
+  rows) — the judge tracks *some* real signal, but far from perfectly.
+- **DeepSeek per-token logprobs** — the one piece of genuine model-internal signal in this
+  project. Confirmed empirically (not assumed from docs) that of all four providers, only
+  DeepSeek's backend actually returns logprobs: Claude and Mistral reject the parameter
+  outright, Qwen's backend accepts it but silently returns nothing. Necessarily asymmetric
+  across models — a limitation of what the hosted APIs expose, not a design choice.
+- **Self-consistency** — each model run 3x on the same text; how much the output varies is a
+  reliability signal independent of how good any single output is. Notable finding: Qwen is
+  the least self-consistent of the four (mean pairwise similarity 0.46 vs. 0.65-0.72 for the
+  others) — worth knowing given Qwen is also the fixed judge.
+
+All four run on a representative 9-text subset (ablation, self-consistency) or the full
+corpus (TF-IDF: 120 rows; logprobs: all 30 texts) — illustrative, not exhaustive. Full
+per-row output in `data/results/xai_*.json`.
 
 ## Setup
 
@@ -93,6 +134,12 @@ plz-run
 
 # or restrict to a subset of models
 plz-run --models claude qwen
+
+# fit + SHAP-explain a proxy model over the diff-tag features (needs pip install -e ".[analysis]")
+plz-explain
+
+# run the four black-box explainability analyses (ablation, TF-IDF, logprobs, self-consistency)
+plz-xai
 ```
 
 ## Tests
@@ -109,11 +156,11 @@ output — all without hitting any API, so they run offline and free.
 `data/texts/manifest.json` lists the source texts, each with a `level`
 (`cantonal`/`federal`/`municipal`), a `source_url`, and a path to the raw `.txt` file.
 
-**The three seed texts are placeholders I wrote to match the style of real Verwaltungsdeutsch
-so the pipeline has something to run against out of the box — they are not scraped from live
-government pages.** Swap them for real excerpts (with the source URL recorded) before treating
-any results as representative; keep excerpts short and cite the source, same convention used
-by plain-language research corpora.
+**All 30 texts are real, verbatim excerpts** from official Swiss government pages (11
+cantonal, 9 federal, 10 municipal), spanning 11 German-speaking cantons/cities — not
+paraphrased or written to a target length, so length varies genuinely by source (15-66
+words). Every excerpt is short and cites its source URL, the same convention used by
+plain-language research corpora.
 
 ## Methodology notes / limitations
 
@@ -139,12 +186,29 @@ by plain-language research corpora.
 - **Passive-voice detection** is a regex heuristic, not a parser — it will miss and
   false-positive on some constructions. Good enough for a rough before/after signal, not
   for a claim like "model X removed exactly N passive constructions."
+- **The SHAP proxy-model analysis (`plz-explain`) is a documented negative result.** A
+  gradient-boosted model over the diff-tag features (jargon removed, substitutions, passive
+  delta, sentence-split delta) predicting WSTF improvement does not generalize: 5-fold CV R²
+  is negative for every tree-ensemble configuration tried, even shrunk to 15 trees/depth 1
+  (best case, regularized linear regression: R² ≈ 0.08 — essentially noise). Reported here
+  deliberately rather than presenting the in-sample SHAP feature ranking as if it were a
+  validated finding — it isn't. Likely cause: WSTF is sensitive to word-length/syllable
+  nuances that coarse count-based features can't capture at N=120.
 
-## Suggested build order (2-3 afternoons)
+## Status
 
-1. Curate a real corpus (10-15 texts, mixed cantonal/federal/municipal) and wire up all
-   four model backends end to end on 1-2 texts.
-2. Run the full pipeline, sanity-check the readability/diff/judge outputs, fix prompt or
-   parsing issues that come up on real data.
-3. Polish: write up results (a short comparison table/summary), finish test coverage, clean
-   up README/code for portfolio review.
+First iteration, complete: 30-text real corpus, full 4-model pipeline (120 rows), rule-based
+diff tagging, LLM-judge scoring with the self-judging caveat surfaced rather than hidden,
+four black-box explainability analyses, and an interactive dashboard (Vergleich /
+Text-Explorer / Erklärbarkeit tabs) built directly from `data/results/*.json`.
+
+## Next iteration
+
+- **Multi-judge panel**: have all four models judge all four models' outputs (not just the
+  one fixed Qwen judge), and measure inter-judge agreement. Would let a documented
+  phenomenon in the LLM-eval literature — models favoring their own outputs when judging
+  ("self-preference bias") — actually be tested on this dataset instead of just flagged as a
+  theoretical risk. Deferred for scope, not because it's a bad idea: it's a 4x increase in
+  judge calls, a results-schema change, and new dashboard UI for inter-judge agreement.
+- Expand the corpus past 30 texts, and past the current 11 cantons/cities.
+- Extend the jargon wordlist beyond its current small seed list.
