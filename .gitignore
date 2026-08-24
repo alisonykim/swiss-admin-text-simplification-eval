@@ -5,3 +5,4 @@ __pycache__/
 venv/
 data/cache/
 src/*.egg-info/
+INTERVIEW_NOTES.md
