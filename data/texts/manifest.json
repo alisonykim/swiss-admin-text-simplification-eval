@@ -1,0 +1,242 @@
+[
+  {
+    "id": "zh_gvz_elementarschaden",
+    "level": "cantonal",
+    "source_name": "GVZ Gebäudeversicherung Kanton Zürich",
+    "source_url": "https://www.gvz.ch/hauptnavigation/gvz-allgemein",
+    "title": "Gebäudeversicherung Kanton Zürich",
+    "file": "zh_gvz_elementarschaden.txt"
+  },
+  {
+    "id": "be_steuererklaerung_frist",
+    "level": "cantonal",
+    "source_name": "Steuerverwaltung Kanton Bern - TaxInfo",
+    "source_url": "https://www.taxinfo.sv.fin.be.ch/taxinfo/1cce120a-05da-45e8-8968-b66ae236fee5",
+    "title": "Fristverlängerung Steuererklärung Kanton Bern",
+    "file": "be_steuererklaerung_frist.txt"
+  },
+  {
+    "id": "lu_praemienverbilligung",
+    "level": "cantonal",
+    "source_name": "WAS Luzern (Ausgleichskasse)",
+    "source_url": "https://www.was-luzern.ch/praemienverbilligung",
+    "title": "Prämienverbilligung Kanton Luzern",
+    "file": "lu_praemienverbilligung.txt"
+  },
+  {
+    "id": "ag_betreibungsregisterauszug",
+    "level": "cantonal",
+    "source_name": "Kanton Aargau - SmartServicePortal",
+    "source_url": "https://www.ag.ch/de/smartserviceportal/dienstleistungen?dl=betreibungsregisterauszug-bestellen-769919d2-dfa6-4e0e-9653-0c3f5ca92eef_de",
+    "title": "Betreibungsregisterauszug Kanton Aargau",
+    "file": "ag_betreibungsregisterauszug.txt"
+  },
+  {
+    "id": "sg_c_bewilligung_verlaengerung",
+    "level": "cantonal",
+    "source_name": "Kanton St. Gallen",
+    "source_url": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/spezial-news/Verlaengerungen_C-Bewilligung.html",
+    "title": "Verlängerung der Niederlassungsbewilligung Kanton St. Gallen",
+    "file": "sg_c_bewilligung_verlaengerung.txt"
+  },
+  {
+    "id": "bs_handelsregisteramt",
+    "level": "cantonal",
+    "source_name": "Kanton Basel-Stadt, Justiz- und Sicherheitsdepartement",
+    "source_url": "https://www.bs.ch/jsd/zentraler-rechtsdienst/handelsregisteramt",
+    "title": "Handelsregisteramt Kanton Basel-Stadt",
+    "file": "bs_handelsregisteramt.txt"
+  },
+  {
+    "id": "so_stipendien",
+    "level": "cantonal",
+    "source_name": "Sozialhilfehandbuch Kanton Solothurn",
+    "source_url": "https://sozialhilfehandbuch.so.ch/grundlagen/grundlagen-soziale-sicherheit/bedarfsleistungen/stipendien/",
+    "title": "Stipendien Kanton Solothurn",
+    "file": "so_stipendien.txt"
+  },
+  {
+    "id": "tg_praemienverbilligung",
+    "level": "cantonal",
+    "source_name": "Amt für Gesundheit, Kanton Thurgau",
+    "source_url": "https://gesundheit.tg.ch/bevoelkerung/krankenversicherung/praemienverbilligung.html/5578",
+    "title": "Prämienverbilligung Kanton Thurgau",
+    "file": "tg_praemienverbilligung.txt"
+  },
+  {
+    "id": "bag_krankenversicherung",
+    "level": "federal",
+    "source_name": "Bundesamt für Gesundheit BAG",
+    "source_url": "https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze",
+    "title": "Obligatorische Krankenpflegeversicherung",
+    "file": "bag_krankenversicherung.txt"
+  },
+  {
+    "id": "estv_quellensteuer",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv.admin.ch/estv/de/home/direkte-bundessteuer/dbst-quellensteuer.html",
+    "title": "Quellensteuer",
+    "file": "estv_quellensteuer.txt"
+  },
+  {
+    "id": "astra_fuehrerausweis",
+    "level": "federal",
+    "source_name": "Bundesamt für Strassen ASTRA",
+    "source_url": "https://www.astra.admin.ch/de/fuehrerausweis-ausbildung",
+    "title": "Führerausweis auf Probe",
+    "file": "astra_fuehrerausweis.txt"
+  },
+  {
+    "id": "bsv_familienzulagen",
+    "level": "federal",
+    "source_name": "Bundesamt für Sozialversicherungen BSV",
+    "source_url": "https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/famz.html",
+    "title": "Familienzulagen",
+    "file": "bsv_familienzulagen.txt"
+  },
+  {
+    "id": "sva_zh_beitragspflicht",
+    "level": "federal",
+    "source_name": "Sozialversicherungsanstalt SVA Zürich",
+    "source_url": "https://svazurich.ch/unsere-produkte/ahv/beitraege/beitragspflicht/selbstaendigerwerbende.html",
+    "title": "AHV-Beitragspflicht Selbständigerwerbende",
+    "file": "sva_zh_beitragspflicht.txt"
+  },
+  {
+    "id": "bj_erwachsenenschutz",
+    "level": "federal",
+    "source_name": "Bundesamt für Justiz BJ",
+    "source_url": "https://www.bj.admin.ch/de/kindes-und-erwachsenenschutzrecht",
+    "title": "Kindes- und Erwachsenenschutzrecht",
+    "file": "bj_erwachsenenschutz.txt"
+  },
+  {
+    "id": "stzh_baubewilligungsverfahren",
+    "level": "municipal",
+    "source_name": "Stadt Zürich",
+    "source_url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/baubewilligungen/bewilligungsprozess/verfahren.html",
+    "title": "Baubewilligungsverfahren Stadt Zürich",
+    "file": "stzh_baubewilligungsverfahren.txt"
+  },
+  {
+    "id": "bern_kehricht",
+    "level": "municipal",
+    "source_name": "Stadt Bern",
+    "source_url": "https://www.bern.ch/themen/abfall/abfuhr/abfallarten/kehricht-und-kleinsperrgut",
+    "title": "Kehrichtentsorgung Stadt Bern",
+    "file": "bern_kehricht.txt"
+  },
+  {
+    "id": "luzern_kindergarten",
+    "level": "municipal",
+    "source_name": "Stadt Luzern, Volksschule",
+    "source_url": "https://www.stadtluzern.ch/dienstleistungeninformation/39755",
+    "title": "Eintritt in den Kindergarten Stadt Luzern",
+    "file": "luzern_kindergarten.txt"
+  },
+  {
+    "id": "stgallen_aufenthalt_niederlassung",
+    "level": "municipal",
+    "source_name": "Stadt St. Gallen",
+    "source_url": "https://www.stadt.sg.ch/home/gesellschaft-sicherheit/leben-schweiz/aufenthalt-niederlassung-bewilligung.html",
+    "title": "Aufenthalt und Niederlassung Stadt St. Gallen",
+    "file": "stgallen_aufenthalt_niederlassung.txt"
+  },
+  {
+    "id": "winterthur_rechtsmittelverfahren",
+    "level": "municipal",
+    "source_name": "Stadt Winterthur",
+    "source_url": "https://stadt.winterthur.ch/themen/leben-in-winterthur/planen-und-bauen/wir-beraten-sie/baubewilligungsverfahren/interessenwahrung-rechtsmittelverfahren",
+    "title": "Rechtsmittelverfahren Baubewilligung Stadt Winterthur",
+    "file": "winterthur_rechtsmittelverfahren.txt"
+  },
+  {
+    "id": "aarau_inventuraufnahme_todesfall",
+    "level": "municipal",
+    "source_name": "Stadt Aarau",
+    "source_url": "https://www.aarau.ch/leben/persoenliches/inventarisierung-todesfaelle.html/569",
+    "title": "Inventuraufnahme im Todesfall Stadt Aarau",
+    "file": "aarau_inventuraufnahme_todesfall.txt"
+  },
+  {
+    "id": "frauenfeld_zivilstandsmutation",
+    "level": "municipal",
+    "source_name": "Stadt Frauenfeld",
+    "source_url": "https://www.frauenfeld.ch/politik-verwaltung/verwaltung/stadtverwaltung/departement-fuer-finanzen-und-zentrales/stadtkanzlei/einwohnerdienste/einwohnerregister/meldewesen-einwohnerregister.html/2500",
+    "title": "Mutationen nach Zivilstandsereignis Stadt Frauenfeld",
+    "file": "frauenfeld_zivilstandsmutation.txt"
+  },
+  {
+    "id": "zg_praemienverbilligung",
+    "level": "cantonal",
+    "source_name": "Kanton Zug, Gesundheitsdirektion",
+    "source_url": "https://zg.ch/de/gesundheit/krankenversicherung/praemienverbilligung",
+    "title": "Prämienverbilligung Kanton Zug",
+    "file": "zg_praemienverbilligung.txt"
+  },
+  {
+    "id": "bl_betreibungsregisterauszug",
+    "level": "cantonal",
+    "source_name": "Kanton Basel-Landschaft, Zivilrechtsverwaltung",
+    "source_url": "https://oslvb.bl.ch/Behoerdengang/291",
+    "title": "Betreibungsregisterauszug Kanton Basel-Landschaft",
+    "file": "bl_betreibungsregisterauszug.txt"
+  },
+  {
+    "id": "gl_betreibungskosten",
+    "level": "cantonal",
+    "source_name": "Kanton Glarus, Betreibungs- und Konkursamt",
+    "source_url": "https://www.gl.ch/verwaltung/sicherheit-und-justiz/justiz/betreibungs-konkursamt/haeufig-gestellte-fragen-faq.html/1256",
+    "title": "Betreibungskosten Kanton Glarus",
+    "file": "gl_betreibungskosten.txt"
+  },
+  {
+    "id": "seco_kurzarbeitsentschaedigung",
+    "level": "federal",
+    "source_name": "Staatssekretariat für Wirtschaft SECO",
+    "source_url": "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitslosenversicherung/leistungen/kurzarbeitsentschaedigung.html",
+    "title": "Kurzarbeitsentschädigung",
+    "file": "seco_kurzarbeitsentschaedigung.txt"
+  },
+  {
+    "id": "bazg_einfuhr_schweiz",
+    "level": "federal",
+    "source_name": "Bundesamt für Zoll und Grenzsicherheit BAZG",
+    "source_url": "https://www.bazg.admin.ch/de/reisen-einkaufen-private-einfuhr-in-die-schweiz",
+    "title": "Private Einfuhr in die Schweiz",
+    "file": "bazg_einfuhr_schweiz.txt"
+  },
+  {
+    "id": "bwo_formularpflicht_mietzins",
+    "level": "federal",
+    "source_name": "Bundesamt für Wohnungswesen BWO",
+    "source_url": "https://www.bwo.admin.ch/de/formularpflicht",
+    "title": "Formularpflicht Anfangsmietzins",
+    "file": "bwo_formularpflicht_mietzins.txt"
+  },
+  {
+    "id": "chur_hundewesen",
+    "level": "municipal",
+    "source_name": "Stadt Chur, Stadtpolizei",
+    "source_url": "https://www.chur.ch/stadtpolizei/327",
+    "title": "Hundewesen Stadt Chur",
+    "file": "chur_hundewesen.txt"
+  },
+  {
+    "id": "schaffhausen_umzug",
+    "level": "municipal",
+    "source_name": "Stadt Schaffhausen",
+    "source_url": "https://www.stadt-schaffhausen.ch/dienste/100114",
+    "title": "Zuzug, Umzug, Wegzug Stadt Schaffhausen",
+    "file": "schaffhausen_umzug.txt"
+  },
+  {
+    "id": "thun_anmeldung_zuzug",
+    "level": "municipal",
+    "source_name": "Stadt Thun, Einwohnerdienste",
+    "source_url": "https://www.thun.ch/dienstleistungen/86108",
+    "title": "Anmeldung bei Zuzug Stadt Thun",
+    "file": "thun_anmeldung_zuzug.txt"
+  }
+]
