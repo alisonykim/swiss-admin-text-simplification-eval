@@ -91,7 +91,7 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 - **The Hugging Face Inference Providers catalog rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on August 22, 2026: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check rather than assuming a doc page's example snippet is current.
 
-Mistral's own API model catalog rotates, too; `ministral-3-8b-2512` was current as of August 22, 2026. Check [docs.mistral.ai/getting-started/models/models_overview](https://docs.mistral.ai/getting-started/models/models_overview/) if it throws an error later, and specifically re-check that it is still open-weight.
+- **Mistral's own API model catalog rotates, too**; `ministral-3-8b-2512` was current as of August 22, 2026. Check [docs.mistral.ai/getting-started/models/models_overview](https://docs.mistral.ai/getting-started/models/models_overview/) if it throws an error later, and specifically re-check that it is still open-weight.
 
 - **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics do not judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
 
@@ -100,6 +100,7 @@ Mistral's own API model catalog rotates, too; `ministral-3-8b-2512` was current 
 - **The jargon wordlist** in `diffing.py` is a small seed list, not a comprehensive lexicon of *Verwaltungsdeutsch*. It should be extended as the corpus grows.
 
 - **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal, but not for a claim like "this model removed exactly $N$ passive constructions."
+
 - **The SHAP proxy-model analysis (`plz-explain`) is a documented negative result.** A gradient-boosted model over the diff-tag features (jargon removed, substitutions, passive delta, sentence-split delta) predicting WSTF improvement does not generalize: 5-fold CV $R^2$ is negative for every tree-ensemble configuration tried, even shrunk to 15 trees/depth 1 (best case, regularized linear regression: $R^2 \approx 0.08 $, so essentially noise). Likely cause: WSTF is sensitive to word-length/syllable nuances that coarse count-based features cannot capture at $N=120$.
 
 ## Status
