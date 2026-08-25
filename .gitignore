@@ -1,9 +1,0 @@
-.gitignore
-.env
-__pycache__/
-*.pyc
-.venv/
-venv/
-data/cache/
-src/*.egg-info/
-INTERVIEW_NOTES.md
