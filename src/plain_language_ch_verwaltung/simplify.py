@@ -12,6 +12,8 @@ from .prompts import SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt
 
 @dataclass
 class SimplificationResult:
+	"""One model's simplified text, its self-reported rationale, and the raw API response."""
+
 	model_id: str
 	simplified_text: str
 	rationale: list[dict] = field(default_factory=list)
@@ -19,6 +21,13 @@ class SimplificationResult:
 
 
 def simplify(model_id: str, text: str) -> SimplificationResult:
+	"""Simplifies a text with the given model and parses its JSON response into a
+	SimplificationResult.
+
+	Parameters
+		model_id: A key into config.MODELS, e.g. 'claude', 'qwen', 'mistral', 'deepseek'
+		text: The source Verwaltungstext to simplify
+	"""
 	raw = call_model(model_id, SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt(text))
 
 	try:
@@ -26,9 +35,6 @@ def simplify(model_id: str, text: str) -> SimplificationResult:
 		simplified_text = parsed['simplified_text']
 		rationale = parsed.get('rationale', [])
 	except (json.JSONDecodeError, KeyError) as e:
-		# If model didn't follow the JSON contract, fall back to using the raw reply as-is.
-		# This is silent data corruption if unnoticed - readability/diff metrics would run
-		# against a raw (possibly truncated or markdown-wrapped) blob instead of clean text.
 		print(f'  WARNING: {model_id} did not return valid JSON ({e}); using raw reply as-is')
 		simplified_text = raw
 		rationale = []

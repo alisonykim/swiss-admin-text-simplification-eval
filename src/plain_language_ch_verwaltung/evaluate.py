@@ -17,19 +17,24 @@ _SENTENCE_SPLIT_RE = re.compile(r'[.!?]+\s*')
 
 
 def _count_syllables(word: str) -> int:
+	"""Counts vowel clusters in a word as a syllable-count proxy."""
 	return max(1, len(re.findall(rf'[{_VOWELS}]+', word.lower())))
 
 
 def tokenize_words(text: str) -> list[str]:
+	"""Splits text into German-alphabet word tokens."""
 	return _WORD_RE.findall(text)
 
 
 def split_sentences(text: str) -> list[str]:
+	"""Splits text into sentences on '.', '!', '?'."""
 	return [s for s in _SENTENCE_SPLIT_RE.split(text.strip()) if s.strip()]
 
 
 @dataclass
 class ReadabilityScores:
+	"""Word/sentence counts and two German readability formulas (WSTF, LIX) for one text."""
+
 	n_words: int
 	n_sentences: int
 	avg_sentence_length: float
@@ -38,6 +43,7 @@ class ReadabilityScores:
 
 
 def compute_readability(text: str) -> ReadabilityScores:
+	"""Computes ReadabilityScores for a text."""
 	words = tokenize_words(text)
 	sentences = split_sentences(text)
 	n_words = len(words)
@@ -55,15 +61,22 @@ def compute_readability(text: str) -> ReadabilityScores:
 	lix = avg_sentence_length + pct_long
 
 	return ReadabilityScores(
-		n_words=n_words,
-		n_sentences=n_sentences,
+		n_words=n_words, n_sentences=n_sentences,
 		avg_sentence_length=round(avg_sentence_length, 2),
-		wstf=round(wstf, 2),
-		lix=round(lix, 2)
+		wstf=round(wstf, 2), lix=round(lix, 2)
 	)
 
 
 def judge(original: str, simplified: str, judge_model_id: str | None = None) -> dict:
+	"""Scores a simplification's faithfulness, simplicity, and fluency via an
+	LLM-as-judge call.
+
+	Parameters
+		original: The source Verwaltungstext, before simplification
+		simplified: The same text after a model has simplified it
+		judge_model_id: Which model judges, as a key into config.MODELS (defaults
+			to config.JUDGE_MODEL_ID when not given)
+	"""
 	model_id = judge_model_id or config.JUDGE_MODEL_ID
 	raw = call_model(model_id, JUDGE_SYSTEM_PROMPT, build_judge_user_prompt(original, simplified))
 	try:

@@ -29,11 +29,6 @@ Wichtig für gültiges JSON:
 	einfachen Anführungszeichen (').
 '''
 
-
-def build_simplify_user_prompt(text: str) -> str:
-	return f'Vereinfachen Sie folgenden Verwaltungstext:\n\n{text}'
-
-
 JUDGE_SYSTEM_PROMPT = '''\
 Sie bewerten, wie gut ein Originaltext (Schweizer Verwaltungstext) durch ein KI-Modell in einfache
 Sprache übersetzt wurde. Bewerten Sie anhand von drei Kriterien, je auf einer Skala von 1 (schlecht)
@@ -55,5 +50,16 @@ auf Deutsch verfasst sein.
 '''
 
 
+def build_simplify_user_prompt(text: str) -> str:
+	"""Builds the user-turn prompt asking a model to simplify `text`."""
+	return f'Vereinfachen Sie folgenden Verwaltungstext:\n\n{text}'
+
+
 def build_judge_user_prompt(original: str, simplified: str) -> str:
+	"""Builds the user-turn prompt asking the judge to compare `original` and `simplified`.
+
+	Parameters
+		original: The source Verwaltungstext, before simplification
+		simplified: The same text after a model has simplified it
+	"""
 	return f'Originaltext:\n{original}\n\nVereinfachte Version:\n{simplified}'

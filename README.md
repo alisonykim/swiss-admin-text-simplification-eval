@@ -1,7 +1,7 @@
 # Interactive Language Simplification: Administrative German *(Verwaltungsdeutsch)*
 
 Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swiss
-administrative texts — cantonal, federal, and municipal — with a focus on *evaluation* and *explainability*.
+administrative texts (cantonal, federal, and municipal), with a focus on *evaluation* and *explainability*.
 
 ## Motivation
 
@@ -31,11 +31,11 @@ Results are written to `data/results/results.json` (full, including simplified t
 
 On top of the core 120-row comparison, `plz-xai` runs four further black-box
 explainability analyses: sentence-level ablation attribution, a TF-IDF faithfulness
-cross-check against the judge, DeepSeek per-token confidence, and self-consistency under repeated sampling. `plz-explain` fits a small SHAP-explained proxy model over the diff-tag features to test whether they predict readability improvement (they don't, robustly; see Methodology notes). All of this is explorable interactively in a published dashboard (*Vergleich* / *Text-Explorer* / *Erklärbarkeit* tabs) built from the same `data/results/*.json` files.
+cross-check against the judge, DeepSeek per-token confidence, and self-consistency under repeated sampling. `plz-explain` fits a small SHAP-explained proxy model over the diff-tag features to test whether they predict readability improvement (they do not, robustly; see Methodology notes). All of this is explorable interactively in a published dashboard (*Vergleich* / *Text-Explorer* / *Erklärbarkeit* tabs) built from the same `data/results/*.json` files.
 
 ### Why not "real" model-internals explainability?
 
-Attention maps / SHAP / gradient attribution would need white-box access to the model internals. Claude is a closed commercial API, so that kind of explainability isn't available for it at all. For the open-weight models, they're called via a hosted inference API rather than run locally, so there's no local access to internals either. The rationale + rule-based diff approach above is the model-agnostic alternative: it doesn't explain *why* a model produced a given token, but it does give a comparable, auditable account of *what changed* across all four models.
+Attention maps / SHAP / gradient attribution would need white-box access to the model internals. As Claude is a closed commercial API, that kind of explainability is not available for it. For the open-weight models, they are called via a hosted inference API rather than run locally, so there is no local access to internals either. The rationale + rule-based diff approach above is the model-agnostic alternative: it does not explain *why* a model produced a given token, but it does give a comparable, auditable account of *what changed* across all four models.
 
 `plz-xai` pushes further within that same constraint, using four different techniques:
 - **Sentence-ablation attribution:** remove one sentence from the source at a time, re-simplify, measure how much the output changes. This is the actual mechanism LIME/SHAP use for black-box models (perturb input, observe output), so it works identically across all four models without needing internals.
@@ -93,14 +93,14 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 Mistral's own API model catalog rotates, too; `ministral-3-8b-2512` was current as of 2026-08-22. Check [docs.mistral.ai/getting-started/models/models_overview](https://docs.mistral.ai/getting-started/models/models_overview/) if it throws an error later, and specifically re-check that it is still open-weight.
 
-- **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics don't judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
+- **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics do not judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
 
 - **LLM-as-judge** has known biases (verbosity, style preferences, imperfect agreement with human raters). Thus, treat judge scores as a signal to inspect, not ground truth. The raw outputs are saved in `results.json`, so every score is traceable back to the actual text.
 
 - **The jargon wordlist** in `diffing.py` is a small seed list, not a comprehensive lexicon of *Verwaltungsdeutsch*. It should be extended as the corpus grows.
 
 - **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal, but not for a claim like "this model removed exactly $N$ passive constructions."
-- **The SHAP proxy-model analysis (`plz-explain`) is a documented negative result.** A gradient-boosted model over the diff-tag features (jargon removed, substitutions, passive delta, sentence-split delta) predicting WSTF improvement does not generalize: 5-fold CV $R^2$ is negative for every tree-ensemble configuration tried, even shrunk to 15 trees/depth 1 (best case, regularized linear regression: $R^2 \approx 0.08 $, so essentially noise). Likely cause: WSTF is sensitive to word-length/syllable nuances that coarse count-based features can't capture at $N=120$.
+- **The SHAP proxy-model analysis (`plz-explain`) is a documented negative result.** A gradient-boosted model over the diff-tag features (jargon removed, substitutions, passive delta, sentence-split delta) predicting WSTF improvement does not generalize: 5-fold CV $R^2$ is negative for every tree-ensemble configuration tried, even shrunk to 15 trees/depth 1 (best case, regularized linear regression: $R^2 \approx 0.08 $, so essentially noise). Likely cause: WSTF is sensitive to word-length/syllable nuances that coarse count-based features cannot capture at $N=120$.
 
 ## Status
 

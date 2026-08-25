@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """Model-agnostic, rule-based diff tagging.
 
-Complements each model's self-reported rationale (see simplify.SimplificationResult) with an
-independent, reproducible signal that doesn't depend on a model accurately describing its own
-edits - the two are meant to be read side by side, not merged into one.
+Complements each model's self-reported rationale (see simplify.SimplificationResult).
 """
 
 from __future__ import annotations
@@ -14,7 +12,7 @@ from difflib import SequenceMatcher
 
 from .evaluate import split_sentences, tokenize_words
 
-# Non-exhausive seed list of common Swiss administrative/legal jargon; extend as the corpus grows
+# Non-exhausive list of common Swiss administrative/legal jargon; extend as the corpus grows
 JARGON_TERMS = [
 	'einsprache',
 	'verfügung',
@@ -38,11 +36,15 @@ _PASSIVE_RE = re.compile(r'\b(wird|werden|wurde|wurden|worden)\b[^.!?]{0,40}?\b\
 
 
 def _count_passive_constructions(text: str) -> int:
+	"""Counts regex matches for the passive-voice heuristic (see _PASSIVE_RE)."""
 	return len(_PASSIVE_RE.findall(text))
 
 
 @dataclass
 class DiffTags:
+	"""Model-agnostic diff between an original and simplified text: sentence and
+	passive-voice counts, jargon removed vs. remaining, and lexical substitutions."""
+
 	sentences_before: int
 	sentences_after: int
 	avg_sentence_len_before: float
@@ -55,6 +57,12 @@ class DiffTags:
 
 
 def compute_diff_tags(original: str, simplified: str) -> DiffTags:
+	"""Computes DiffTags for one (original, simplified) pair.
+
+	Parameters
+		original: The source Verwaltungstext, before simplification
+		simplified: The same text after a model has simplified it
+	"""
 	orig_sentences = split_sentences(original)
 	simp_sentences = split_sentences(simplified)
 	orig_words = tokenize_words(original.lower())

@@ -19,8 +19,10 @@ HF_PROVIDER = os.getenv('HF_PROVIDER', 'novita')
 
 @dataclass(frozen=True)
 class ModelConfig:
+	"""One entry in the model registry."""
+
 	id: str
-	provider: str  # 'anthropic' | 'huggingface' | 'mistral'
+	provider: str 
 	model_name: str
 
 

@@ -1,25 +1,16 @@
 #!/usr/bin/env python3
-"""Explainability analyses beyond the core pipeline - each answers a different question
-about the four models, using a different technique, none requiring white-box access
-(still unavailable for any of the four, see README):
-
-- Sentence-ablation attribution: black-box perturbation (the same principle LIME/SHAP use
-  for models with no internals access) - remove one sentence from the original at a time,
-  re-simplify, and measure how much the output changes. Works identically across all four
-  models since it never touches internals.
-- TF-IDF faithfulness cross-check: an independent, deterministic (non-LLM) faithfulness
-  signal to compare against the LLM-judge's faithfulness score - offline, no API calls.
-- DeepSeek per-token logprobs: real model-internal confidence, but only DeepSeek's backend
-  actually returns them (confirmed empirically 2026-08-24 - Qwen accepts the parameter and
-  silently returns None, Mistral and Claude reject it outright). Asymmetric by construction,
-  not a design choice.
-- Self-consistency: run each model multiple times on the same text and measure how much the
-  output varies - a model that gives a very different simplification each time is a model
-  whose behavior on that text is unreliable, independent of how good any single output is.
-
-Each of these makes additional API calls beyond the core 120-row comparison (except the
-TF-IDF check) and analyzes only a representative subset of texts, not the full corpus -
-illustrative, not exhaustive.
+"""Explainability analyses beyond the core pipeline:
+1. Sentence-ablation attribution: black-box perturbation (the same principle LIME/SHAP use
+   for models with no internals access), removing one sentence from the original at a time,
+   re-simplifying, and measuring how much the output changes. Works identically across all four
+   models since it never touches internals.
+2. TF-IDF faithfulness cross-check: an independent, deterministic (non-LLM) faithfulness
+   signal to compare against the LLM-judge's faithfulness score.
+3. DeepSeek per-token logprobs: real model-internal confidence, but only DeepSeek's backend
+   actually returns them (see README).
+4. Self-consistency: run each model multiple times on the same text and measure how much the
+   output varies. A model that gives a very different simplification each time is a model
+   whose behavior on that text is unreliable, independent of how good any single output is.
 """
 
 from __future__ import annotations
@@ -45,17 +36,26 @@ GERMAN_STOPWORDS = [
 	'und', 'oder', 'ist', 'sind', 'war', 'waren', 'wird', 'werden', 'wurde', 'wurden',
 	'für', 'von', 'mit', 'bei', 'im', 'in', 'auf', 'zu', 'zur', 'zum', 'sich', 'sie', 'er', 'es',
 	'ich', 'wir', 'ihr', 'als', 'auch', 'nicht', 'kann', 'können', 'muss', 'müssen', 'so', 'wie',
-	'an', 'am', 'um', 'nach', 'durch', 'über', 'unter', 'aus', 'diese', 'dieser', 'dieses',
+	'an', 'am', 'um', 'nach', 'durch', 'über', 'unter', 'aus', 'diese', 'dieser', 'dieses'
 ]
 
 
 def _text_similarity(a: str, b: str) -> float:
+	"""Word-level similarity ratio between two texts (SequenceMatcher, 0-1).
+
+	Parameters
+		a: First text to compare (order doesn't matter, this is symmetric)
+		b: Second text to compare
+	"""
 	return SequenceMatcher(a=a.split(), b=b.split(), autojunk=False).ratio()
 
 
 def _pick_subset_texts(n_per_level: int = 3) -> list[dict]:
-	"""Texts with the most sentences per level - richer, more informative material for
-	ablation and self-consistency than the shortest one-sentence entries."""
+	"""Texts with the most sentences per level.
+
+	Parameters
+		n_per_level: How many texts to keep per level (cantonal/federal/municipal)
+	"""
 	texts = load_texts()
 	by_level: dict[str, list[dict]] = {'cantonal': [], 'federal': [], 'municipal': []}
 	for t in texts:
@@ -68,15 +68,25 @@ def _pick_subset_texts(n_per_level: int = 3) -> list[dict]:
 
 
 def _load_main_results() -> list[dict]:
+	"""Loads the core pipeline's results.json."""
 	with open(RESULTS_DIR / 'results.json', encoding='utf-8') as f:
 		return json.load(f)
 
 
 # ---------------------------------------------------------------------------
-# A. Sentence-ablation attribution (all 4 models, model-agnostic perturbation)
+# 1. Sentence-ablation attribution (all 4 models, model-agnostic perturbation)
 # ---------------------------------------------------------------------------
 
 def run_ablation_attribution(subset_texts: list[dict], main_results: list[dict]) -> list[dict]:
+	"""For each (text, model) pair, removes one sentence at a time, re-simplifies, and
+	scores how much the output changed relative to the full-text baseline.
+
+	Parameters
+		subset_texts: The manifest entries to run ablation on (from load_texts(),
+			usually the output of _pick_subset_texts())
+		main_results: The core pipeline's results.json rows, used to look up each
+			(text, model) pair's full, unablated simplified_text as the baseline
+	"""
 	baseline_by_key = {(r['text_id'], r['model_id']): r['simplified_text'] for r in main_results}
 	rows = []
 	for text_entry in subset_texts:
@@ -110,10 +120,16 @@ def run_ablation_attribution(subset_texts: list[dict], main_results: list[dict])
 
 
 # ---------------------------------------------------------------------------
-# B. TF-IDF faithfulness cross-check (offline, all 120 rows, no API calls)
+# 2. TF-IDF faithfulness cross-check
 # ---------------------------------------------------------------------------
 
 def run_tfidf_faithfulness_check(main_results: list[dict]) -> dict:
+	"""Computes TF-IDF cosine similarity between original and simplified text for every
+	row, and its correlation with the judge's faithfulness score.
+
+	Parameters
+		main_results: The core pipeline's results.json rows
+	"""
 	from sklearn.feature_extraction.text import TfidfVectorizer
 	from sklearn.metrics.pairwise import cosine_similarity
 
@@ -143,10 +159,16 @@ def run_tfidf_faithfulness_check(main_results: list[dict]) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# C. DeepSeek per-token logprobs (only backend confirmed to return them)
+# 3. DeepSeek per-token logprobs
 # ---------------------------------------------------------------------------
 
 def _group_tokens_into_words(tokens: list[dict]) -> list[dict]:
+	"""Groups DeepSeek's subword logprob tokens into whole words with a mean logprob each.
+
+	Parameters
+		tokens: A list of {'token': str, 'logprob': float} dicts, one per subword
+			token, as returned by call_huggingface_with_logprobs
+	"""
 	words = []
 	current = None
 	for t in tokens:
@@ -167,6 +189,13 @@ def _group_tokens_into_words(tokens: list[dict]) -> list[dict]:
 
 
 def _slice_tokens_for_substring(tokens: list[dict], substring: str) -> list[dict]:
+	"""Slices the token stream down to just the tokens covering `substring` (e.g. the
+	simplified_text value, not the surrounding JSON scaffolding).
+
+	Parameters
+		tokens: A list of {'token': str, 'logprob': float} dicts, in generation order
+		substring: The exact text to locate within the tokens once reconstructed
+	"""
 	reconstructed = ''.join(t['token'] for t in tokens)
 	needle = substring[:60] if len(substring) > 60 else substring
 	start = reconstructed.find(needle)
@@ -186,6 +215,11 @@ def _slice_tokens_for_substring(tokens: list[dict], substring: str) -> list[dict
 
 
 def run_deepseek_logprobs(texts: list[dict]) -> list[dict]:
+	"""Captures per-token logprobs from DeepSeek for every text and groups them into words.
+
+	Parameters
+		texts: The manifest entries to run (from load_texts())
+	"""
 	model_name = config.MODELS['deepseek'].model_name
 	rows = []
 	for text_entry in texts:
@@ -209,10 +243,17 @@ def run_deepseek_logprobs(texts: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# D. Self-consistency (all 4 models, repeated sampling)
+# 4. Self-consistency (all 4 models, repeated sampling)
 # ---------------------------------------------------------------------------
 
 def run_self_consistency(subset_texts: list[dict]) -> list[dict]:
+	"""Runs each model N_CONSISTENCY_SAMPLES times per text and measures output
+	similarity and WSTF variance across the samples.
+
+	Parameters
+		subset_texts: The manifest entries to run (from load_texts(), usually the
+			output of _pick_subset_texts())
+	"""
 	rows = []
 	for text_entry in subset_texts:
 		for model_id in MODEL_IDS:
@@ -243,30 +284,31 @@ def run_self_consistency(subset_texts: list[dict]) -> list[dict]:
 
 
 def main() -> None:
+	"""CLI entry point: runs all four XAI analyses and saves each to its own JSON file."""
 	main_results = _load_main_results()
 	subset = _pick_subset_texts(n_per_level=3)
 	print(f'Subset for ablation/consistency: {[t["id"] for t in subset]}\n')
 
-	print('=== A. Sentence-ablation attribution ===')
+	print('=== 1. Sentence-ablation attribution ===')
 	ablation_rows = run_ablation_attribution(subset, main_results)
 	with open(RESULTS_DIR / 'xai_ablation.json', 'w', encoding='utf-8') as f:
 		json.dump(ablation_rows, f, ensure_ascii=False, indent=2)
 	print(f'Saved {len(ablation_rows)} rows to xai_ablation.json\n')
 
-	print('=== B. TF-IDF faithfulness cross-check ===')
+	print('=== 2. TF-IDF faithfulness cross-check ===')
 	tfidf_result = run_tfidf_faithfulness_check(main_results)
 	with open(RESULTS_DIR / 'xai_tfidf_faithfulness.json', 'w', encoding='utf-8') as f:
 		json.dump(tfidf_result, f, ensure_ascii=False, indent=2)
 	print(f"Pearson r (tfidf_similarity vs. judge_faithfulness), n={tfidf_result['n']}: {tfidf_result['pearson_r']}\n")
 
-	print('=== C. DeepSeek per-token logprobs ===')
+	print('=== 3. DeepSeek per-token logprobs ===')
 	all_texts = load_texts()
 	logprob_rows = run_deepseek_logprobs(all_texts)
 	with open(RESULTS_DIR / 'xai_deepseek_logprobs.json', 'w', encoding='utf-8') as f:
 		json.dump(logprob_rows, f, ensure_ascii=False, indent=2)
 	print(f'Saved {len(logprob_rows)} rows to xai_deepseek_logprobs.json\n')
 
-	print('=== D. Self-consistency ===')
+	print('=== 4. Self-consistency ===')
 	consistency_rows = run_self_consistency(subset)
 	with open(RESULTS_DIR / 'xai_self_consistency.json', 'w', encoding='utf-8') as f:
 		json.dump(consistency_rows, f, ensure_ascii=False, indent=2)

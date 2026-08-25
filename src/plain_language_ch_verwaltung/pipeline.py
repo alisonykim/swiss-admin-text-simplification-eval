@@ -22,6 +22,7 @@ RESULTS_DIR = config.DATA_DIR / 'results'
 
 
 def load_texts() -> list[dict]:
+	"""Loads every source text listed in data/texts/manifest.json."""
 	with open(TEXTS_MANIFEST, encoding='utf-8') as f:
 		manifest = json.load(f)
 
@@ -33,6 +34,13 @@ def load_texts() -> list[dict]:
 
 
 def run(model_ids: list[str] | None = None) -> list[dict]:
+	"""Runs the full pipeline (simplify, score readability, diff-tag, judge) for every
+	(text x model) pair.
+
+	Parameters
+		model_ids: Which models to run, as keys into config.MODELS (defaults to
+			every registered model in config.MODELS when not given)
+	"""
 	model_ids = model_ids or list(config.MODELS)
 	texts = load_texts()
 	rows = []
@@ -57,8 +65,6 @@ def run(model_ids: list[str] | None = None) -> list[dict]:
 				'level': text_entry['level'],
 				'source_url': text_entry.get('source_url'),
 				'model_id': model_id,
-				# True when this model is also the fixed judge (config.JUDGE_MODEL_ID) - that
-				# row's judge scores are self-graded rather than from an independent model.
 				'is_self_judged': model_id == config.JUDGE_MODEL_ID,
 				'latency_s': latency_s,
 				'wstf_before': readability_before.wstf,
@@ -88,6 +94,8 @@ def run(model_ids: list[str] | None = None) -> list[dict]:
 
 
 def save_results(rows: list[dict]) -> None:
+	"""Writes results to results.json (full) and results.csv (flattened, for quick
+	comparison across models)."""
 	RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 	with open(RESULTS_DIR / 'results.json', 'w', encoding='utf-8') as f:
@@ -98,12 +106,19 @@ def save_results(rows: list[dict]) -> None:
 	df.drop(columns=flat_cols).to_csv(RESULTS_DIR / 'results.csv', index=False)
 
 
-def main() -> None:
+def build_arg_parser() -> argparse.ArgumentParser:
+	"""Builds the CLI argument parser for plz-run."""
 	parser = argparse.ArgumentParser(description='Compare LLMs on Swiss admin-text simplification.')
 	parser.add_argument(
-		'--models', nargs='*', default=None, help='Subset of model ids to run, e.g. --models claude gpt'
+		'--models', nargs='*', default=None,
+		help='Subset of model ids to run, e.g. --models claude gpt'
 	)
-	args = parser.parse_args()
+	return parser
+
+
+def main() -> None:
+	"""CLI entry point: runs the pipeline and saves results."""
+	args = build_arg_parser().parse_args()
 
 	rows = run(args.models)
 	save_results(rows)
