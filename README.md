@@ -1,8 +1,8 @@
 # Simplifying German-Swiss Administrative Text: An Interactive Tool for Evaluating LLM Output
 
-**[Open the live dashboard →](https://alisonykim.github.io/swiss-admin-text-simplification-eval/)**
+**<a href="https://alisonykim.github.io/swiss-admin-text-simplification-eval/" target="_blank" rel="noopener">Open the live dashboard →</a>**
 
-Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swiss administrative texts (cantonal and federal, currently focused on Kanton Zürich), with a focus on *evaluation* and *explainability*.
+Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swiss administrative texts (currently focused on Kanton Zürich and Bund), with a focus on *evaluation* and *explainability*.
 
 ## Motivation
 
@@ -18,7 +18,7 @@ The simplified texts in this project are LLM output, NOT verified official guida
 
 ## Related work
 
-The Kanton Zürich data science team already runs [`simply-simplify-language`](https://github.com/machinelearningZH/simply-simplify-language) in production. It is a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom readability index (ZIX) and sentence-by-sentence coaching feedback.
+The Kanton Zürich data science team already runs <a href="https://github.com/machinelearningZH/simply-simplify-language" target="_blank" rel="noopener"><code>simply-simplify-language</code></a> in production. It is a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom readability index (ZIX) and sentence-by-sentence coaching feedback.
 
 Rather than developing another end-user app, this project is intended to provide a benchmark and evaluation harness:
 
@@ -28,7 +28,7 @@ Rather than developing another end-user app, this project is intended to provide
 
 ## Project Steps
 
-### Step 1: Core pipeline (`plz-run`)
+### Step 1: Core pipeline (`klartext-simplify`)
 
 For each source text, the pipeline:
 
@@ -45,9 +45,9 @@ For each source text, the pipeline:
 
 Output: `data/results/results.json` (full, including simplified texts, rationale, and per-row `is_self_judged`) and `data/results/results.csv` (flattened, for quick comparison across models).
 
-### Step 2: Explainability analysis (`plz-xai`)
+### Step 2: Explainability analysis (`klartext-xray`)
 
-On top of the core (text x model) comparison, `plz-xai` runs four further black-box analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, DeepSeek per-token confidence, and self-consistency under repeated sampling.
+On top of the core (text x model) comparison, `klartext-xray` runs four further black-box analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, DeepSeek per-token confidence, and self-consistency under repeated sampling.
 
 Output: `data/results/xai_*.json`.
 
@@ -55,7 +55,7 @@ Output: `data/results/xai_*.json`.
 
 Attention maps / SHAP / gradient attribution in their classic form need white-box access to the model internals, and none of the four models offer that (Claude is closed; the open-weight ones are called via a hosted inference API rather than run locally). But "no internals" doesn't mean "no explainability" full stop, it rules out *white-box* XAI specifically. There is a separate, equally established branch, **model-agnostic, perturbation-based XAI**, that needs nothing but query access: perturb an input, observe how the output changes. LIME and the general (Kernel) form of SHAP both work this way. That is exactly the access available to all four APIs here.
 
-`plz-xai` runs four techniques within that constraint, though they are not all the same *kind* of technique, and this project does not treat them as such:
+`klartext-xray` runs four techniques within that constraint, though they are not all the same *kind* of technique, and this project does not treat them as such:
 
 - **Sentence-ablation attribution** *(genuine black-box attribution)*: remove one sentence from the source at a time, re-simplify, measure how much the output changes. This is not a proxy for LIME/SHAP, it is the same underlying mechanism (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, a real, citable NLP interpretability technique, simplified relative to LIME (no surrogate-model fit) and SHAP (no combinatorial coalition averaging).
 - **DeepSeek per-token logprobs** *(uncertainty quantification, not attribution)*: the one piece of genuine model-internal signal in this project, telling you how confident the model was per token, not why it made a choice. Confirmed empirically (not assumed from docs) that of all four providers, only DeepSeek's backend actually returns logprobs.
@@ -83,13 +83,13 @@ The `openai` package is a dependency here purely as a generic OpenAI-compatible 
 
 ```bash
 # Run all four models over every text in data/texts/manifest.json...
-plz-run
+klartext-simplify
 
 # ...or restrict to a subset of models
-plz-run --models claude qwen
+klartext-simplify --models claude qwen
 
 # Run the four black-box explainability analyses (ablation, TF-IDF, logprobs, self-consistency)
-plz-xai
+klartext-xray
 ```
 
 ## Tests
@@ -110,7 +110,7 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 - **The Hugging Face Inference Providers catalog rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on August 22, 2026: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check rather than assuming a doc page's example snippet is current.
 
-- **Mistral's own API model catalog rotates, too**; `ministral-3-8b-2512` was current as of August 22, 2026. Check [docs.mistral.ai/getting-started/models/models_overview](https://docs.mistral.ai/getting-started/models/models_overview/) if it throws an error later, and specifically re-check that it is still open-weight.
+- **Mistral's own API model catalog rotates, too**; `ministral-3-8b-2512` was current as of August 22, 2026. Check <a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank" rel="noopener">docs.mistral.ai/getting-started/models/models_overview</a> if it throws an error later, and specifically re-check that it is still open-weight.
 
 - **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics do not judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
 

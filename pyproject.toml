@@ -1,5 +1,5 @@
 [project]
-name = "plain-language-ch-verwaltung"
+name = "swiss-admin-text-simplification-eval"
 version = "0.1.0"
 description = "Comparing LLMs on plain-language simplification (Sprachvereinfachung) of Swiss administrative texts"
 requires-python = ">=3.10"
@@ -14,8 +14,8 @@ dependencies = [
 dev = ["pytest>=8.0"]
 
 [project.scripts]
-plz-run = "pipeline:main"
-plz-xai = "xai:main"
+klartext-simplify = "pipeline:main"
+klartext-xray = "xai:main"
 
 [build-system]
 requires = ["setuptools>=68"]
