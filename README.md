@@ -1,4 +1,6 @@
-# Interactive Language Simplification: Administrative German *(Verwaltungsdeutsch)*
+# Simplifying German-Swiss Administrative Text: An Interactive Tool for Evaluating LLM Output
+
+**[Open the live dashboard →](https://alisonykim.github.io/swiss-admin-text-simplification-eval/)**
 
 Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swiss administrative texts (cantonal and federal, currently focused on Kanton Zürich), with a focus on *evaluation* and *explainability*.
 
@@ -6,7 +8,13 @@ Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swi
 
 *Verwaltungstexte* are often dense, legalistic, and hard to parse without domain expertise or native German skills (e.g., those with immigration backgrounds, lower literacy, etc.). This project asks: *how well do current LLMs do at rewriting these texts in plain language, and how do different models compare, on **readability**, **faithfulness** to the original, and the **kind  of changes** they actually make*?
 
-The current corpus was compiled through a personal lens: I chose texts that I have had to read through myself, such as residence/migration directives and foreigner-specific tax rules, both from Kanton Zürich and the federal tax authority. It was also a good methodological fit: the chosen *Weisungen* and *Kreisschreiben* are structured into numbered, citable subsections that map directly onto auditable excerpt boundaries (see [Data](#data) below). Additionally, they cite actual statute articles rather than being pre-simplified themselves, which grounds the faithfulness evaluation in real legal specifics.
+The current corpus was inspired by:
+* **Methodological fit:** The selected *Weisungen* and *Kreisschreiben* are structured into numbered, citable subsections that map directly onto auditable excerpt boundaries (see [Data](#data) below). Additionally, they cite actual statute articles rather than being pre-simplified themselves, which grounds the faithfulness evaluation in real legal specifics.
+* **Personal experience:** I chose documents that I have had to read through myself, such as residence/migration directives and foreigner-specific tax rules, both from Kanton Zürich and the federal tax authority.
+
+## Disclaimer
+
+The simplified texts in this project are LLM output, NOT verified official guidance. They are provided to be *evaluated*, not to be *relied on* for personal or professional use. Please do not treat a simplified text as accurate or complete. Always refer back to the original, cited source, which is provided for every entry in the corpus.
 
 ## Related work
 
@@ -113,6 +121,8 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 - **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal, but not for a claim like "this model removed exactly $N$ passive constructions."
 
 - **The corpus was rebuilt once already** after an audit against live source URLs found verbatim-quoting errors in most entries. The current corpus uses the subsection-boundary method described in [Data](#data) above specifically to make the excerpt boundary auditable.
+
+- **The interactive dashboard was built with AI coding assistance** (Claude). The ideas, corrections, and decisions steering the prompting, the methodology choices, the corpus curation, and the interpretation of results, are my own.
 
 ## Status
 
