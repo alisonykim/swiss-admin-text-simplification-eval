@@ -1,0 +1,242 @@
+[
+  {
+    "id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsatz (Kreisschreiben Nr. 45 Quellenbesteuerung, 2.2.1)",
+    "file": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_2_2_2_personalverleih",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Beim Personalverleih (Kreisschreiben Nr. 45 Quellenbesteuerung, 2.2.2)",
+    "file": "estv_ks45_quellenbesteuerung_2_2_2_personalverleih.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsätze (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.1)",
+    "file": "estv_ks45_quellenbesteuerung_3_1_grundsaetze.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Arbeitnehmer mit Ansässigkeit in der Schweiz (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.1.1)",
+    "file": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Arbeitnehmer mit Ansässigkeit im Ausland (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.1.2)",
+    "file": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "In der Schweiz beschränkt der Quellensteuer unterliegende Einkünfte aus Arbeitsverhältnis (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.2)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Entschädigung für Berufskosten (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.4)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Spesenzahlungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.5)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Abgangsentschädigungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.8)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_3_2_9_personalverleih_faktische_arbeitgeberschaft",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Beim Personalverleih bzw. bei einer faktischen Arbeitgeberschaft (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.9)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_9_personalverleih_faktische_arbeitgeberschaft.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Tarif für Alleinerziehende (Tarifcodes H bzw. P) (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.3)",
+    "file": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_4_5_grenzgaenger_italien",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Tarif für Grenzgänger aus Italien (Tarifcode F) (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.5)",
+    "file": "estv_ks45_quellenbesteuerung_4_5_grenzgaenger_italien.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_4_6_grenzgaenger_deutschland",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Tarife für Grenzgänger aus Deutschland (Tarifcodes L, M, N und P) (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.6)",
+    "file": "estv_ks45_quellenbesteuerung_4_6_grenzgaenger_deutschland.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Kirchensteuerpflicht (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.8)",
+    "file": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Härtefallregelung (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.9)",
+    "file": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Abgrenzungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 5)",
+    "file": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_5_1_kuenstler_sportler_referenten",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Künstler, Sportler und Referenten (Kreisschreiben Nr. 45 Quellenbesteuerung, 5.1)",
+    "file": "estv_ks45_quellenbesteuerung_5_1_kuenstler_sportler_referenten.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Vorbemerkungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.1)",
+    "file": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsätze (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.2)",
+    "file": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Quellensteuerberechnung bei Leistungen vor Antritt des Arbeitsverhältnisses (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.8)",
+    "file": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_10_ersatzeinkuenfte_an_arbeitgeber",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Ersatzeinkünfte, die an den Arbeitgeber ausbezahlt werden (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.10)",
+    "file": "estv_ks45_quellenbesteuerung_6_10_ersatzeinkuenfte_an_arbeitgeber.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_7_1_vorbemerkungen_jahresmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Vorbemerkungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 7.1)",
+    "file": "estv_ks45_quellenbesteuerung_7_1_vorbemerkungen_jahresmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsätze (Kreisschreiben Nr. 45 Quellenbesteuerung, 7.2)",
+    "file": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_9_6_verletzung_verfahrenspflichten",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Verletzung von Verfahrenspflichten (Kreisschreiben Nr. 45 Quellenbesteuerung, 9.6)",
+    "file": "estv_ks45_quellenbesteuerung_9_6_verletzung_verfahrenspflichten.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Rechte des quellensteuerpflichtigen Arbeitnehmers (Kreisschreiben Nr. 45 Quellenbesteuerung, 10.1)",
+    "file": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Pflichten der quellensteuerpflichtigen Arbeitnehmer (Kreisschreiben Nr. 45 Quellenbesteuerung, 10.2)",
+    "file": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_11_3_nov_antrag_ansaessigkeit_schweiz",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Nachträgliche ordentliche Veranlagung auf Antrag bei Ansässigkeit in der Schweiz (Kreisschreiben Nr. 45 Quellenbesteuerung, 11.3)",
+    "file": "estv_ks45_quellenbesteuerung_11_3_nov_antrag_ansaessigkeit_schweiz.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Wechsel von der Quellenbesteuerung zur ordentlichen Veranlagung (Kreisschreiben Nr. 45 Quellenbesteuerung, 12.1)",
+    "file": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_12_2_wechsel_ordentlich_zu_quellenbesteuerung",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Wechsel von der ordentlichen Veranlagung zur Quellenbesteuerung (Kreisschreiben Nr. 45 Quellenbesteuerung, 12.2)",
+    "file": "estv_ks45_quellenbesteuerung_12_2_wechsel_ordentlich_zu_quellenbesteuerung.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_13_inkrafttreten",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Inkrafttreten, Aufhebungen und Übergangsrecht (Kreisschreiben Nr. 45 Quellenbesteuerung, 13)",
+    "file": "estv_ks45_quellenbesteuerung_13_inkrafttreten.txt"
+  }
+]

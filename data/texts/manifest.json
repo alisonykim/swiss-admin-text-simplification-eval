@@ -1,242 +1,482 @@
 [
   {
-    "id": "zh_gvz_elementarschaden",
+    "id": "zh_migrationsamt_anmeldung_einreise",
     "level": "cantonal",
-    "source_name": "GVZ Gebäudeversicherung Kanton Zürich",
-    "source_url": "https://www.gvz.ch/hauptnavigation/gvz-allgemein",
-    "title": "Gebäudeversicherung Kanton Zürich",
-    "file": "zh_gvz_elementarschaden.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Anmeldung nach erfolgter Einreise (Freizügigkeitsabkommen EU/EFTA)",
+    "file": "zh_migrationsamt_anmeldung_einreise.txt"
   },
   {
-    "id": "be_steuererklaerung_frist",
+    "id": "zh_migrationsamt_eu_efta_1_1_einfuehrung",
     "level": "cantonal",
-    "source_name": "Steuerverwaltung Kanton Bern - TaxInfo",
-    "source_url": "https://www.taxinfo.sv.fin.be.ch/taxinfo/1cce120a-05da-45e8-8968-b66ae236fee5",
-    "title": "Fristverlängerung Steuererklärung Kanton Bern",
-    "file": "be_steuererklaerung_frist.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Einführung (Freizügigkeitsabkommen EU/EFTA, 1.1)",
+    "file": "zh_migrationsamt_eu_efta_1_1_einfuehrung.txt"
   },
   {
-    "id": "lu_praemienverbilligung",
+    "id": "zh_migrationsamt_eu_efta_1_2_adressatenkreis",
     "level": "cantonal",
-    "source_name": "WAS Luzern (Ausgleichskasse)",
-    "source_url": "https://www.was-luzern.ch/praemienverbilligung",
-    "title": "Prämienverbilligung Kanton Luzern",
-    "file": "lu_praemienverbilligung.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Adressatenkreis (Freizügigkeitsabkommen EU/EFTA, 1.2)",
+    "file": "zh_migrationsamt_eu_efta_1_2_adressatenkreis.txt"
   },
   {
-    "id": "ag_betreibungsregisterauszug",
+    "id": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige",
     "level": "cantonal",
-    "source_name": "Kanton Aargau - SmartServicePortal",
-    "source_url": "https://www.ag.ch/de/smartserviceportal/dienstleistungen?dl=betreibungsregisterauszug-bestellen-769919d2-dfa6-4e0e-9653-0c3f5ca92eef_de",
-    "title": "Betreibungsregisterauszug Kanton Aargau",
-    "file": "ag_betreibungsregisterauszug.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Einreisebestimmungen für EU/EFTA-Staatsangehörige (Freizügigkeitsabkommen EU/EFTA, 2.1)",
+    "file": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige.txt"
   },
   {
-    "id": "sg_c_bewilligung_verlaengerung",
+    "id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
     "level": "cantonal",
-    "source_name": "Kanton St. Gallen",
-    "source_url": "https://www.sg.ch/sicherheit/einreise-aufenthalt-ausreise/spezial-news/Verlaengerungen_C-Bewilligung.html",
-    "title": "Verlängerung der Niederlassungsbewilligung Kanton St. Gallen",
-    "file": "sg_c_bewilligung_verlaengerung.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Einreisebestimmungen für Familienangehörige und entsandte Dienstleistungserbringer aus Drittstaaten (Freizügigkeitsabkommen EU/EFTA, 2.2)",
+    "file": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten.txt"
   },
   {
-    "id": "bs_handelsregisteramt",
+    "id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
     "level": "cantonal",
-    "source_name": "Kanton Basel-Stadt, Justiz- und Sicherheitsdepartement",
-    "source_url": "https://www.bs.ch/jsd/zentraler-rechtsdienst/handelsregisteramt",
-    "title": "Handelsregisteramt Kanton Basel-Stadt",
-    "file": "bs_handelsregisteramt.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Anmeldung nach Wohnortwechsel in der Schweiz (Freizügigkeitsabkommen EU/EFTA, 2.4)",
+    "file": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel.txt"
   },
   {
-    "id": "so_stipendien",
+    "id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
     "level": "cantonal",
-    "source_name": "Sozialhilfehandbuch Kanton Solothurn",
-    "source_url": "https://sozialhilfehandbuch.so.ch/grundlagen/grundlagen-soziale-sicherheit/bedarfsleistungen/stipendien/",
-    "title": "Stipendien Kanton Solothurn",
-    "file": "so_stipendien.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Wochenaufenthalt (Freizügigkeitsabkommen EU/EFTA, 2.5)",
+    "file": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt.txt"
   },
   {
-    "id": "tg_praemienverbilligung",
+    "id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
     "level": "cantonal",
-    "source_name": "Amt für Gesundheit, Kanton Thurgau",
-    "source_url": "https://gesundheit.tg.ch/bevoelkerung/krankenversicherung/praemienverbilligung.html/5578",
-    "title": "Prämienverbilligung Kanton Thurgau",
-    "file": "tg_praemienverbilligung.txt"
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Acht-Tage-Regelung (Freizügigkeitsabkommen EU/EFTA, 3.3)",
+    "file": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung.txt"
   },
   {
-    "id": "bag_krankenversicherung",
-    "level": "federal",
-    "source_name": "Bundesamt für Gesundheit BAG",
-    "source_url": "https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze",
-    "title": "Obligatorische Krankenpflegeversicherung",
-    "file": "bag_krankenversicherung.txt"
+    "id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Verbleiberecht – Einleitung (Freizügigkeitsabkommen EU/EFTA, 4)",
+    "file": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro.txt"
   },
   {
-    "id": "estv_quellensteuer",
+    "id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Verbleiberecht von Familienangehörigen (Freizügigkeitsabkommen EU/EFTA, 4.2)",
+    "file": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Zulassung ohne Erwerbstätigkeit – Einleitung (Freizügigkeitsabkommen EU/EFTA, 5)",
+    "file": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Schülerinnen bzw. Schüler und Studierende (Freizügigkeitsabkommen EU/EFTA, 5.1)",
+    "file": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Aufenthalt zur Stellensuche (Freizügigkeitsabkommen EU/EFTA, 5.4)",
+    "file": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Zulassung aus wichtigen Gründen (Freizügigkeitsabkommen EU/EFTA, 5.5)",
+    "file": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Erwerbstätigkeit von Personen, die im Familiennachzug eingereist sind (Freizügigkeitsabkommen EU/EFTA, 6.2)",
+    "file": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Aufenthalt nach Auflösung der Ehe (Freizügigkeitsabkommen EU/EFTA, 6.3)",
+    "file": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Eigenständiges Aufenthaltsrecht von Kindern (Freizügigkeitsabkommen EU/EFTA, 6.6)",
+    "file": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Erlöschen von Bewilligungen bei Auslandaufenthalten (Freizügigkeitsabkommen EU/EFTA, 7.4)",
+    "file": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_9_gebuehren",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Gebühren (Freizügigkeitsabkommen EU/EFTA, 9)",
+    "file": "zh_migrationsamt_eu_efta_9_gebuehren.txt"
+  },
+  {
+    "id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Freiz%C3%BCgigkeitsabkommen%20EU-26,%20EFTA-Staaten_IW.pdf",
+    "title": "Inkrafttreten (Freizügigkeitsabkommen EU/EFTA, 10)",
+    "file": "zh_migrationsamt_eu_efta_10_inkrafttreten.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Gegenstand (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 1.1)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Begriffe (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 1.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Bewilligungspflicht (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Gesuchseinreichung (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 3.1)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Einreiseerlaubnis und Anmeldung – Einleitung (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 3.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Kurzfristige Erwerbstätigkeit bis vier Monate (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 3.2.1)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Langfristige Erwerbstätigkeit (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 3.2.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Akademische Aus- und Weiterbildung (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 3.4.1)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Ausländische Ärzte und Medizinstudenten für Aufenthalte bis zu vier Monaten (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 3.4.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Höchstzahlen (Kontingente) (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.1)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Kurzaufenthaltsbewilligungen – Einleitung (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Stellenwechsel (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.2.1)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Verlängerung von Kurzaufenthaltsbewilligungen (Art. 32 Abs. 3 AIG) (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.2.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Aufenthaltsbewilligungen – Einleitung (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.3)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Erwerbstätigkeit von Au-Pair-Angestellten (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.5.2)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Erwerbstätigkeit von anerkannten Flüchtlingen und vorläufig Aufgenommenen (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.5.3)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Erwerbstätigkeit von Asylsuchenden (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.5.4)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Nebenbeschäftigung (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 4.8)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Erfüllter Aufenthaltszweck (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 5)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck.txt"
+  },
+  {
+    "id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
+    "level": "cantonal",
+    "source_name": "Sicherheitsdirektion Kanton Zürich, Migrationsamt",
+    "source_url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einreise-aufenthalt/weisungen/Aufenthalt%20mit%20Erwerbst%C3%A4tigkeit%20aus%20Drittstaaten_IW_AIG.pdf",
+    "title": "Inkrafttreten (Aufenthalt mit Erwerbstätigkeit aus Drittstaaten, 7)",
+    "file": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
     "level": "federal",
     "source_name": "Eidgenössische Steuerverwaltung ESTV",
-    "source_url": "https://www.estv.admin.ch/estv/de/home/direkte-bundessteuer/dbst-quellensteuer.html",
-    "title": "Quellensteuer",
-    "file": "estv_quellensteuer.txt"
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsatz (Kreisschreiben Nr. 45 Quellenbesteuerung, 2.2.1)",
+    "file": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz.txt"
   },
   {
-    "id": "astra_fuehrerausweis",
+    "id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
     "level": "federal",
-    "source_name": "Bundesamt für Strassen ASTRA",
-    "source_url": "https://www.astra.admin.ch/de/fuehrerausweis-ausbildung",
-    "title": "Führerausweis auf Probe",
-    "file": "astra_fuehrerausweis.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsätze (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.1)",
+    "file": "estv_ks45_quellenbesteuerung_3_1_grundsaetze.txt"
   },
   {
-    "id": "bsv_familienzulagen",
+    "id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
     "level": "federal",
-    "source_name": "Bundesamt für Sozialversicherungen BSV",
-    "source_url": "https://www.bsv.admin.ch/bsv/de/home/sozialversicherungen/famz.html",
-    "title": "Familienzulagen",
-    "file": "bsv_familienzulagen.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Arbeitnehmer mit Ansässigkeit in der Schweiz (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.1.1)",
+    "file": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz.txt"
   },
   {
-    "id": "sva_zh_beitragspflicht",
+    "id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
     "level": "federal",
-    "source_name": "Sozialversicherungsanstalt SVA Zürich",
-    "source_url": "https://svazurich.ch/unsere-produkte/ahv/beitraege/beitragspflicht/selbstaendigerwerbende.html",
-    "title": "AHV-Beitragspflicht Selbständigerwerbende",
-    "file": "sva_zh_beitragspflicht.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Arbeitnehmer mit Ansässigkeit im Ausland (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.1.2)",
+    "file": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland.txt"
   },
   {
-    "id": "bj_erwachsenenschutz",
+    "id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
     "level": "federal",
-    "source_name": "Bundesamt für Justiz BJ",
-    "source_url": "https://www.bj.admin.ch/de/kindes-und-erwachsenenschutzrecht",
-    "title": "Kindes- und Erwachsenenschutzrecht",
-    "file": "bj_erwachsenenschutz.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "In der Schweiz beschränkt der Quellensteuer unterliegende Einkünfte aus Arbeitsverhältnis (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.2)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte.txt"
   },
   {
-    "id": "stzh_baubewilligungsverfahren",
-    "level": "municipal",
-    "source_name": "Stadt Zürich",
-    "source_url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/baubewilligungen/bewilligungsprozess/verfahren.html",
-    "title": "Baubewilligungsverfahren Stadt Zürich",
-    "file": "stzh_baubewilligungsverfahren.txt"
-  },
-  {
-    "id": "bern_kehricht",
-    "level": "municipal",
-    "source_name": "Stadt Bern",
-    "source_url": "https://www.bern.ch/themen/abfall/abfuhr/abfallarten/kehricht-und-kleinsperrgut",
-    "title": "Kehrichtentsorgung Stadt Bern",
-    "file": "bern_kehricht.txt"
-  },
-  {
-    "id": "luzern_kindergarten",
-    "level": "municipal",
-    "source_name": "Stadt Luzern, Volksschule",
-    "source_url": "https://www.stadtluzern.ch/dienstleistungeninformation/39755",
-    "title": "Eintritt in den Kindergarten Stadt Luzern",
-    "file": "luzern_kindergarten.txt"
-  },
-  {
-    "id": "stgallen_aufenthalt_niederlassung",
-    "level": "municipal",
-    "source_name": "Stadt St. Gallen",
-    "source_url": "https://www.stadt.sg.ch/home/gesellschaft-sicherheit/leben-schweiz/aufenthalt-niederlassung-bewilligung.html",
-    "title": "Aufenthalt und Niederlassung Stadt St. Gallen",
-    "file": "stgallen_aufenthalt_niederlassung.txt"
-  },
-  {
-    "id": "winterthur_rechtsmittelverfahren",
-    "level": "municipal",
-    "source_name": "Stadt Winterthur",
-    "source_url": "https://stadt.winterthur.ch/themen/leben-in-winterthur/planen-und-bauen/wir-beraten-sie/baubewilligungsverfahren/interessenwahrung-rechtsmittelverfahren",
-    "title": "Rechtsmittelverfahren Baubewilligung Stadt Winterthur",
-    "file": "winterthur_rechtsmittelverfahren.txt"
-  },
-  {
-    "id": "aarau_inventuraufnahme_todesfall",
-    "level": "municipal",
-    "source_name": "Stadt Aarau",
-    "source_url": "https://www.aarau.ch/leben/persoenliches/inventarisierung-todesfaelle.html/569",
-    "title": "Inventuraufnahme im Todesfall Stadt Aarau",
-    "file": "aarau_inventuraufnahme_todesfall.txt"
-  },
-  {
-    "id": "frauenfeld_zivilstandsmutation",
-    "level": "municipal",
-    "source_name": "Stadt Frauenfeld",
-    "source_url": "https://www.frauenfeld.ch/politik-verwaltung/verwaltung/stadtverwaltung/departement-fuer-finanzen-und-zentrales/stadtkanzlei/einwohnerdienste/einwohnerregister/meldewesen-einwohnerregister.html/2500",
-    "title": "Mutationen nach Zivilstandsereignis Stadt Frauenfeld",
-    "file": "frauenfeld_zivilstandsmutation.txt"
-  },
-  {
-    "id": "zg_praemienverbilligung",
-    "level": "cantonal",
-    "source_name": "Kanton Zug, Gesundheitsdirektion",
-    "source_url": "https://zg.ch/de/gesundheit/krankenversicherung/praemienverbilligung",
-    "title": "Prämienverbilligung Kanton Zug",
-    "file": "zg_praemienverbilligung.txt"
-  },
-  {
-    "id": "bl_betreibungsregisterauszug",
-    "level": "cantonal",
-    "source_name": "Kanton Basel-Landschaft, Zivilrechtsverwaltung",
-    "source_url": "https://oslvb.bl.ch/Behoerdengang/291",
-    "title": "Betreibungsregisterauszug Kanton Basel-Landschaft",
-    "file": "bl_betreibungsregisterauszug.txt"
-  },
-  {
-    "id": "gl_betreibungskosten",
-    "level": "cantonal",
-    "source_name": "Kanton Glarus, Betreibungs- und Konkursamt",
-    "source_url": "https://www.gl.ch/verwaltung/sicherheit-und-justiz/justiz/betreibungs-konkursamt/haeufig-gestellte-fragen-faq.html/1256",
-    "title": "Betreibungskosten Kanton Glarus",
-    "file": "gl_betreibungskosten.txt"
-  },
-  {
-    "id": "seco_kurzarbeitsentschaedigung",
+    "id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
     "level": "federal",
-    "source_name": "Staatssekretariat für Wirtschaft SECO",
-    "source_url": "https://www.seco.admin.ch/seco/de/home/Arbeit/Arbeitslosenversicherung/leistungen/kurzarbeitsentschaedigung.html",
-    "title": "Kurzarbeitsentschädigung",
-    "file": "seco_kurzarbeitsentschaedigung.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Entschädigung für Berufskosten (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.4)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten.txt"
   },
   {
-    "id": "bazg_einfuhr_schweiz",
+    "id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
     "level": "federal",
-    "source_name": "Bundesamt für Zoll und Grenzsicherheit BAZG",
-    "source_url": "https://www.bazg.admin.ch/de/reisen-einkaufen-private-einfuhr-in-die-schweiz",
-    "title": "Private Einfuhr in die Schweiz",
-    "file": "bazg_einfuhr_schweiz.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Spesenzahlungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.5)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen.txt"
   },
   {
-    "id": "bwo_formularpflicht_mietzins",
+    "id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
     "level": "federal",
-    "source_name": "Bundesamt für Wohnungswesen BWO",
-    "source_url": "https://www.bwo.admin.ch/de/formularpflicht",
-    "title": "Formularpflicht Anfangsmietzins",
-    "file": "bwo_formularpflicht_mietzins.txt"
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Abgangsentschädigungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 3.2.8)",
+    "file": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen.txt"
   },
   {
-    "id": "chur_hundewesen",
-    "level": "municipal",
-    "source_name": "Stadt Chur, Stadtpolizei",
-    "source_url": "https://www.chur.ch/stadtpolizei/327",
-    "title": "Hundewesen Stadt Chur",
-    "file": "chur_hundewesen.txt"
+    "id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Tarif für Alleinerziehende (Tarifcodes H bzw. P) (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.3)",
+    "file": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende.txt"
   },
   {
-    "id": "schaffhausen_umzug",
-    "level": "municipal",
-    "source_name": "Stadt Schaffhausen",
-    "source_url": "https://www.stadt-schaffhausen.ch/dienste/100114",
-    "title": "Zuzug, Umzug, Wegzug Stadt Schaffhausen",
-    "file": "schaffhausen_umzug.txt"
+    "id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Kirchensteuerpflicht (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.8)",
+    "file": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht.txt"
   },
   {
-    "id": "thun_anmeldung_zuzug",
-    "level": "municipal",
-    "source_name": "Stadt Thun, Einwohnerdienste",
-    "source_url": "https://www.thun.ch/dienstleistungen/86108",
-    "title": "Anmeldung bei Zuzug Stadt Thun",
-    "file": "thun_anmeldung_zuzug.txt"
+    "id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Härtefallregelung (Kreisschreiben Nr. 45 Quellenbesteuerung, 4.9)",
+    "file": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Abgrenzungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 5)",
+    "file": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Vorbemerkungen (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.1)",
+    "file": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsätze (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.2)",
+    "file": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Quellensteuerberechnung bei Leistungen vor Antritt des Arbeitsverhältnisses (Kreisschreiben Nr. 45 Quellenbesteuerung, 6.8)",
+    "file": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Grundsätze (Kreisschreiben Nr. 45 Quellenbesteuerung, 7.2)",
+    "file": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Rechte des quellensteuerpflichtigen Arbeitnehmers (Kreisschreiben Nr. 45 Quellenbesteuerung, 10.1)",
+    "file": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Pflichten der quellensteuerpflichtigen Arbeitnehmer (Kreisschreiben Nr. 45 Quellenbesteuerung, 10.2)",
+    "file": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Wechsel von der Quellenbesteuerung zur ordentlichen Veranlagung (Kreisschreiben Nr. 45 Quellenbesteuerung, 12.1)",
+    "file": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich.txt"
+  },
+  {
+    "id": "estv_ks45_quellenbesteuerung_13_inkrafttreten",
+    "level": "federal",
+    "source_name": "Eidgenössische Steuerverwaltung ESTV",
+    "source_url": "https://www.estv2.admin.ch/dvs/kreisschreiben/dbst-ks-2019-1-045-d-de.pdf",
+    "title": "Inkrafttreten, Aufhebungen und Übergangsrecht (Kreisschreiben Nr. 45 Quellenbesteuerung, 13)",
+    "file": "estv_ks45_quellenbesteuerung_13_inkrafttreten.txt"
   }
 ]

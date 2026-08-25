@@ -1,0 +1,7 @@
+Bei der Berechnung der Quellensteuer nach dem Monatsmodell gilt der Monat als Steuerperiode. Für die Berechnung des Steuerabzugs sind die monatlichen Bruttoeinkünfte massgebend, d.h. sämtliche steuerpflichtigen Leistungen, die im entsprechenden Monat an den quellensteuerpflichtigen Arbeitnehmer ausgerichtet werden, sind in der Regel zusammenzuzählen und als Ganzes der Quellenbesteuerung zu unterwerfen.
+
+Für den Quellensteuerabzug sind die Verhältnisse im Zeitpunkt der Fälligkeit der steuerbaren Leistung massgebend. Im Normalfall wird die geschuldete Quellensteuer aufgrund der Bruttoeinkünfte eines Monats durch Multiplikation der Bruttoeinkünfte mit dem Steuersatz gemäss anwendbarem Quellensteuertarif ermittelt. Dieselbe Vorgehensweise ist anzuwenden, wenn der Arbeitnehmer im Stundenlohn angestellt ist und ihm der Lohn monatlich ausbezahlt wird.
+
+In Einzelfällen kann eine Berechnung des satzbestimmenden Einkommens notwendig sein (vgl. Ziffer 6.3 ff. unten). Dies ist beispielsweise bei mehreren Arbeitsverhältnissen, bei untermonatiger Aufnahme bzw. Beendigung des Arbeitsverhältnisses oder bei der Ausscheidung von Arbeitstagen ins Ausland für Steuerpflichtige ohne Ansässigkeit in der Schweiz der Fall.
+
+Der 13. Monatslohn ist grundsätzlich im Monat der Auszahlung an der Quelle zu besteuern.

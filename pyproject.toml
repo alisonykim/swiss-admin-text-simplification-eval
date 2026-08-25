@@ -12,11 +12,9 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
-analysis = ["shap>=0.45", "scikit-learn>=1.4"]
 
 [project.scripts]
 plz-run = "pipeline:main"
-plz-explain = "explain:main"
 plz-xai = "xai:main"
 
 [build-system]
@@ -24,7 +22,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["config", "diffing", "evaluate", "explain", "llm_clients", "pipeline", "prompts", "simplify", "xai"]
+py-modules = ["config", "diffing", "evaluate", "llm_clients", "pipeline", "prompts", "simplify", "xai"]
 
 [tool.setuptools.package-dir]
 "" = "src"
