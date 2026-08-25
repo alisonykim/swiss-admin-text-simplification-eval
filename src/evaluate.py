@@ -7,9 +7,9 @@ import json
 import re
 from dataclasses import dataclass
 
-from . import config
-from .llm_clients import call_model, extract_json
-from .prompts import JUDGE_SYSTEM_PROMPT, build_judge_user_prompt
+import config
+from llm_clients import call_model, extract_json
+from prompts import JUDGE_SYSTEM_PROMPT, build_judge_user_prompt
 
 _VOWELS = 'aeiouyäöü'
 _WORD_RE = re.compile(r'[A-Za-zÄÖÜäöüß]+')

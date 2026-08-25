@@ -20,12 +20,12 @@ import time
 import numpy as np
 from difflib import SequenceMatcher
 
-from . import config
-from .evaluate import compute_readability, split_sentences
-from .llm_clients import call_huggingface_with_logprobs, extract_json
-from .pipeline import load_texts
-from .prompts import SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt
-from .simplify import simplify
+import config
+from evaluate import compute_readability, split_sentences
+from llm_clients import call_huggingface_with_logprobs, extract_json
+from pipeline import load_texts
+from prompts import SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt
+from simplify import simplify
 
 RESULTS_DIR = config.DATA_DIR / 'results'
 MODEL_IDS = ['claude', 'deepseek', 'mistral', 'qwen']

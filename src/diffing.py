@@ -10,7 +10,7 @@ import re
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 
-from .evaluate import split_sentences, tokenize_words
+from evaluate import split_sentences, tokenize_words
 
 # Non-exhausive list of common Swiss administrative/legal jargon; extend as the corpus grows
 JARGON_TERMS = [

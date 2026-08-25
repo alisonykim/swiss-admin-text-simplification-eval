@@ -11,10 +11,10 @@ import time
 
 import pandas as pd
 
-from . import config
-from .diffing import compute_diff_tags
-from .evaluate import compute_readability, judge
-from .simplify import simplify
+import config
+from diffing import compute_diff_tags
+from evaluate import compute_readability, judge
+from simplify import simplify
 
 TEXTS_DIR = config.DATA_DIR / 'texts'
 TEXTS_MANIFEST = TEXTS_DIR / 'manifest.json'

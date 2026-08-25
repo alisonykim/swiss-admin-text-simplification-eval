@@ -6,8 +6,8 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass, field
 
-from .llm_clients import call_model, extract_json
-from .prompts import SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt
+from llm_clients import call_model, extract_json
+from prompts import SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt
 
 
 @dataclass

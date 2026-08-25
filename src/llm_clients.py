@@ -11,7 +11,7 @@ import time
 import anthropic
 from openai import OpenAI
 
-from . import config
+import config
 
 MAX_RETRIES = 4
 BACKOFF_BASE_SECONDS = 2

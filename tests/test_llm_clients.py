@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import pytest
 
-from plain_language_ch_verwaltung.llm_clients import extract_json
+from llm_clients import extract_json
 
 
 def test_extract_json_handles_markdown_fence():

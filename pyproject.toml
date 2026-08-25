@@ -15,16 +15,19 @@ dev = ["pytest>=8.0"]
 analysis = ["shap>=0.45", "scikit-learn>=1.4"]
 
 [project.scripts]
-plz-run = "plain_language_ch_verwaltung.pipeline:main"
-plz-explain = "plain_language_ch_verwaltung.explain:main"
-plz-xai = "plain_language_ch_verwaltung.xai:main"
+plz-run = "pipeline:main"
+plz-explain = "explain:main"
+plz-xai = "xai:main"
 
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+py-modules = ["config", "diffing", "evaluate", "explain", "llm_clients", "pipeline", "prompts", "simplify", "xai"]
+
+[tool.setuptools.package-dir]
+"" = "src"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

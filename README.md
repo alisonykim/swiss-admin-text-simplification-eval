@@ -12,7 +12,7 @@ Swiss Verwaltungstexte are often dense, legalistic, and hard to parse for people
 The Kanton Zürich data science team already runs [`simply-simplify-language`](https://github.com/machinelearningZH/simply-simplify-language) in production. It is a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom readability index (ZIX) and sentence-by-sentence
 coaching feedback.
 
-This project asks a narrower, different question: *How would one know, systematically, whether a given model or prompt is actually good at this*. It is a benchmark and evaluation harness rather than an end-user app:
+This project asks a narrower, different question: *How would one know, systematically, whether a given model or prompt is actually good at this?* It is a benchmark and evaluation harness rather than an end-user app:
 
 - **Published, citable readability formulas** (Wiener Sachtextformel, LIX)
 - **A model-agnostic, rule-based diff tagger** that cross-checks what a model *claims* it changed (sentence splits, passive→active, jargon removed/kept) against an independent, non-LLM signal
@@ -89,9 +89,9 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 ## Methodology Notes & Limitations
 
-- **The Hugging Face Inference Providers catalog rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on 2026-08-22: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check rather than assuming a doc page's example snippet is current.
+- **The Hugging Face Inference Providers catalog rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on August 22, 2026: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check rather than assuming a doc page's example snippet is current.
 
-Mistral's own API model catalog rotates, too; `ministral-3-8b-2512` was current as of 2026-08-22. Check [docs.mistral.ai/getting-started/models/models_overview](https://docs.mistral.ai/getting-started/models/models_overview/) if it throws an error later, and specifically re-check that it is still open-weight.
+Mistral's own API model catalog rotates, too; `ministral-3-8b-2512` was current as of August 22, 2026. Check [docs.mistral.ai/getting-started/models/models_overview](https://docs.mistral.ai/getting-started/models/models_overview/) if it throws an error later, and specifically re-check that it is still open-weight.
 
 - **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics do not judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
 

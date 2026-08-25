@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from plain_language_ch_verwaltung.diffing import compute_diff_tags
+from diffing import compute_diff_tags
 
 
 def test_jargon_term_removal_is_detected():

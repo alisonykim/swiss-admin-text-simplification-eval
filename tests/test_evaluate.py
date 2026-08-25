@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from plain_language_ch_verwaltung.evaluate import compute_readability
+from evaluate import compute_readability
 
 
 def test_simple_text_scores_easier_than_complex_text():

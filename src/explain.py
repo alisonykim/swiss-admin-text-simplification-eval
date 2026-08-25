@@ -21,7 +21,7 @@ import shap
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import cross_val_score
 
-from . import config
+import config
 
 RESULTS_DIR = config.DATA_DIR / 'results'
 MODEL_IDS = ['claude', 'deepseek', 'mistral', 'qwen']

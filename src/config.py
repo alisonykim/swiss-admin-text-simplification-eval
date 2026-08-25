@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = REPO_ROOT / 'data'
 
 HF_PROVIDER = os.getenv('HF_PROVIDER', 'novita')
