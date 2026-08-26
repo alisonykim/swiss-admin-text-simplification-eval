@@ -24,7 +24,7 @@ Rather than developing another end-user app, this project is intended to provide
 
 - **Published, citable readability formulas** (Wiener Sachtextformel, LIX)
 - **A model-agnostic, rule-based diff tagger** that cross-checks what a model *claims* it changed (sentence splits, passive→active, jargon removed/kept) against an independent, non-LLM signal
-- **A fixed, separate judge model** (Qwen) scoring all four models, including itself, since Qwen is also one of the four being compared. The interactive dashboard's *Vergleich* tab has a toggle to include/exclude those rows from Qwen's aggregate score.
+- **A fixed, separate judge model** (Qwen) scoring all four models, including itself, since Qwen is also one of the four being compared. The interactive dashboard's *Modell-Vergleich* tab has a toggle to include/exclude those rows from Qwen's aggregate score.
 
 ## Project Steps
 
@@ -47,7 +47,7 @@ Output: `data/results/results.json` (full, including simplified texts, rationale
 
 ### Step 2: Explainability analysis (`klartext-xray`)
 
-On top of the core (text x model) comparison, `klartext-xray` runs four further black-box analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, DeepSeek per-token confidence, and self-consistency under repeated sampling.
+On top of the core (text x model) comparison, `klartext-xray` runs four further black-box analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, self-consistency under repeated sampling, and DeepSeek per-token confidence.
 
 Output: `data/results/xai_*.json`.
 
@@ -57,15 +57,15 @@ Attention maps / SHAP / gradient attribution in their classic form need white-bo
 
 `klartext-xray` runs four techniques within that constraint, though they are not all the same *kind* of technique, and this project does not treat them as such:
 
-- **Sentence-ablation attribution** *(genuine black-box attribution)*: remove one sentence from the source at a time, re-simplify, measure how much the output changes. This is not a proxy for LIME/SHAP, it is the same underlying mechanism (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, a real, citable NLP interpretability technique, simplified relative to LIME (no surrogate-model fit) and SHAP (no combinatorial coalition averaging).
-- **DeepSeek per-token logprobs** *(uncertainty quantification, not attribution)*: the one piece of genuine model-internal signal in this project, telling you how confident the model was per token, not why it made a choice. Confirmed empirically (not assumed from docs) that of all four providers, only DeepSeek's backend actually returns logprobs.
-- **TF-IDF faithfulness cross-check** and **Self-consistency** *(evaluation/reliability checks, not attribution)*: the former is an independent, deterministic lexical-overlap signal compared against the LLM judge's faithfulness score, run across the full corpus; the latter runs each model 3x on the same text to measure output stability under repeated sampling. Neither explains a specific model decision, they answer "can I trust this score" and "is this model's behavior stable."
+- **Sentence-ablation attribution** *(black-box attribution)*: remove one sentence from the source at a time, re-simplify, then measure how much the output changes. This is the same underlying mechanism as LIME and SHAP (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, simplified (😉) relative to LIME (no surrogate-model fit) and SHAP (no combinatorial coalition averaging).
+- **TF-IDF faithfulness cross-check** and **Self-consistency** *(evaluation/reliability checks, not attribution)*: the former is an independent, deterministic lexical-overlap signal compared against the LLM judge's faithfulness score, run across the full corpus; the latter runs each model 3x on the same text to measure output stability under repeated sampling. Neither explains a specific model decision, but rather answers, "Is this score trustworthy?" and "Is this model's behaviour stable?"
+- **DeepSeek per-token logprobs** *(uncertainty quantification, not attribution)*: the single genuine model-internal signal in this project, indicating how confident the model was per token, not why it made a choice.
 
-All four live under one dashboard tab for UX reasons, one genuine attribution method plus three supporting checks, not four methodologically identical techniques. Ablation and self-consistency run on a representative text subset rather than the full corpus, since both make several extra API calls per text; these subsets are illustrative, not exhaustive.
+All four analyses can be found in the *Erklärbarkeit* tab on the dashboard. Ablation and self-consistency run on a representative six-text subset, chosen as the three longest texts per source (Kanton Zürich, Bund) by sentence count. This way, each source has enough sentences to produce a meaningful attribution signal. Illustrative, not exhaustive.
 
 ---
 
-Both steps are explorable interactively in a published dashboard (*Vergleich* / *Text-Explorer* / *Erklärbarkeit* tabs), built directly from the `data/results/*.json` files these steps write, and published via GitHub Pages from this repo's `docs/` folder.
+Both steps are explorable interactively in a published dashboard (*Modell-Vergleich* / *Text-Explorer* / *Erklärbarkeit* tabs), built directly from the `data/results/*.json` files these steps write, and published via GitHub Pages from this repo's `docs/` folder.
 
 ## Setup
 
@@ -118,19 +118,21 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 - **The jargon wordlist** in `diffing.py` is a small seed list, not a comprehensive lexicon of *Verwaltungsdeutsch*. It should be extended as the corpus grows.
 
+- **Jargon matching is keyword-based, not morphological.** A term must start at a word boundary, but nothing is required after it, so German noun inflection (*zuständig* → *zuständige*/*zuständigen*) still matches correctly. This can still false-positive on an unrelated word that shares a root and also starts at a boundary (e.g. *gesucht*, the past participle of *suchen*, vs. the noun *Gesuch*); fully resolving that needs a lemmatizer. An earlier version matched a term anywhere inside a word at all (e.g. *erlass* inside the unrelated compound *Hauptniederlassung*); fixed to left-boundary-only matching and re-verified against the full corpus.
+
 - **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal, but not for a claim like "this model removed exactly $N$ passive constructions."
 
 - **The corpus was rebuilt once already** after an audit against live source URLs found verbatim-quoting errors in most entries. The current corpus uses the subsection-boundary method described in [Data](#data) above specifically to make the excerpt boundary auditable.
 
-- **The interactive dashboard was built with AI coding assistance** (Claude). The ideas, corrections, and decisions steering the prompting, the methodology choices, the corpus curation, and the interpretation of results, are my own.
+- **The interactive dashboard was built with AI coding assistance** (Claude), which was also used to edit code docstrings and check my German prose throughout. The ideas, corrections, and decisions steering the prompting, the methodology choices, the corpus curation, and the interpretation of results, are my own.
 
 ## Status
 
-Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and explainability analyses re-run against it. Full four-model pipeline, rule-based diff tagging, LLM-judge scoring, four black-box explainability analyses, and an interactive dashboard (*Text-Explorer* / *Vergleich* / *Erklärbarkeit* tabs) built directly from `data/results/*.json`, published via GitHub Pages.
+Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and explainability analyses re-run against it. Full four-model pipeline, rule-based diff tagging, LLM-judge scoring, four black-box explainability analyses, and an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Erklärbarkeit* tabs) built directly from `data/results/*.json`, published via GitHub Pages.
 
 ## Next iteration
 
 - **Multi-judge panel**: Have all four models judge all four models' outputs and measure inter-judge agreement.
-- **Proxy-model feature importance** (`plz-explain`): fits a small model over the diff-tag features to test whether they predict readability improvement. Hasn't found a generalizable signal at the current sample size; worth revisiting with more data or richer features rather than treating the current result as final.
+- **Proxy-model feature importance** (`src/explain.py`, not wired to a CLI command): fits a small model over the diff-tag features to test whether they predict readability improvement. Hasn't found a generalizable signal at the current sample size; worth revisiting with more data or richer features rather than treating the current result as final.
 - Extend to a second German-speaking canton with a comparably high foreign-resident share (Basel-Stadt is the leading candidate), and to the remaining Migrationsamt directives and Quellensteuer guidance not yet included from Zürich.
 - Extend the jargon wordlist beyond its current small seed list.

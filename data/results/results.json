@@ -19,7 +19,6 @@
     "passive_after": 0,
     "jargon_removed": [],
     "jargon_remaining": [
-      "gesuch",
       "zuständig"
     ],
     "lexical_substitutions": [
@@ -119,9 +118,7 @@
     "jargon_removed": [
       "zuständig"
     ],
-    "jargon_remaining": [
-      "gesuch"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "betreffend",
@@ -193,7 +190,6 @@
     "passive_before": 0,
     "passive_after": 1,
     "jargon_removed": [
-      "gesuch",
       "zuständig"
     ],
     "jargon_remaining": [],
@@ -279,7 +275,6 @@
     "passive_before": 0,
     "passive_after": 0,
     "jargon_removed": [
-      "gesuch",
       "zuständig"
     ],
     "jargon_remaining": [],
@@ -908,9 +903,7 @@
     "sentences_after": 22,
     "passive_before": 3,
     "passive_after": 1,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -1056,9 +1049,7 @@
     "sentences_after": 7,
     "passive_before": 3,
     "passive_after": 0,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -1181,9 +1172,7 @@
     "sentences_after": 21,
     "passive_before": 3,
     "passive_after": 1,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -1346,9 +1335,7 @@
     "sentences_after": 15,
     "passive_before": 3,
     "passive_after": 0,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -6805,8 +6792,7 @@
     "passive_before": 0,
     "passive_after": 1,
     "jargon_removed": [
-      "gemäss",
-      "verordnung"
+      "gemäss"
     ],
     "jargon_remaining": [],
     "lexical_substitutions": [
@@ -6974,8 +6960,7 @@
     "passive_before": 0,
     "passive_after": 1,
     "jargon_removed": [
-      "gemäss",
-      "verordnung"
+      "gemäss"
     ],
     "jargon_remaining": [],
     "lexical_substitutions": [
@@ -7075,9 +7060,7 @@
     "jargon_removed": [
       "gemäss"
     ],
-    "jargon_remaining": [
-      "verordnung"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "handelt es sich bei der ehegattin oder beim ehegatten um",
@@ -7264,8 +7247,7 @@
     "passive_before": 0,
     "passive_after": 0,
     "jargon_removed": [
-      "gemäss",
-      "verordnung"
+      "gemäss"
     ],
     "jargon_remaining": [],
     "lexical_substitutions": [
@@ -8142,8 +8124,7 @@
     "passive_after": 0,
     "jargon_removed": [],
     "jargon_remaining": [
-      "verordnung",
-      "erlass"
+      "verordnung"
     ],
     "lexical_substitutions": [
       [
@@ -8205,9 +8186,7 @@
     "jargon_removed": [
       "verordnung"
     ],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "die ausstellung erneuerung verlängerung und änderung von kurzaufenthalts aufenthalts und niederlassungsbewilligungen",
@@ -8271,8 +8250,7 @@
     "passive_after": 0,
     "jargon_removed": [],
     "jargon_remaining": [
-      "verordnung",
-      "erlass"
+      "verordnung"
     ],
     "lexical_substitutions": [
       [
@@ -8339,9 +8317,7 @@
     "sentences_after": 3,
     "passive_before": 0,
     "passive_after": 0,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [
       "verordnung"
     ],
@@ -9664,9 +9640,7 @@
     "passive_before": 2,
     "passive_after": 1,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "ausländer die",
@@ -9837,9 +9811,7 @@
     "passive_before": 2,
     "passive_after": 0,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "eine erwerbstätigkeit ausüben wollen benötigen unabhängig von der aufenthaltsdauer",
@@ -9975,9 +9947,7 @@
     "passive_before": 2,
     "passive_after": 0,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "eine erwerbstätigkeit ausüben wollen benötigen unabhängig von der aufenthaltsdauer eine bewilligung diese ist beim awi zu beantragen art abs aig ausländer können zur ausübung einer unselbständigen oder selbständigen erwerbstätigkeit zugelassen werden wenn dies dem gesamtwirtschaftlichen interesse der schweiz entspricht art und aig die zahl der erstmaligen kurzaufenthalts und aufenthaltsbewilligungen zur ausübung einer erwerbstätigkeit wird vom bundesrat mittels jährlich festzulegender kontingente begrenzt art aig von der bewilligungspflicht ausgenommen sind familienangehörige mit anspruch auf die ausübung einer erwerbstätigkeit art aig",
@@ -10102,9 +10072,7 @@
     "passive_before": 2,
     "passive_after": 0,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "eine erwerbstätigkeit ausüben wollen benötigen unabhängig von der aufenthaltsdauer",
@@ -11017,9 +10985,7 @@
     "jargon_removed": [
       "gemäss"
     ],
-    "jargon_remaining": [
-      "gesuch"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "die",
@@ -11179,7 +11145,6 @@
     "passive_before": 3,
     "passive_after": 1,
     "jargon_removed": [
-      "gesuch",
       "gemäss"
     ],
     "jargon_remaining": [],
@@ -11270,7 +11235,6 @@
     "passive_before": 3,
     "passive_after": 0,
     "jargon_removed": [
-      "gesuch",
       "gemäss"
     ],
     "jargon_remaining": [],
@@ -11400,7 +11364,6 @@
     "passive_before": 3,
     "passive_after": 0,
     "jargon_removed": [
-      "gesuch",
       "gemäss"
     ],
     "jargon_remaining": [],
@@ -15751,7 +15714,6 @@
     "passive_before": 0,
     "passive_after": 1,
     "jargon_removed": [
-      "gesuch",
       "vollzug",
       "gemäss"
     ],
@@ -15923,7 +15885,6 @@
     "passive_before": 0,
     "passive_after": 3,
     "jargon_removed": [
-      "gesuch",
       "vollzug",
       "gemäss"
     ],
@@ -16078,9 +16039,7 @@
       "vollzug",
       "gemäss"
     ],
-    "jargon_remaining": [
-      "gesuch"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "während der",
@@ -16219,7 +16178,6 @@
     "passive_before": 0,
     "passive_after": 1,
     "jargon_removed": [
-      "gesuch",
       "vollzug",
       "gemäss"
     ],
@@ -18018,9 +17976,7 @@
     "passive_before": 0,
     "passive_after": 0,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "ansässig",
@@ -18115,9 +18071,7 @@
     "sentences_after": 7,
     "passive_before": 0,
     "passive_after": 0,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -18205,9 +18159,7 @@
     "sentences_after": 3,
     "passive_before": 0,
     "passive_after": 0,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -18326,9 +18278,7 @@
     "sentences_after": 5,
     "passive_before": 0,
     "passive_after": 0,
-    "jargon_removed": [
-      "erlass"
-    ],
+    "jargon_removed": [],
     "jargon_remaining": [],
     "lexical_substitutions": [
       [
@@ -18407,9 +18357,7 @@
     "jargon_removed": [
       "massgebend"
     ],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "unabhängig von der staatsangehörigkeit oder der aufenthaltsrechtlichen bewilligung ist ein",
@@ -18561,8 +18509,7 @@
     "passive_before": 1,
     "passive_after": 0,
     "jargon_removed": [
-      "massgebend",
-      "erlass"
+      "massgebend"
     ],
     "jargon_remaining": [],
     "lexical_substitutions": [
@@ -18639,9 +18586,7 @@
     "jargon_removed": [
       "massgebend"
     ],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "unabhängig von der staatsangehörigkeit oder der aufenthaltsrechtlichen bewilligung ist ein arbeitnehmer grenzgänger wochen oder kurzaufenthalter mit ansässigkeit",
@@ -18757,9 +18702,7 @@
     "jargon_removed": [
       "massgebend"
     ],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "grenzgänger wochen oder kurzaufenthalter mit ansässigkeit",
@@ -25603,9 +25546,7 @@
     "passive_before": 3,
     "passive_after": 2,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "ansässigkeit",
@@ -25765,9 +25706,7 @@
     "passive_before": 3,
     "passive_after": 3,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "mit ansässigkeit",
@@ -25928,9 +25867,7 @@
     "passive_before": 3,
     "passive_after": 2,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "eine quellensteuerpflichtige person mit ansässigkeit",
@@ -26120,9 +26057,7 @@
     "passive_before": 3,
     "passive_after": 2,
     "jargon_removed": [],
-    "jargon_remaining": [
-      "erlass"
-    ],
+    "jargon_remaining": [],
     "lexical_substitutions": [
       [
         "wird aus der quellenbesteuerung entlassen",

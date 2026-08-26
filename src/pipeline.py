@@ -22,7 +22,16 @@ RESULTS_DIR = config.DATA_DIR / 'results'
 
 
 def load_texts() -> list[dict]:
-	"""Loads every source text listed in data/texts/manifest.json."""
+	"""Loads every source text listed in data/texts/manifest.json.
+
+	Returns
+		A list of manifest entries, each extended with a 'text' key holding the
+		source file's contents
+
+	Raises
+		FileNotFoundError: if the manifest or one of the text files it references
+			is missing
+	"""
 	with open(TEXTS_MANIFEST, encoding='utf-8') as f:
 		manifest = json.load(f)
 
@@ -40,6 +49,14 @@ def run(model_ids: list[str] | None = None) -> list[dict]:
 	Parameters
 		model_ids: Which models to run, as keys into config.MODELS (defaults to
 			every registered model in config.MODELS when not given)
+
+	Returns
+		One row per (text, model) pair, in the shape saved to results.json (see
+		save_results)
+
+	Raises
+		Whatever simplify() or evaluate.judge() raise for a non-transient API error
+		or exhausted retries
 	"""
 	model_ids = model_ids or list(config.MODELS)
 	texts = load_texts()
@@ -107,7 +124,11 @@ def save_results(rows: list[dict]) -> None:
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
-	"""Builds the CLI argument parser for plz-run."""
+	"""Builds the CLI argument parser for klartext-simplify.
+
+	Returns
+		The configured ArgumentParser
+	"""
 	parser = argparse.ArgumentParser(description='Compare LLMs on Swiss admin-text simplification.')
 	parser.add_argument(
 		'--models', nargs='*', default=None,

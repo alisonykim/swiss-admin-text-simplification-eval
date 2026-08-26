@@ -17,17 +17,29 @@ _SENTENCE_SPLIT_RE = re.compile(r'[.!?]+\s*')
 
 
 def _count_syllables(word: str) -> int:
-	"""Counts vowel clusters in a word as a syllable-count proxy."""
+	"""Counts vowel clusters in a word as a syllable-count proxy.
+
+	Returns
+		The syllable count (minimum 1)
+	"""
 	return max(1, len(re.findall(rf'[{_VOWELS}]+', word.lower())))
 
 
 def tokenize_words(text: str) -> list[str]:
-	"""Splits text into German-alphabet word tokens."""
+	"""Splits text into German-alphabet word tokens.
+
+	Returns
+		The list of word tokens, in order of appearance
+	"""
 	return _WORD_RE.findall(text)
 
 
 def split_sentences(text: str) -> list[str]:
-	"""Splits text into sentences on '.', '!', '?'."""
+	"""Splits text into sentences on '.', '!', '?'.
+
+	Returns
+		The list of non-empty sentences, in order of appearance
+	"""
 	return [s for s in _SENTENCE_SPLIT_RE.split(text.strip()) if s.strip()]
 
 
@@ -43,7 +55,11 @@ class ReadabilityScores:
 
 
 def compute_readability(text: str) -> ReadabilityScores:
-	"""Computes ReadabilityScores for a text."""
+	"""Computes ReadabilityScores for a text.
+
+	Returns
+		The computed ReadabilityScores
+	"""
 	words = tokenize_words(text)
 	sentences = split_sentences(text)
 	n_words = len(words)
@@ -76,6 +92,14 @@ def judge(original: str, simplified: str, judge_model_id: str | None = None) -> 
 		simplified: The same text after a model has simplified it
 		judge_model_id: Which model judges, as a key into config.MODELS (defaults
 			to config.JUDGE_MODEL_ID when not given)
+
+	Returns
+		A dict with 'faithfulness', 'simplicity', 'fluency' (each 1-5, or None if
+		the judge's reply didn't parse as JSON) and 'comment'
+
+	Raises
+		Whatever call_model raises for a non-transient error or exhausted retries
+		(see llm_clients.call_model)
 	"""
 	model_id = judge_model_id or config.JUDGE_MODEL_ID
 	raw = call_model(model_id, JUDGE_SYSTEM_PROMPT, build_judge_user_prompt(original, simplified))

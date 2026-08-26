@@ -51,7 +51,11 @@ auf Deutsch verfasst sein.
 
 
 def build_simplify_user_prompt(text: str) -> str:
-	"""Builds the user-turn prompt asking a model to simplify `text`."""
+	"""Builds the user-turn prompt asking a model to simplify `text`.
+
+	Returns
+		The formatted user-turn prompt string
+	"""
 	return f'Vereinfachen Sie folgenden Verwaltungstext:\n\n{text}'
 
 
@@ -61,5 +65,8 @@ def build_judge_user_prompt(original: str, simplified: str) -> str:
 	Parameters
 		original: The source Verwaltungstext, before simplification
 		simplified: The same text after a model has simplified it
+
+	Returns
+		The formatted user-turn prompt string
 	"""
 	return f'Originaltext:\n{original}\n\nVereinfachte Version:\n{simplified}'

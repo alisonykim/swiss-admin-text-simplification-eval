@@ -35,8 +35,29 @@ JARGON_TERMS = [
 _PASSIVE_RE = re.compile(r'\b(wird|werden|wurde|wurden|worden)\b[^.!?]{0,40}?\b\w+(t|en)\b', re.IGNORECASE)
 
 
+def _contains_term(text: str, term: str) -> bool:
+	"""Left-boundary containment check for a jargon term: `term` must start at a word
+	boundary, but nothing is required after it, so German noun inflection (zuständig ->
+	zuständige/zuständigen) still matches.
+
+	Returns
+		True if `term` occurs in `text` starting at a word boundary
+
+	Note
+		Still false-positives on same-root, different-meaning words that happen to also
+		start at a word boundary (e.g. 'gesucht', past participle of 'suchen', vs. the
+		noun 'Gesuch'). A robuster solution requires a lemmatizer, which is out of scope for a
+		keyword-based heuristic.
+	"""
+	return re.search(rf'\b{re.escape(term)}', text) is not None
+
+
 def _count_passive_constructions(text: str) -> int:
-	"""Counts regex matches for the passive-voice heuristic (see _PASSIVE_RE)."""
+	"""Counts regex matches for the passive-voice heuristic (see _PASSIVE_RE).
+
+	Returns
+		The number of passive-construction matches found
+	"""
 	return len(_PASSIVE_RE.findall(text))
 
 
@@ -62,6 +83,9 @@ def compute_diff_tags(original: str, simplified: str) -> DiffTags:
 	Parameters
 		original: The source Verwaltungstext, before simplification
 		simplified: The same text after a model has simplified it
+
+	Returns
+		The computed DiffTags for this pair
 	"""
 	orig_sentences = split_sentences(original)
 	simp_sentences = split_sentences(simplified)
@@ -73,8 +97,8 @@ def compute_diff_tags(original: str, simplified: str) -> DiffTags:
 
 	orig_lower = original.lower()
 	simp_lower = simplified.lower()
-	removed = [t for t in JARGON_TERMS if t in orig_lower and t not in simp_lower]
-	remaining = [t for t in JARGON_TERMS if t in orig_lower and t in simp_lower]
+	removed = [t for t in JARGON_TERMS if _contains_term(orig_lower, t) and not _contains_term(simp_lower, t)]
+	remaining = [t for t in JARGON_TERMS if _contains_term(orig_lower, t) and _contains_term(simp_lower, t)]
 
 	substitutions: list[tuple[str, str]] = []
 	matcher = SequenceMatcher(a=orig_words, b=simp_words, autojunk=False)

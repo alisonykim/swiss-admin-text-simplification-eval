@@ -27,6 +27,15 @@ def simplify(model_id: str, text: str) -> SimplificationResult:
 	Parameters
 		model_id: A key into config.MODELS, e.g. 'claude', 'qwen', 'mistral', 'deepseek'
 		text: The source Verwaltungstext to simplify
+
+	Returns
+		The SimplificationResult. If the model's reply doesn't parse as JSON, its raw
+		reply is used as `simplified_text` and `rationale` is left empty (a warning is
+		printed, not raised).
+
+	Raises
+		Whatever call_model raises for a non-transient error or exhausted retries
+		(see llm_clients.call_model)
 	"""
 	raw = call_model(model_id, SIMPLIFY_SYSTEM_PROMPT, build_simplify_user_prompt(text))
 

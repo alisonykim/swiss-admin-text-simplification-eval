@@ -45,6 +45,10 @@ def build_features(rows: list[dict]) -> pd.DataFrame:
 
 	Parameters
 		rows: The core pipeline's results.json rows
+
+	Returns
+		A DataFrame with one row per input row: the feature columns, the
+		'wstf_improvement' target, plus 'text_id' and 'model_id' for reference
 	"""
 	records = []
 	for r in rows:
@@ -66,7 +70,17 @@ def build_features(rows: list[dict]) -> pd.DataFrame:
 
 def run() -> dict:
 	"""Fits a small GradientBoostingRegressor on the diff-tag features, cross-validates
-	it, and computes SHAP values. Does not generalize - see module docstring."""
+	it, and computes SHAP values. Does not generalize; see module docstring.
+
+	Returns
+		A summary dict: 'n_rows', 5-fold CV R² mean/std, 'feature_labels',
+		'feature_importance' (mean |SHAP| per feature, sorted descending), and
+		'per_row' (per-row SHAP values)
+
+	Raises
+		FileNotFoundError: if data/results/results.json doesn't exist yet (run the
+			core pipeline first)
+	"""
 	with open(RESULTS_DIR / 'results.json', encoding='utf-8') as f:
 		rows = json.load(f)
 
@@ -116,7 +130,7 @@ def main() -> None:
 	"""CLI entry point: runs the SHAP analysis and prints a feature-importance summary."""
 	summary = run()
 	print(f"Trained on {summary['n_rows']} rows. 5-fold CV R²: "
-		f"{summary['cv_r2_mean']:.2f} ± {summary['cv_r2_std']:.2f} (negative - does not generalize, see module docstring)")
+		f"{summary['cv_r2_mean']:.2f} ± {summary['cv_r2_std']:.2f} (negative: does not generalize, see module docstring)")
 	print('\nFeature importance (mean |SHAP| on WSTF improvement):')
 	for item in summary['feature_importance']:
 		label = summary['feature_labels'][item['feature']]
