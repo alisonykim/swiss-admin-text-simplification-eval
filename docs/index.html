@@ -407,7 +407,7 @@
     font-family: var(--font-display); font-size: calc(11px * var(--font-scale)); letter-spacing: 0.05em;
     text-transform: uppercase; color: var(--ink-muted);
   }
-  select#text-select {
+  select#text-select, select#ablation-text-select, select#logprob-text-select {
     font-family: var(--font-sans); font-size: calc(14px * var(--font-scale)); color: var(--ink);
     background: var(--paper-raised); border: 1px solid var(--rule-strong);
     border-radius: 8px; padding: 8px 12px; min-width: 320px;
@@ -683,7 +683,7 @@
   </header>
 
   <section id="panel-explorer" class="panel active" role="tabpanel" aria-labelledby="tab-btn-explorer">
-    <p class="sample-note">Eine repräsentative Auswahl von 14 der 60 Texte im Korpus, quer über alle drei Quelldokumente und mit unterschiedlich starker Verbesserung. Der vollständige Korpus fliesst in den Vergleich-Tab und in <a href="https://github.com/alisonykim/swiss-admin-text-simplification-eval/tree/main/data/results" target="_blank" rel="noopener"><code>data/results/</code></a> ein.</p>
+    <p class="sample-note">Eine repräsentative Auswahl von 14 der 60 Texte im Korpus. Der vollständige Korpus fliesst in den Modell-Vergleich-Tab und in <a href="https://github.com/alisonykim/swiss-admin-text-simplification-eval/tree/main/data/results" target="_blank" rel="noopener"><code>data/results/</code></a> ein.</p>
     <div class="explorer-controls">
       <div class="control-block">
         <label for="text-select">Verwaltungstext</label>
@@ -747,7 +747,7 @@
         <div class="judge-panel-left">
           <div class="judge-panel-head">
             <h3 style="margin:0; font-family: var(--font-display); font-size: calc(16px * var(--font-scale));">LLM-Urteil (Richter: Qwen)</h3>
-            <span id="explorer-self-judged" style="display:none;" class="self-judged-badge">⚠ Modell bewertet sich selbst</span>
+            <span id="explorer-self-judged" style="display:none;" class="self-judged-badge">Modell bewertet sich selbst</span>
           </div>
           <div class="judge-scores-row">
             <div class="judge-score-item"><span class="jlabel">Treue</span><span class="jval tabular" id="judge-faithfulness"></span></div>
@@ -788,7 +788,7 @@
 
   <section id="panel-compare" class="panel" role="tabpanel" aria-labelledby="tab-btn-compare">
     <div class="compare-toolbar">
-      <span class="toolbar-label">Qwen ist sowohl eines der vier Modelle als auch der feste Richter.</span>
+      <span class="toolbar-label">Qwen, eines der vier Modelle, dient als Richter.</span>
       <div class="toggle-group" role="group" aria-label="Selbstbewertung">
         <button id="toggle-include" aria-pressed="true">Selbstbewertung einschliessen</button>
         <button id="toggle-exclude" aria-pressed="false">Ausschliessen</button>
@@ -813,25 +813,23 @@
   </section>
 
   <section id="panel-xai" class="panel" role="tabpanel" aria-labelledby="tab-btn-xai">
-    <p class="xai-intro">Keines der vier Modelle erlaubt Zugriff auf Gewichte, Aufmerksamkeit oder Gradienten;
-      SHAP oder Attention-Maps im klassischen Sinn sind hier nicht möglich (siehe <a href="https://github.com/alisonykim/swiss-admin-text-simplification-eval#readme" target="_blank" rel="noopener">README</a>). Die vier Analysen
-      unten funktionieren stattdessen ohne Modellinternas: durch gezieltes Stören der Eingabe, durch einen
-      unabhängigen Treue-Abgleich, durch die Token-Konfidenz, die einzig DeepSeeks Backend tatsächlich
-      zurückgibt, und durch wiederholtes Abfragen desselben Textes. Alle vier laufen auf einer Stichprobe,
-      nicht dem ganzen Korpus, siehe Hinweis je Abschnitt.</p>
+    <p class="xai-intro">Die vier Analysen unten funktionieren als Black-Box-Explainability: durch gezieltes
+      Stören der Eingabe, durch einen unabhängigen Treue-Abgleich, durch wiederholtes Abfragen desselben Textes,
+      und durch die Token-Konfidenz, die ausschliesslich DeepSeeks Backend tatsächlich zurückgibt.
+      Diese Analysen laufen auf einer Stichprobe, nicht dem ganzen Korpus, siehe Hinweis je Abschnitt.</p>
 
     <nav class="xai-jump-nav" aria-label="Sprung zu einer Analyse">
       <span class="label">Direkt zu</span>
-      <a href="#section-ablation">1 · Satz-Ablation</a>
-      <a href="#section-tfidf">2 · TF-IDF-Treue-Abgleich</a>
-      <a href="#section-consistency">3 · Selbstkonsistenz</a>
-      <a href="#section-logprobs">4 · DeepSeek-Tokenkonfidenz</a>
+      <a href="#section-ablation">1 Satz-Ablation</a>
+      <a href="#section-tfidf">2 TF-IDF-Treue-Abgleich</a>
+      <a href="#section-consistency">3 Selbstkonsistenz</a>
+      <a href="#section-logprobs">4 DeepSeek-Tokenkonfidenz</a>
     </nav>
 
     <div class="xai-grid">
     <div class="card xai-section" id="section-ablation">
       <div class="xai-section-head">
-        <h2>1 · Satz-Ablation <span class="xai-lang">(en. <em>sentence ablation</em>)</span></h2>
+        <h2>1 Satz-Ablation <span class="xai-lang">(en. <em>sentence ablation</em>)</span></h2>
         <span class="tag">6 Texte × 4 Modelle</span>
       </div>
       <p class="xai-sub">Jeder Satz des Originals wird einzeln entfernt, der Text erneut vereinfacht. Wie stark
@@ -860,7 +858,7 @@
 
     <div class="card xai-section" id="section-tfidf">
       <div class="xai-section-head">
-        <h2>2 · TF-IDF-Treue-Abgleich <span class="xai-lang">(en. <em>TF-IDF faithfulness cross-check</em>)</span></h2>
+        <h2>2 TF-IDF-Treue-Abgleich <span class="xai-lang">(en. <em>TF-IDF faithfulness cross-check</em>)</span></h2>
         <span class="tag">Alle 240 Zeilen</span>
       </div>
       <p class="xai-sub">Ein unabhängiges, deterministisches Mass für lexikalische Überlappung zwischen Original
@@ -874,7 +872,7 @@
 
     <div class="card xai-section" id="section-consistency">
       <div class="xai-section-head">
-        <h2>3 · Selbstkonsistenz <span class="xai-lang">(en. <em>self-consistency</em>)</span></h2>
+        <h2>3 Selbstkonsistenz <span class="xai-lang">(en. <em>self-consistency</em>)</span></h2>
         <span class="tag">6 Texte × 4 Modelle × 3 Wiederholungen</span>
       </div>
       <p class="xai-sub">Derselbe Text, dreimal an dasselbe Modell geschickt. Hohe Übereinstimmung heisst
@@ -886,7 +884,7 @@
 
     <div class="card xai-section" id="section-logprobs">
       <div class="xai-section-head">
-        <h2>4 · DeepSeek-Tokenkonfidenz <span class="xai-lang">(en. <em>DeepSeek token confidence</em>)</span></h2>
+        <h2>4 DeepSeek-Tokenkonfidenz <span class="xai-lang">(en. <em>DeepSeek token confidence</em>)</span></h2>
         <span class="tag">60 Texte · nur DeepSeek</span>
       </div>
       <p class="xai-sub">Einziges Signal aus echten Modellinterna in diesem Projekt, bestätigt empirisch als
@@ -904,8 +902,7 @@
   </section>
 
   <footer class="page">
-    <p class="disclaimer"><strong>Kein Gewährleistungsanspruch.</strong> Die vereinfachten Texte in diesem Tool sind LLM-Output, keine geprüfte amtliche Auskunft. Sie dienen der Auswertung, nicht der Verwendung als verlässliche Quelle. Bitte betrachten Sie einen vereinfachten Text nicht als korrekt oder vollständig. Verweisen Sie immer auf die zitierte Originalquelle, die zu jedem Eintrag verlinkt ist.</p>
-    <p>Alle 240 Durchläufe (60 Texte × 4 Modelle) sind lokal reproduzierbar erzeugt. Quelltexte sind kurze, zitierte Ausschnitte von offiziellen kantonalen und eidgenössischen Webseiten (Quelle bei jedem Text verlinkt). LLM-Urteile sind ein Signal, keine Ground Truth; Rohdaten stets nachvollziehbar.</p>
+    <p class="disclaimer"><strong>Kein Gewährleistungsanspruch.</strong> Die vereinfachten Texte in diesem Tool sind LLM-Output, keine geprüfte amtliche Auskunft. Sie dienen der Auswertung, nicht der Verwendung als verlässliche Quelle. Verweisen Sie immer auf die zitierte Originalquelle, die zu jedem Eintrag verlinkt ist. Alle 240 Durchläufe (60 Texte × 4 Modelle) sind lokal reproduzierbar erzeugt.</p>
     <p>Ich freue mich über Feedback zu diesem Projekt. Der Quellcode ist auf <a href="https://github.com/alisonykim/swiss-admin-text-simplification-eval" target="_blank" rel="noopener">GitHub</a> verfügbar.</p>
   </footer>
 </div>

@@ -4,29 +4,27 @@
 
 Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swiss administrative texts (currently focused on Kanton Zürich and Bund), with a focus on *evaluation* and *explainability*.
 
+This project grew out of my own experience navigating *Verwaltungsdeutsch* as a non-native German speaker. I enjoyed reading these documents myself as a way to improve my German, then used a chatbot to check my understanding. While the chatbot check helped, I still wanted to understand *why* the chatbot made the choices it did so that I could judge the simplification's quality myself. This project is my attempt at building such an evaluation.
+
+I welcome feedback on any and all elements of this project.
+
 ## Motivation
 
-*Verwaltungstexte* are often dense, legalistic, and hard to parse without domain expertise or native German skills (e.g., those with immigration backgrounds, lower literacy, etc.). This project asks: *how well do current LLMs do at rewriting these texts in plain language, and how do different models compare on **readability**, **faithfulness** to the original, and the **kind  of changes** they actually make*?
+*Verwaltungstexte* are often dense, legalistic, and hard to parse without domain expertise or native German skills (e.g., those with immigration backgrounds, lower literacy, etc.). This project asks: *how well do current LLMs do at rewriting these texts in plain language, and how do different models compare on **readability**, **faithfulness** to the original, and the **kind of changes** they actually make*?
 
 The current corpus was inspired by:
 * **Methodological fit:** The selected *Weisungen* and *Kreisschreiben* are structured into numbered, citable subsections that map directly onto auditable excerpt boundaries (see [Data](#data) below). Additionally, they cite actual statute articles rather than being pre-simplified themselves, which grounds the faithfulness evaluation in real legal specifics.
 * **Personal experience:** I chose documents that I have had to read through myself, such as residence/migration directives and foreigner-specific tax rules, both from Kanton Zürich and the federal tax authority.
 
-## Disclaimer
+## Related Work
 
-The simplified texts in this project are LLM output, NOT verified official guidance. They are provided to be *evaluated*, not to be *relied on* for personal or professional use. Always refer back to the original, cited source, which is provided for every entry in the corpus.
+The Kanton Zürich data science team has already piloted <a href="https://github.com/machinelearningZH/simply-simplify-language" target="_blank" rel="noopener"><code>simply-simplify-language</code></a>, a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom readability index (ZIX) and sentence-by-sentence coaching feedback.
 
-I welcome feedback on any and all elements of this project.
-
-## Related work
-
-The Kanton Zürich data science team already runs <a href="https://github.com/machinelearningZH/simply-simplify-language" target="_blank" rel="noopener"><code>simply-simplify-language</code></a> in production. It is a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom readability index (ZIX) and sentence-by-sentence coaching feedback.
-
-Rather than developing another end-user app, this project is intended to provide a benchmark and evaluation harness:
+Rather than developing another end-user app, this project aims to help users assess a text simplification model's performance:
 
 - **Published, citable readability formulas** (Wiener Sachtextformel, LIX)
-- **A model-agnostic, rule-based diff tagger** that cross-checks what a model *claims* it changed (sentence splits, passive→active, jargon removed/kept) against an independent, non-LLM signal
-- **A fixed, separate judge model** (Qwen) scoring all four models, including itself, since Qwen is also one of the four being compared. The interactive dashboard's *Modell-Vergleich* tab has a toggle to include/exclude those rows from Qwen's aggregate score.
+- **A model-agnostic, rule-based diff tagger** that cross-checks what a model *claims* it changed against an independent, non-LLM signal
+- **A fixed, separate judge model** (Qwen) scoring all four models.
 
 ## Project Steps
 
@@ -42,26 +40,26 @@ For each source text, the pipeline:
 
     Each model also returns a short rationale for its key edits.
 2. **Scores readability** before/after with two independent German metrics: the *Wiener Sachtextformel* and *LIX*.
-3. **Tags what changed**, model-agnostically, via a rule-based diff: sentence splitting, passive-to-active shifts, jargon terms removed vs. still present, lexical substitutions. This is independent of each model's self-reported rationale and serves as a reproducible cross-check.
-4. **Judges faithfulness, simplicity, and fluency** with a separate LLM-as-judge call (defaults to Qwen2.5-72B-Instruct, the strongest open model, judging all four; judging stays free this way). Qwen is also one of the four models being scored, so its own rows (one per source text) are self-judged, flagged per-row (`is_self_judged`) rather than hidden; see [Related work](#related-work) above.
+3. **Tags what changed**, model-agnostically, via a rule-based diff. This is independent of each model's self-reported rationale and serves as a reproducible cross-check.
+4. **Judges faithfulness, simplicity, and fluency** with a separate LLM-as-judge call (defaults to Qwen2.5-72B-Instruct, which is also one of the four models being scored).
 
 Output: `data/results/results.json` (full, including simplified texts, rationale, and per-row `is_self_judged`) and `data/results/results.csv` (flattened, for quick comparison across models).
 
-### Step 2: Explainability analysis (`klartext-xray`)
+### Step 2: Explainability Analysis (`klartext-xray`)
 
-On top of the core (text x model) comparison, `klartext-xray` runs four further black-box analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, self-consistency under repeated sampling, and DeepSeek per-token confidence.
+On top of the core (text x model) comparison, `klartext-xray` runs four further analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, self-consistency under repeated sampling, and DeepSeek per-token confidence.
 
 Output: `data/results/xai_*.json`.
 
-#### Why not "real" model-internals explainability?
+#### Note: Why not model-internals explainability?
 
 Attention maps / SHAP / gradient attribution need white-box access to the model internals, and none of the four models used in this project offer this. This limitation only rules out *white-box* XAI: **model-agnostic, perturbation-based XAI**, on the other hand, requires only query access to perturb an input and observe how the output changes. LIME and the general form of SHAP both work this way.
 
-`klartext-xray` runs four techniques within that constraint, though they are not all the same *kind* of technique, and this project does not treat them as such:
+`klartext-xray` runs four techniques within that constraint:
 
-- **Sentence-ablation attribution** *(black-box attribution)*: remove one sentence from the source at a time, re-simplify, then measure how much the output changes. This is the same underlying mechanism as LIME and SHAP (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, simplified (😉) relative to LIME (no surrogate-model fit) and SHAP (no combinatorial coalition averaging).
+- **Sentence-ablation attribution** *(black-box attribution)*: remove one sentence from the source at a time, re-simplify, then measure how much the output changes. This is the same underlying mechanism as LIME and SHAP (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, simplified (get it? 😉) relative to LIME and SHAP.
 - **TF-IDF faithfulness cross-check** and **Self-consistency** *(evaluation/reliability checks, not attribution)*: the former is an independent, deterministic lexical-overlap signal compared against the LLM judge's faithfulness score, run across the full corpus; the latter runs each model 3x on the same text to measure output stability under repeated sampling. Neither explains a specific model decision, but rather answers, "Is this score trustworthy?" and "Is this model's behaviour stable?"
-- **DeepSeek per-token logprobs** *(uncertainty quantification, not attribution)*: the single genuine model-internal signal in this project, indicating how confident the model was per token, not why it made a choice.
+- **DeepSeek per-token logprobs** *(uncertainty quantification, not attribution)*: the single genuine model-internal signal in this project, indicating how confident the model was per token.
 
 All four analyses can be found in the *Erklärbarkeit* tab on the dashboard. Ablation and self-consistency run on a representative six-text subset, chosen as the three longest texts per source (Kanton Zürich, Bund) by sentence count. This way, each source has enough sentences to produce a meaningful attribution signal.
 
@@ -77,9 +75,9 @@ pip install -e ".[dev]"
 cp .env.example .env # Fill in ANTHROPIC_API_KEY, HF_TOKEN, and MISTRAL_API_KEY
 ```
 
-Qwen and DeepSeek are both ungated and confirmed hosted on the `novita` backend as of 2026-08-22 (see [Methodology Notes & Limitations](#methodology-notes--limitations) below on why this is worth re-checking). Ministral 3 8B doesn't go through Hugging Face, but is rather called directly against `https://api.mistral.ai/v1`.
+Qwen and DeepSeek are both ungated and confirmed hosted on the `novita` backend as of August 22, 2026 (see [Methodology Notes & Limitations](#methodology-notes--limitations)). Ministral 3 8B doesn't go through Hugging Face, but is rather called directly against `https://api.mistral.ai/v1`.
 
-The `openai` package is a dependency here purely as a generic OpenAI-compatible HTTP client, reused for two different base URLs (`router.huggingface.co` and `api.mistral.ai`). No OpenAI account or API key involved anywhere in this project.
+The `openai` package is a dependency here as a generic OpenAI-compatible HTTP client, reused for two different base URLs (`router.huggingface.co` and `api.mistral.ai`). No OpenAI account or API key involved anywhere in this project.
 
 ## Usage
 
@@ -90,7 +88,7 @@ klartext-simplify
 # ...or restrict to a subset of models
 klartext-simplify --models claude qwen
 
-# Run the four black-box explainability analyses (ablation, TF-IDF, logprobs, self-consistency)
+# Run the four black-box explainability analyses (ablation, TF-IDF, self-consistency, logprobs)
 klartext-xray
 ```
 
@@ -106,35 +104,39 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 `data/texts/manifest.json` lists the source texts, each with a `level` (`cantonal`/`federal`), a `source_url`, and a path to the raw `.txt` file.
 
-**All texts are real, verbatim excerpts**, each one a single, self-contained subsection from an official Swiss government directive or circular, and transcribed exactly. The current corpus draws from three source documents: two Weisungen (directives) from Sicherheitsdirektion Kanton Zürich, Migrationsamt (Freizügigkeitsabkommen EU/EFTA-Staaten; Aufenthalt mit Erwerbstätigkeit aus Drittstaaten), and Kreisschreiben Nr. 45 from the Eidgenössische Steuerverwaltung ESTV (Quellenbesteuerung des Erwerbseinkommens von Arbeitnehmern). Every entry uses the source document's own subsection boundary as the excerpt boundary, so the excerpt selection is auditable against the source's own table of contents.
+**All texts are real, verbatim excerpts** from official Swiss government sources. The current corpus draws from three source documents: two Weisungen (directives) from Sicherheitsdirektion Kanton Zürich, Migrationsamt (Freizügigkeitsabkommen EU/EFTA-Staaten; Aufenthalt mit Erwerbstätigkeit aus Drittstaaten), and Kreisschreiben Nr. 45 from the Eidgenössische Steuerverwaltung ESTV (Quellenbesteuerung des Erwerbseinkommens von Arbeitnehmern).
 
 ## Methodology Notes & Limitations
 
 - **The Hugging Face Inference Providers catalog rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on August 22, 2026: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check before use.
 
-- **Mistral's own API model catalog rotates, too**; `ministral-3-8b-2512` was current as of August 22, 2026. Check <a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank" rel="noopener">docs.mistral.ai/getting-started/models/models_overview</a> if it throws an error later, and specifically re-check that it is still open-weight.
+- **Mistral's own API model catalog rotates, too**; `ministral-8b-2512` was current as of August 22, 2026. Check <a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank" rel="noopener">docs.mistral.ai/getting-started/models/models_overview</a> if it throws an error later, and specifically re-check that it is still open-weight.
 
 - **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics do not judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
 
-- **LLM-as-judge** has known biases (verbosity, style preferences, imperfect agreement with human raters). Thus, treat judge scores as a signal to inspect, not as a ground truth. The raw outputs are saved in `results.json`, so every score is traceable back to the actual text.
+- **LLM-as-judge** has known biases (verbosity, style preferences, imperfect agreement with human raters), so do not take the scores at face value. As the raw outputs are saved in `results.json`, every score is traceable back to the actual text.
 
 - **The jargon wordlist** in `diffing.py` is a small seed list, not a comprehensive lexicon of *Verwaltungsdeutsch*. It should be extended as the corpus grows.
 
 - **Jargon matching is keyword-based, not morphological.** A term must start at a word boundary, but nothing is required after it, so German noun inflection (e.g., *zuständig* → *zuständige*/*zuständigen*) still matches correctly. This can still false-positive on an unrelated word that shares a root and also starts at a boundary (e.g. *gesucht*, the past participle of *suchen*, vs. the noun *Gesuch*). Fully resolving this needs a lemmatizer. Empirical example: an earlier version matched a term anywhere inside a word at all (e.g. *erlass* inside the unrelated compound *Hauptniederlassung*). In the current version of the project, this was fixed to left-boundary-only matching and re-verified against the full corpus.
 
-- **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal but is not an infallible methodology.
+- **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal but is not a comprehensive methodology.
 
-- **The corpus was rebuilt once already** after an audit against live source URLs found verbatim-quoting errors in most entries. The current corpus uses the subsection-boundary method described in [Data](#data) above specifically to make the excerpt boundary auditable.
+- **The corpus was rebuilt once already** after a manual check against live source URLs revealed verbatim-quoting errors in most entries. The current corpus instead uses each source document's own subsection boundaries as excerpt boundaries.
 
-- **The interactive dashboard was built with AI coding assistance** (Claude), which was also used to edit code docstrings and check my German prose throughout. The ideas, corrections, and decisions informing the prompting, the methodology choices, the corpus curation, and the interpretation of results, are my own.
+- **AI coding assistance** (Claude) was used to build the interactive dashboard, edit code docstrings, and check my German throughout. The ideas, corrections, and decisions behind prompting, methodology, corpus curation, and interpretation of results, are my own.
 
-## Status
+## Current Status
 
-Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and explainability analyses re-run against it. Full four-model pipeline, rule-based diff tagging, LLM-judge scoring, four black-box explainability analyses, and an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Erklärbarkeit* tabs) built directly from `data/results/*.json`, published via GitHub Pages.
+Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and explainability analyses re-run against it. Full four-model simplification, evaluation, and explainability analyses, plus an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Erklärbarkeit* tabs) built directly from `data/results/*.json` (published via GitHub Pages).
 
-## Next iteration
+## Next Iteration
 
 - **Multi-judge panel**: Have all four models judge all four models' outputs and measure inter-judge agreement.
-- **Proxy-model feature importance** (`src/explain.py`, not wired to a CLI command): fits a small model over the diff-tag features to test whether they predict readability improvement. Hasn't found a generalizable signal at the current sample size; worth revisiting with more data or richer features rather than treating the current result as final.
-- Extend to a second German-speaking canton with a comparably high foreign-resident share (Basel-Stadt is the leading candidate), and to the remaining Migrationsamt directives and Quellensteuer guidance not yet included from Zürich.
-- Extend the jargon wordlist beyond its current small seed list.
+- **Proxy-model feature importance** (`src/explain.py`, not wired to a CLI command): fits a small model over the diff-tag features to test whether they predict readability improvement.
+- Extend to a second German-speaking canton with a comparably high foreign-resident proportion (Basel-Stadt is the leading candidate), and to the remaining Migrationsamt directives and Quellensteuer guidance not yet included from Zürich.
+- Extend the *Verwaltungsdeutsch* jargon wordlist beyond its current small seed list.
+
+## Disclaimer
+
+The simplified texts in this project are LLM output, not verified official guidance. Please do not rely on this project, including its tools and outputs, for personal or professional use. Always refer back to the original, cited source, which is provided for every entry in the corpus.
