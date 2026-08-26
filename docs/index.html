@@ -906,6 +906,7 @@
   <footer class="page">
     <p class="disclaimer"><strong>Kein Gewährleistungsanspruch.</strong> Die vereinfachten Texte in diesem Tool sind LLM-Output, keine geprüfte amtliche Auskunft. Sie dienen der Auswertung, nicht der Verwendung als verlässliche Quelle. Bitte betrachten Sie einen vereinfachten Text nicht als korrekt oder vollständig. Verweisen Sie immer auf die zitierte Originalquelle, die zu jedem Eintrag verlinkt ist.</p>
     <p>Alle 240 Durchläufe (60 Texte × 4 Modelle) sind lokal reproduzierbar erzeugt. Quelltexte sind kurze, zitierte Ausschnitte von offiziellen kantonalen und eidgenössischen Webseiten (Quelle bei jedem Text verlinkt). LLM-Urteile sind ein Signal, keine Ground Truth; Rohdaten stets nachvollziehbar.</p>
+    <p>Ich freue mich über Feedback zu diesem Projekt. Der Quellcode ist auf <a href="https://github.com/alisonykim/swiss-admin-text-simplification-eval" target="_blank" rel="noopener">GitHub</a> verfügbar.</p>
   </footer>
 </div>
 
@@ -1124,13 +1125,19 @@ allTextIds.forEach(id => {
   const row = RESULTS.find(r => r.text_id === id);
   textMeta[id] = { title: row.title, level: row.level, source_url: row.source_url };
 });
+function buildGroupedOptions(ids) {
+  const byLevel = { cantonal: [], federal: [], municipal: [] };
+  ids.forEach(id => {
+    const level = textMeta[id] ? textMeta[id].level : 'cantonal';
+    byLevel[level].push(id);
+  });
+  return Object.entries(byLevel).filter(([, group]) => group.length).map(([level, group]) => `
+    <optgroup label="${LEVEL_LABEL[level]}">
+      ${group.map(id => `<option value="${id}">${esc(textMeta[id] ? textMeta[id].title : id)}</option>`).join('')}
+    </optgroup>`).join('');
+}
 const textSelect = document.getElementById('text-select');
-const byLevel = { cantonal: [], federal: [], municipal: [] };
-textIds.forEach(id => byLevel[textMeta[id].level].push(id));
-textSelect.innerHTML = Object.entries(byLevel).filter(([, ids]) => ids.length).map(([level, ids]) => `
-  <optgroup label="${LEVEL_LABEL[level]}">
-    ${ids.map(id => `<option value="${id}">${esc(textMeta[id].title)}</option>`).join('')}
-  </optgroup>`).join('');
+textSelect.innerHTML = buildGroupedOptions(textIds);
 
 const modelPillsEl = document.getElementById('model-pills');
 modelPillsEl.innerHTML = MODEL_ORDER.map(m => `
@@ -1227,8 +1234,7 @@ modelPillsEl.addEventListener('click', e => {
 /* ================= XAI: 1. ABLATION ================= */
 const ablationTextIds = [...new Set(XAI_ABLATION.map(r => r.text_id))];
 const ablationTextSelect = document.getElementById('ablation-text-select');
-ablationTextSelect.innerHTML = ablationTextIds.map(id =>
-  `<option value="${id}">${esc(textMeta[id] ? textMeta[id].title : id)}</option>`).join('');
+ablationTextSelect.innerHTML = buildGroupedOptions(ablationTextIds);
 const ablationPillsEl = document.getElementById('ablation-model-pills');
 const ablationModelsForText = id => [...new Set(XAI_ABLATION.filter(r => r.text_id === id).map(r => r.model_id))];
 let currentAblationText = ablationTextIds[0];
@@ -1345,8 +1351,7 @@ scatterGrid.innerHTML = MODEL_ORDER.map(m => {
 
 /* ================= XAI: 3. LOGPROBS ================= */
 const logprobTextSelect = document.getElementById('logprob-text-select');
-logprobTextSelect.innerHTML = XAI_LOGPROBS.map(r =>
-  `<option value="${r.text_id}">${esc(textMeta[r.text_id] ? textMeta[r.text_id].title : r.text_id)}</option>`).join('');
+logprobTextSelect.innerHTML = buildGroupedOptions(XAI_LOGPROBS.map(r => r.text_id));
 const allLogprobVals = XAI_LOGPROBS.flatMap(r => r.words.map(w => w.mean_logprob));
 const lpMax = Math.max(...allLogprobVals), lpMin = Math.min(...allLogprobVals);
 function renderLogprobs() {
