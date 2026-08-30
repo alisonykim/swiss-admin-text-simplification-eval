@@ -1,10 +1,10 @@
-# Simplifying German-Swiss Administrative Text: An Interactive Tool for Evaluating LLM Output
+# Simplifying German-Swiss Administrative Text: An Interactive Tool for Evaluating and Diagnosing LLM Output
 
 **<a href="https://alisonykim.github.io/swiss-admin-text-simplification-eval/" target="_blank" rel="noopener">Open the live dashboard →</a>**
 
 Comparing LLMs on **Sprachvereinfachung** (plain-language simplification) of Swiss administrative texts (currently focused on Kanton Zürich and Bund), with a focus on *evaluation* and *explainability*.
 
-This project grew out of my own experience navigating *Verwaltungsdeutsch* as a non-native German speaker. I enjoyed reading these documents myself as a way to improve my German, then used a chatbot to check my understanding. While the chatbot check helped, I still wanted to understand *why* the chatbot made the choices it did so that I could judge the simplification's quality myself. This project is my attempt at building such an evaluation.
+This project grew out of my own experience of navigating *Verwaltungsdeutsch* as a non-native German speaker. After consulting an administrative resource myself, I sometimes use chatbots to summarise longer, denser texts in order to check my understanding. While the chatbot checks have helped, I still want concrete metrics and an understanding of the chatbot's decision in order to judge the quality of a simplification myself. This project is my attempt at building such an evaluation and explainability tool.
 
 I welcome feedback on any and all elements of this project.
 
@@ -18,13 +18,15 @@ The current corpus was inspired by:
 
 ## Related Work
 
-The Kanton Zürich data science team has already piloted <a href="https://github.com/machinelearningZH/simply-simplify-language" target="_blank" rel="noopener"><code>simply-simplify-language</code></a>, a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom readability index (ZIX) and sentence-by-sentence coaching feedback.
+The Kanton Zürich data science team has already piloted <a href="https://github.com/machinelearningZH/simply-simplify-language" target="_blank" rel="noopener"><code>simply-simplify-language</code></a>, a Streamlit app that sends a text to several LLMs via OpenRouter and lets staff pick the best draft, with a custom understandability index (<a href="https://github.com/machinelearningZH/zix_understandability-index" target="_blank" rel="noopener">ZIX</a>) and sentence-by-sentence coaching feedback.
 
-Rather than developing another end-user app, this project aims to help users assess a text simplification model's performance:
+Rather than developing another end-user app, this project aims to help users assess a text simplification model's performance and understand its decisions:
 
-- **Published, citable readability formulas** (Wiener Sachtextformel, LIX)
+- **Published readability formulas *(Lesbarkeit)*:** Wiener Sachtextformel, LIX
+- **Comprehensibility score *(Verständlichkeit)*, specifically for *Swiss Standard German*:** ZIX
 - **A model-agnostic, rule-based diff tagger** that cross-checks what a model *claims* it changed against an independent, non-LLM signal
 - **A fixed, separate judge model** (Qwen) scoring all four models.
+- **Four model diagnostic analyses** (`klartext-xray`): one attribution method and three reliability/confidence checks
 
 ## Project Steps
 
@@ -39,33 +41,33 @@ For each source text, the pipeline:
     - **Ministral 3 8B** (Mistral AI, Apache 2.0): open-weight, called via paid API
 
     Each model also returns a short rationale for its key edits.
-2. **Scores readability** before/after with two independent German metrics: the *Wiener Sachtextformel* and *LIX*.
+2. **Scores readability and comprehensibility** before/after with three independent German metrics: the *Wiener Sachtextformel*, *LIX*, and *ZIX* (see [Related Work](#related-work)).
 3. **Tags what changed**, model-agnostically, via a rule-based diff. This is independent of each model's self-reported rationale and serves as a reproducible cross-check.
 4. **Judges faithfulness, simplicity, and fluency** with a separate LLM-as-judge call (defaults to Qwen2.5-72B-Instruct, which is also one of the four models being scored).
 
 Output: `data/results/results.json` (full, including simplified texts, rationale, and per-row `is_self_judged`) and `data/results/results.csv` (flattened, for quick comparison across models).
 
-### Step 2: Explainability Analysis (`klartext-xray`)
+### Step 2: Model Diagnostics (`klartext-xray`)
 
 On top of the core (text x model) comparison, `klartext-xray` runs four further analyses: sentence-level ablation attribution, a TF-IDF faithfulness cross-check against the judge, self-consistency under repeated sampling, and DeepSeek per-token confidence.
 
-Output: `data/results/xai_*.json`.
+Output: `data/results/diagnostics_*.json`.
 
-#### Note: Why not model-internals explainability?
+#### Why not white-box explainability methods?
 
-Attention maps / SHAP / gradient attribution need white-box access to the model internals, and none of the four models used in this project offer this. This limitation only rules out *white-box* XAI: **model-agnostic, perturbation-based XAI**, on the other hand, requires only query access to perturb an input and observe how the output changes. LIME and the general form of SHAP both work this way.
+Attention maps, SHAP, and gradient attribution need white-box access to model internals, which none of the four models here provide. This project nevertheless uses one **model-agnostic, perturbation-based XAI** method, sentence ablation, explained below.
 
-`klartext-xray` runs four techniques within that constraint:
+#### `klartext-xray` runs four model diagnostic analyses:
 
-- **Sentence-ablation attribution** *(black-box attribution)*: remove one sentence from the source at a time, re-simplify, then measure how much the output changes. This is the same underlying mechanism as LIME and SHAP (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, simplified (get it? 😉) relative to LIME and SHAP.
+- **Sentence-ablation attribution** *(black-box XAI)*: remove one sentence from the source at a time, re-simplify, then measure how much the output changes. This is the same underlying mechanism as LIME and SHAP (perturb input, observe output), specifically **leave-one-out / occlusion-based attribution**, simplified (get it? 😉) relative to LIME and SHAP.
 - **TF-IDF faithfulness cross-check** and **Self-consistency** *(evaluation/reliability checks, not attribution)*: the former is an independent, deterministic lexical-overlap signal compared against the LLM judge's faithfulness score, run across the full corpus; the latter runs each model 3x on the same text to measure output stability under repeated sampling. Neither explains a specific model decision, but rather answers, "Is this score trustworthy?" and "Is this model's behaviour stable?"
 - **DeepSeek per-token logprobs** *(uncertainty quantification, not attribution)*: the single genuine model-internal signal in this project, indicating how confident the model was per token.
 
-All four analyses can be found in the *Erklärbarkeit* tab on the dashboard. Ablation and self-consistency run on a representative six-text subset, chosen as the three longest texts per source (Kanton Zürich, Bund) by sentence count. This way, each source has enough sentences to produce a meaningful attribution signal.
+All four analyses can be found in the *Modell-Diagnostik* tab on the dashboard. Ablation and self-consistency run on a representative six-text subset, chosen as the three longest texts per source (Kanton Zürich, Bund) by sentence count. This way, each source has enough sentences to produce a meaningful attribution signal.
 
 ---
 
-Both steps are explorable interactively in a published dashboard (*Text-Explorer* / *Modell-Vergleich* / *Erklärbarkeit* tabs), built directly from the `data/results/*.json` files these steps write, and published via GitHub Pages from this repo's `docs/` folder.
+Both steps are explorable interactively in a published dashboard (*Text-Explorer* / *Modell-Vergleich* / *Modell-Diagnostik* tabs), built directly from the `data/results/*.json` files these steps write, and published via GitHub Pages from this repo's `docs/` folder.
 
 ## Setup
 
@@ -76,6 +78,8 @@ cp .env.example .env # Fill in ANTHROPIC_API_KEY, HF_TOKEN, and MISTRAL_API_KEY
 ```
 
 Qwen and DeepSeek are both ungated and confirmed hosted on the `novita` backend as of August 22, 2026 (see [Methodology Notes & Limitations](#methodology-notes--limitations)). Ministral 3 8B doesn't go through Hugging Face, but is rather called directly against `https://api.mistral.ai/v1`.
+
+`pip install` also pulls in [ZIX](https://github.com/machinelearningZH/zix_understandability-index).
 
 The `openai` package is a dependency here as a generic OpenAI-compatible HTTP client, reused for two different base URLs (`router.huggingface.co` and `api.mistral.ai`). No OpenAI account or API key involved anywhere in this project.
 
@@ -88,7 +92,7 @@ klartext-simplify
 # ...or restrict to a subset of models
 klartext-simplify --models claude qwen
 
-# Run the four black-box explainability analyses (ablation, TF-IDF, self-consistency, logprobs)
+# Run the four black-box model diagnostics (ablation, TF-IDF, self-consistency, logprobs)
 klartext-xray
 ```
 
@@ -108,27 +112,29 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 ## Methodology Notes & Limitations
 
-- **The Hugging Face Inference Providers catalog rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on August 22, 2026: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check before use.
+- **The Hugging Face Inference Providers catalogue rotates** which backend hosts a given model, and which models are hosted at all, changes over time (this is why the original Llama pick stopped working). Each model ID + `HF_PROVIDER=novita` combination in `.env.example` was verified directly against the Hub API on August 22, 2026: `curl -s "https://huggingface.co/api/models/<org>/<model>?expand[]=inferenceProviderMapping"`. Re-run this check before use.
 
-- **Mistral's own API model catalog rotates, too**; `ministral-8b-2512` was current as of August 22, 2026. Check <a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank" rel="noopener">docs.mistral.ai/getting-started/models/models_overview</a> if it throws an error later, and specifically re-check that it is still open-weight.
+- **Mistral's own API model catalogue rotates, too**; `ministral-8b-2512` was current as of August 22, 2026. Check <a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank" rel="noopener">docs.mistral.ai/getting-started/models/models_overview</a> if it throws an error later, and specifically re-check that it is still open-weight.
 
 - **WSTF and LIX** are formula-based proxies for reading difficulty, not comprehension measures. These metrics do not judge whether a "simple" sentence is also *correct*, hence the inclusion of the LLM-judge faithfulness score.
+
+- **<a href="https://github.com/machinelearningZH/zix_understandability-index/" target="_blank" rel="noopener">ZIX</a>** is built on a small model (CEFR-vocabulary coverage, word-frequency scores, and RIX sentence length). As a comprehensibility metric, ZIX aims to quantify how easily the content can be grasped, while readability quantifies how easily one can follow a written text.
 
 - **LLM-as-judge** has known biases (verbosity, style preferences, imperfect agreement with human raters), so do not take the scores at face value. As the raw outputs are saved in `results.json`, every score is traceable back to the actual text.
 
 - **The jargon wordlist** in `diffing.py` is a small seed list, not a comprehensive lexicon of *Verwaltungsdeutsch*. It should be extended as the corpus grows.
 
-- **Jargon matching is keyword-based, not morphological.** A term must start at a word boundary, but nothing is required after it, so German noun inflection (e.g., *zuständig* → *zuständige*/*zuständigen*) still matches correctly. This can still false-positive on an unrelated word that shares a root and also starts at a boundary (e.g. *gesucht*, the past participle of *suchen*, vs. the noun *Gesuch*). Fully resolving this needs a lemmatizer. Empirical example: an earlier version matched a term anywhere inside a word at all (e.g. *erlass* inside the unrelated compound *Hauptniederlassung*). In the current version of the project, this was fixed to left-boundary-only matching and re-verified against the full corpus.
+- **Jargon matching is keyword-based, not morphological.** A term must start at a word boundary, but nothing is required after it, so German noun inflection (e.g., *zuständig* → *zuständige*/*zuständigen*) still matches correctly. This can still false-positive on an unrelated word that shares a root and also starts at a boundary (e.g. *gesucht*, the past participle of *suchen*, vs. the noun *Gesuch*). Resolving this robustly would require a lemmatiser.
 
 - **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal but is not a comprehensive methodology.
 
 - **The corpus was rebuilt once already** after a manual check against live source URLs revealed verbatim-quoting errors in most entries. The current corpus instead uses each source document's own subsection boundaries as excerpt boundaries.
 
-- **AI coding assistance** (Claude) was used to build the interactive dashboard, edit code docstrings, and check my German throughout. The ideas, corrections, and decisions behind prompting, methodology, corpus curation, and interpretation of results, are my own.
+- **AI coding assistance** (Claude) was used to build the interactive dashboard, edit code docstrings and README text, and check my German throughout. The ideas, corrections, and decisions behind prompting, methodology, corpus curation, and interpretation of results, are my own.
 
 ## Current Status
 
-Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and explainability analyses re-run against it. Full four-model simplification, evaluation, and explainability analyses, plus an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Erklärbarkeit* tabs) built directly from `data/results/*.json` (published via GitHub Pages).
+Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and diagnostic analyses re-run against it. Full four-model simplification, evaluation, and diagnostic analyses, plus an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Modell-Diagnostik* tabs) built directly from `data/results/*.json` (published via GitHub Pages).
 
 ## Next Iteration
 

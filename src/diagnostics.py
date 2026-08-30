@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Explainability analyses:
-1. Sentence-ablation attribution: black-box perturbation (the same principle LIME/SHAP use
-	for models with no internals access), removing one sentence from the original at a time,
-	re-simplifying, and measuring how much the output changes. Works identically across models.
-2. TF-IDF faithfulness cross-check: an independent, deterministic (non-LLM) faithfulness
-	signal to compare against the LLM-judge's faithfulness score.
-3. DeepSeek per-token logprobs: model-internal confidence for DeepSeek.
-4. Self-consistency: run each model multiple times on the same text and measure how much the
-	output varies.
+"""Black-box model diagnostics:
+1. Sentence-ablation attribution: black-box perturbation (the same principle LIME/SHAP use for
+   models with no internals access), removing one sentence from the original at a time,
+   re-simplifying, and measuring how much the output changes. Works identically across models.
+2. TF-IDF faithfulness cross-check: an independent, deterministic (non-LLM) faithfulness signal to
+   compare against the LLM-judge's faithfulness score.
+3. Self-consistency: run each model multiple times on the same text and measure how much the output
+   varies.
+4. DeepSeek per-token logprobs: model-internal confidence for DeepSeek.
 """
 
 from __future__ import annotations
@@ -29,11 +29,15 @@ MODEL_IDS = ['claude', 'deepseek', 'mistral', 'qwen']
 N_CONSISTENCY_SAMPLES = 3
 
 GERMAN_STOPWORDS = [
-	'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einer', 'eines', 'einem', 'einen',
-	'und', 'oder', 'ist', 'sind', 'war', 'waren', 'wird', 'werden', 'wurde', 'wurden',
-	'für', 'von', 'mit', 'bei', 'im', 'in', 'auf', 'zu', 'zur', 'zum', 'sich', 'sie', 'er', 'es',
-	'ich', 'wir', 'ihr', 'als', 'auch', 'nicht', 'kann', 'können', 'muss', 'müssen', 'so', 'wie',
-	'an', 'am', 'um', 'nach', 'durch', 'über', 'unter', 'aus', 'diese', 'dieser', 'dieses'
+	'der', 'die', 'das', 'den', 'dem', 'des',
+	'diese', 'dieser', 'dieses',
+	'ein', 'eine', 'einer', 'eines', 'einem', 'einen',
+	'und', 'oder', 'ist',
+	'sind', 'war', 'waren', 'wird', 'werden', 'wurde', 'wurden',
+	'für', 'von', 'mit', 'bei', 'im', 'in', 'auf', 'zu', 'zur', 'zum',
+	'als', 'auch', 'nicht', 'kann', 'können', 'muss', 'müssen', 'so', 'wie',
+	'an', 'am', 'um', 'nach', 'durch', 'über', 'unter', 'aus',
+	'sich', 'sie', 'er', 'es', 'ich', 'wir', 'ihr'
 ]
 
 
@@ -95,10 +99,7 @@ def _load_main_results() -> list[dict]:
 def run_ablation_attribution(subset_texts: list[dict], main_results: list[dict]) -> list[dict]:
 	"""For each (text, model) pair, removes one sentence at a time, re-simplifies, and
 	scores how much the output changed relative to the full-text baseline. Saves progress
-	to xai_ablation.json after every text (across all four models), not just at the end,
-	since this is by far the most expensive of the four analyses (one simplify() call per
-	sentence per model) and the one most likely to hit a transient API failure partway
-	through, this way a crash only loses the current text's calls, not the whole subset's.
+	to diagnostics_ablation.json after every text (across all four models).
 
 	Parameters
 		subset_texts: The manifest entries to run ablation on (from load_texts(),
@@ -108,8 +109,7 @@ def run_ablation_attribution(subset_texts: list[dict], main_results: list[dict])
 
 	Returns
 		One row per (text, model) pair, each with the full sentence list and, per
-		sentence, its similarity/attribution score relative to the full-text baseline;
-		also incrementally checkpointed to xai_ablation.json
+			sentence, its similarity/attribution score relative to the full-text baseline
 
 	Raises
 		Whatever simplify() raises for a non-transient API error or exhausted retries
@@ -145,9 +145,9 @@ def run_ablation_attribution(subset_texts: list[dict], main_results: list[dict])
 				'full_simplified_text': full_simplified,
 				'ablations': ablations
 			})
-		with open(RESULTS_DIR / 'xai_ablation.json', 'w', encoding='utf-8') as f:
+		with open(RESULTS_DIR / 'diagnostics_ablation.json', 'w', encoding='utf-8') as f:
 			json.dump(rows, f, ensure_ascii=False, indent=2)
-		print(f'  ...checkpointed {len(rows)} rows to xai_ablation.json')
+		print(f'  ...checkpointed {len(rows)} rows to diagnostics_ablation.json')
 	return rows
 
 
@@ -156,15 +156,15 @@ def run_ablation_attribution(subset_texts: list[dict], main_results: list[dict])
 # ---------------------------------------------------------------------------
 
 def run_tfidf_faithfulness_check(main_results: list[dict]) -> dict:
-	"""Computes TF-IDF cosine similarity between original and simplified text for every
-	row, and its correlation with the judge's faithfulness score.
+	"""Computes TF-IDF cosine similarity between original and simplified text for every row, and
+	its correlation with the judge's faithfulness score.
 
 	Parameters
 		main_results: The core pipeline's results.json rows
 
 	Returns
-		A dict with 'pearson_r' (correlation between tfidf_similarity and
-		judge_faithfulness), 'n' (row count), and 'per_row' (per-row detail)
+		A dict with 'pearson_r' (correlation between tfidf_similarity and judge_faithfulness), 'n',
+			(row count), and 'per_row' (per-row detail)
 	"""
 	from sklearn.feature_extraction.text import TfidfVectorizer
 	from sklearn.metrics.pairwise import cosine_similarity
@@ -195,7 +195,58 @@ def run_tfidf_faithfulness_check(main_results: list[dict]) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# 3. DeepSeek per-token logprobs
+# 3. Self-consistency (all 4 models, repeated sampling)
+# ---------------------------------------------------------------------------
+
+def run_self_consistency(subset_texts: list[dict]) -> list[dict]:
+	"""Runs each model N_CONSISTENCY_SAMPLES times per text and measures output similarity and WSTF
+	variance across the samples. Saves progress to diagnostics_self_consistency.json after every text.
+
+	Parameters
+		subset_texts: The manifest entries to run (from load_texts(), usually the
+			output of _pick_subset_texts())
+
+	Returns
+		One row per (text, model) pair: 'n_samples', 'mean_pairwise_similarity' across the
+			samples, 'wstf_std', and the raw 'wstf_values'
+
+	Raises
+		Whatever simplify() raises for a non-transient API error or exhausted retries
+	"""
+	rows = []
+	for text_entry in subset_texts:
+		for model_id in MODEL_IDS:
+			print(f"[consistency] {text_entry['id']} / {model_id}...")
+			samples = []
+			for sample_i in range(N_CONSISTENCY_SAMPLES):
+				if sample_i > 0:
+					time.sleep(1.5) # Small pause between calls
+				result = simplify(model_id, text_entry['text'])
+				samples.append({
+					'simplified_text': result.simplified_text,
+					'wstf_after': compute_readability(result.simplified_text).wstf
+				})
+			sims = [
+				_text_similarity(samples[i]['simplified_text'], samples[j]['simplified_text'])
+				for i in range(len(samples)) for j in range(i + 1, len(samples))
+			]
+			wstf_values = [s['wstf_after'] for s in samples]
+			rows.append({
+				'text_id': text_entry['id'],
+				'model_id': model_id,
+				'n_samples': N_CONSISTENCY_SAMPLES,
+				'mean_pairwise_similarity': round(sum(sims) / len(sims), 4),
+				'wstf_std': round(float(np.std(wstf_values)), 4),
+				'wstf_values': wstf_values
+			})
+		with open(RESULTS_DIR / 'diagnostics_self_consistency.json', 'w', encoding='utf-8') as f:
+			json.dump(rows, f, ensure_ascii=False, indent=2)
+		print(f'  ...checkpointed {len(rows)} rows to diagnostics_self_consistency.json')
+	return rows
+
+
+# ---------------------------------------------------------------------------
+# 4. DeepSeek per-token logprobs
 # ---------------------------------------------------------------------------
 
 def _group_tokens_into_words(tokens: list[dict]) -> list[dict]:
@@ -228,16 +279,15 @@ def _group_tokens_into_words(tokens: list[dict]) -> list[dict]:
 
 
 def _slice_tokens_for_substring(tokens: list[dict], substring: str) -> list[dict]:
-	"""Slices the token stream down to just the tokens covering `substring` (e.g. the
-	simplified_text value, not the surrounding JSON scaffolding).
+	"""Slices the token stream down to just the tokens covering `substring` (e.g. the simplified_text value, not the surrounding JSON scaffolding).
 
 	Parameters
 		tokens: A list of {'token': str, 'logprob': float} dicts, in generation order
 		substring: The exact text to locate within the tokens once reconstructed
 
 	Returns
-		The subset of `tokens` covering `substring`, in original order, falling back
-		to the full `tokens` list if `substring` isn't found in the reconstructed text
+		The subset of `tokens` covering `substring`, in original order, falling back to the full
+			`tokens` list if `substring` isn't found in the reconstructed text
 	"""
 	reconstructed = ''.join(t['token'] for t in tokens)
 	needle = substring[:60] if len(substring) > 60 else substring
@@ -264,13 +314,11 @@ def run_deepseek_logprobs(texts: list[dict]) -> list[dict]:
 		texts: The manifest entries to run (from load_texts())
 
 	Returns
-		One row per text that returned logprobs (texts where the backend gave none
-		are skipped): 'text_id', 'simplified_text', and 'words' (see
-		_group_tokens_into_words)
+		One row per text that returned logprobs (texts where the backend gave none are skipped):
+			'text_id', 'simplified_text', and 'words' (see _group_tokens_into_words)
 
 	Raises
-		Whatever call_huggingface_with_logprobs raises for a non-transient API error
-		or exhausted retries
+		Whatever call_huggingface_with_logprobs raises for a non-transient API error or exhausted retries
 	"""
 	model_name = config.MODELS['deepseek'].model_name
 	rows = []
@@ -294,61 +342,6 @@ def run_deepseek_logprobs(texts: list[dict]) -> list[dict]:
 	return rows
 
 
-# ---------------------------------------------------------------------------
-# 4. Self-consistency (all 4 models, repeated sampling)
-# ---------------------------------------------------------------------------
-
-def run_self_consistency(subset_texts: list[dict]) -> list[dict]:
-	"""Runs each model N_CONSISTENCY_SAMPLES times per text and measures output
-	similarity and WSTF variance across the samples. Saves progress to
-	xai_self_consistency.json after every text, same reasoning as
-	run_ablation_attribution: several API calls per text, checkpoint so a crash
-	partway through doesn't lose everything already paid for.
-
-	Parameters
-		subset_texts: The manifest entries to run (from load_texts(), usually the
-			output of _pick_subset_texts())
-
-	Returns
-		One row per (text, model) pair: 'n_samples', 'mean_pairwise_similarity'
-		across the samples, 'wstf_std', and the raw 'wstf_values', also
-		incrementally checkpointed to xai_self_consistency.json
-
-	Raises
-		Whatever simplify() raises for a non-transient API error or exhausted retries
-	"""
-	rows = []
-	for text_entry in subset_texts:
-		for model_id in MODEL_IDS:
-			print(f"[consistency] {text_entry['id']} / {model_id}...")
-			samples = []
-			for sample_i in range(N_CONSISTENCY_SAMPLES):
-				if sample_i > 0:
-					time.sleep(1.5) # Small pause between calls
-				result = simplify(model_id, text_entry['text'])
-				samples.append({
-					'simplified_text': result.simplified_text,
-					'wstf_after': compute_readability(result.simplified_text).wstf
-				})
-			sims = [
-				_text_similarity(samples[i]['simplified_text'], samples[j]['simplified_text'])
-				for i in range(len(samples)) for j in range(i + 1, len(samples))
-			]
-			wstf_values = [s['wstf_after'] for s in samples]
-			rows.append({
-				'text_id': text_entry['id'],
-				'model_id': model_id,
-				'n_samples': N_CONSISTENCY_SAMPLES,
-				'mean_pairwise_similarity': round(sum(sims) / len(sims), 4),
-				'wstf_std': round(float(np.std(wstf_values)), 4),
-				'wstf_values': wstf_values
-			})
-		with open(RESULTS_DIR / 'xai_self_consistency.json', 'w', encoding='utf-8') as f:
-			json.dump(rows, f, ensure_ascii=False, indent=2)
-		print(f'  ...checkpointed {len(rows)} rows to xai_self_consistency.json')
-	return rows
-
-
 def main() -> None:
 	"""CLI entry point: runs all four XAI analyses and saves each to its own JSON file."""
 	main_results = _load_main_results()
@@ -357,28 +350,28 @@ def main() -> None:
 
 	print('=== 1. Sentence-ablation attribution ===')
 	ablation_rows = run_ablation_attribution(subset, main_results)
-	with open(RESULTS_DIR / 'xai_ablation.json', 'w', encoding='utf-8') as f:
+	with open(RESULTS_DIR / 'diagnostics_ablation.json', 'w', encoding='utf-8') as f:
 		json.dump(ablation_rows, f, ensure_ascii=False, indent=2)
-	print(f'Saved {len(ablation_rows)} rows to xai_ablation.json\n')
+	print(f'Saved {len(ablation_rows)} rows to diagnostics_ablation.json\n')
 
 	print('=== 2. TF-IDF faithfulness cross-check ===')
 	tfidf_result = run_tfidf_faithfulness_check(main_results)
-	with open(RESULTS_DIR / 'xai_tfidf_faithfulness.json', 'w', encoding='utf-8') as f:
+	with open(RESULTS_DIR / 'diagnostics_tfidf_faithfulness.json', 'w', encoding='utf-8') as f:
 		json.dump(tfidf_result, f, ensure_ascii=False, indent=2)
 	print(f"Pearson r (tfidf_similarity vs. judge_faithfulness), n={tfidf_result['n']}: {tfidf_result['pearson_r']}\n")
 
-	print('=== 3. DeepSeek per-token logprobs ===')
+	print('=== 3. Self-consistency ===')
+	consistency_rows = run_self_consistency(subset)
+	with open(RESULTS_DIR / 'diagnostics_self_consistency.json', 'w', encoding='utf-8') as f:
+		json.dump(consistency_rows, f, ensure_ascii=False, indent=2)
+	print(f'Saved {len(consistency_rows)} rows to diagnostics_self_consistency.json')
+
+	print('=== 4. DeepSeek per-token logprobs ===')
 	all_texts = load_texts()
 	logprob_rows = run_deepseek_logprobs(all_texts)
-	with open(RESULTS_DIR / 'xai_deepseek_logprobs.json', 'w', encoding='utf-8') as f:
+	with open(RESULTS_DIR / 'diagnostics_deepseek_logprobs.json', 'w', encoding='utf-8') as f:
 		json.dump(logprob_rows, f, ensure_ascii=False, indent=2)
-	print(f'Saved {len(logprob_rows)} rows to xai_deepseek_logprobs.json\n')
-
-	print('=== 4. Self-consistency ===')
-	consistency_rows = run_self_consistency(subset)
-	with open(RESULTS_DIR / 'xai_self_consistency.json', 'w', encoding='utf-8') as f:
-		json.dump(consistency_rows, f, ensure_ascii=False, indent=2)
-	print(f'Saved {len(consistency_rows)} rows to xai_self_consistency.json')
+	print(f'Saved {len(logprob_rows)} rows to diagnostics_deepseek_logprobs.json\n')
 
 
 if __name__ == '__main__':

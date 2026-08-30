@@ -42,12 +42,6 @@ def _contains_term(text: str, term: str) -> bool:
 
 	Returns
 		True if `term` occurs in `text` starting at a word boundary
-
-	Note
-		Still false-positives on same-root, different-meaning words that happen to also
-		start at a word boundary (e.g. 'gesucht', past participle of 'suchen', vs. the
-		noun 'Gesuch'). A robuster solution requires a lemmatizer, which is out of scope for a
-		keyword-based heuristic.
 	"""
 	return re.search(rf'\b{re.escape(term)}', text) is not None
 

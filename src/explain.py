@@ -70,7 +70,7 @@ def build_features(rows: list[dict]) -> pd.DataFrame:
 
 def run() -> dict:
 	"""Fits a small GradientBoostingRegressor on the diff-tag features, cross-validates
-	it, and computes SHAP values. Does not generalize; see module docstring.
+	it, and computes SHAP values. Does not generalise; see module docstring.
 
 	Returns
 		A summary dict: 'n_rows', 5-fold CV R² mean/std, 'feature_labels',
@@ -130,7 +130,7 @@ def main() -> None:
 	"""CLI entry point: runs the SHAP analysis and prints a feature-importance summary."""
 	summary = run()
 	print(f"Trained on {summary['n_rows']} rows. 5-fold CV R²: "
-		f"{summary['cv_r2_mean']:.2f} ± {summary['cv_r2_std']:.2f} (negative: does not generalize, see module docstring)")
+		f"{summary['cv_r2_mean']:.2f} ± {summary['cv_r2_std']:.2f} (negative: does not generalise, see module docstring)")
 	print('\nFeature importance (mean |SHAP| on WSTF improvement):')
 	for item in summary['feature_importance']:
 		label = summary['feature_labels'][item['feature']]

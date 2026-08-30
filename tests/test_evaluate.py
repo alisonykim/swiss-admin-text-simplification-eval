@@ -14,6 +14,7 @@ def test_simple_text_scores_easier_than_complex_text():
 
 	assert simple_scores.wstf < complex_scores.wstf
 	assert simple_scores.lix < complex_scores.lix
+	assert simple_scores.zix > complex_scores.zix  # zix is inverted: higher = easier
 
 
 def test_empty_text_does_not_crash():

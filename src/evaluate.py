@@ -7,6 +7,8 @@ import json
 import re
 from dataclasses import dataclass
 
+from zix.understandability import get_cefr, get_zix
+
 import config
 from llm_clients import call_model, extract_json
 from prompts import JUDGE_SYSTEM_PROMPT, build_judge_user_prompt
@@ -45,13 +47,15 @@ def split_sentences(text: str) -> list[str]:
 
 @dataclass
 class ReadabilityScores:
-	"""Word/sentence counts and two German readability formulas (WSTF, LIX) for one text."""
+	"""Word/sentence counts and three German readability metrics (WSTF, LIX, ZIX) for one text."""
 
 	n_words: int
 	n_sentences: int
 	avg_sentence_length: float
-	wstf: float  # Wiener Sachtextformel (1. Formel): higher = harder to read
-	lix: float  # Läsbarhetsindex: higher = harder to read
+	wstf: float # Wiener Sachtextformel: higher = harder to read
+	lix: float # Läsbarhetsindex: higher = harder to read
+	zix: float | None # Zürcher Verständlichkeitsindex: higher = easier to read, -10 to 10
+	cefr: str | None # CEFR level implied by zix (A1 easiest to C2 hardest), or None if zix is None
 
 
 def compute_readability(text: str) -> ReadabilityScores:
@@ -65,7 +69,7 @@ def compute_readability(text: str) -> ReadabilityScores:
 	n_words = len(words)
 
 	if n_words == 0:
-		return ReadabilityScores(0, len(sentences), 0.0, 0.0, 0.0)
+		return ReadabilityScores(0, len(sentences), 0.0, 0.0, 0.0, None, None)
 
 	n_sentences = max(1, len(sentences))
 	avg_sentence_length = n_words / n_sentences
@@ -75,17 +79,19 @@ def compute_readability(text: str) -> ReadabilityScores:
 
 	wstf = 0.1935 * pct_poly + 0.1672 * avg_sentence_length + 0.1297 * pct_long - 0.0327 * pct_mono - 0.875
 	lix = avg_sentence_length + pct_long
+	zix = get_zix(text)
+	cefr = get_cefr(zix) if zix is not None else None
 
 	return ReadabilityScores(
 		n_words=n_words, n_sentences=n_sentences,
 		avg_sentence_length=round(avg_sentence_length, 2),
-		wstf=round(wstf, 2), lix=round(lix, 2)
+		wstf=round(wstf, 2), lix=round(lix, 2),
+		zix=round(zix, 2) if zix is not None else None, cefr=cefr
 	)
 
 
 def judge(original: str, simplified: str, judge_model_id: str | None = None) -> dict:
-	"""Scores a simplification's faithfulness, simplicity, and fluency via an
-	LLM-as-judge call.
+	"""Scores a simplification's faithfulness, simplicity, and fluency via an LLM-as-judge call.
 
 	Parameters
 		original: The source Verwaltungstext, before simplification
