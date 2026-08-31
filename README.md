@@ -122,6 +122,8 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 - **LLM-as-judge** has known biases (verbosity, style preferences, imperfect agreement with human raters), so do not take the scores at face value. As the raw outputs are saved in `results.json`, every score is traceable back to the actual text.
 
+- **The judge occasionally code-switches into Chinese characters** in its free-text comment (2.5% of rows, 6/240), despite the system prompt requiring German; the structured 1-5 scores themselves stay clean.
+
 - **The jargon wordlist** in `diffing.py` is a small seed list, not a comprehensive lexicon of *Verwaltungsdeutsch*. It should be extended as the corpus grows.
 
 - **Jargon matching is keyword-based, not morphological.** A term must start at a word boundary, but nothing is required after it, so German noun inflection (e.g., *zuständig* → *zuständige*/*zuständigen*) still matches correctly. This can still false-positive on an unrelated word that shares a root and also starts at a boundary (e.g. *gesucht*, the past participle of *suchen*, vs. the noun *Gesuch*). Resolving this robustly would require a lemmatiser.
@@ -129,6 +131,8 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 - **Passive-voice detection** is a regex heuristic, not a parser, so it will miss and false-positive on some constructions. It suffices for a rough before/after signal but is not a comprehensive methodology.
 
 - **The corpus was rebuilt once already** after a manual check against live source URLs revealed verbatim-quoting errors in most entries. The current corpus instead uses each source document's own subsection boundaries as excerpt boundaries.
+
+- **TF-IDF similarity is a proxy for shared vocabulary, not shared meaning.** This makes it a weaker fit for a task where good simplification is expected to change the wording on purpose. It is nevertheless kept as a simple cross-check, not a faithfulness metric.
 
 - **AI coding assistance** (Claude) was used to build the interactive dashboard, edit code docstrings and README text, and check my German throughout. The ideas, corrections, and decisions behind prompting, methodology, corpus curation, and interpretation of results are my own.
 
@@ -152,6 +156,7 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 - **Extend corpus** to a second German-speaking canton with a comparably high foreign-resident proportion (Basel-Stadt is the leading candidate), and to the remaining Migrationsamt directives and Quellensteuer guidance not yet included from Zürich.
 - **Extend the *Verwaltungsdeutsch* jargon wordlist** beyond its current small seed list.
 - **More robust sentence-segmentation preprocessing**: Detect and standardise paragraph formatting (e.g., bullet-point/list formatting: "–"-prefixed items that continue one grammatical sentence) before running the segmentation model, which currently has no notion of paragraph structure and can misjudge sentence boundaries inside one.
+- **A semantic or NLI-based faithfulness cross-check with the LLM's judgment** (e.g. embedding similarity) to complement or replace TF-IDF similarity.
 
 ## Disclaimer
 
