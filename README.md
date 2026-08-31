@@ -130,18 +130,28 @@ Tests cover the readability metrics, the rule-based diff tagger, and JSON-parsin
 
 - **The corpus was rebuilt once already** after a manual check against live source URLs revealed verbatim-quoting errors in most entries. The current corpus instead uses each source document's own subsection boundaries as excerpt boundaries.
 
-- **AI coding assistance** (Claude) was used to build the interactive dashboard, edit code docstrings and README text, and check my German throughout. The ideas, corrections, and decisions behind prompting, methodology, corpus curation, and interpretation of results, are my own.
+- **AI coding assistance** (Claude) was used to build the interactive dashboard, edit code docstrings and README text, and check my German throughout. The ideas, corrections, and decisions behind prompting, methodology, corpus curation, and interpretation of results are my own.
 
 ## Current Status
 
-Second iteration: corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, see [Data](#data)), pipeline and diagnostic analyses re-run against it. Full four-model simplification, evaluation, and diagnostic analyses, plus an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Modell-Diagnostik* tabs) built directly from `data/results/*.json` (published via GitHub Pages).
+### Third Iteration
+- **Issue:** Discovered that the naive regex split was frequently incorrectly detecting sentence boundaries. In particular it was fragmenting legal citations (e.g. "Art. 65 Abs. 5") into false sentences. This inflated source-text sentence counts far more than simplified-text sentence counts.
+- **Solution:** Implemented a sentence-segmentation model (<a href="https://github.com/segment-any-text/wtpsplit" target="_blank" rel="noopener">wtpsplit</a>) and re-ran the pipeline and diagnostic analyses against the corrected splitter.
+- **Results:** Increased measured readability improvement scores (WSTF +69%, LIX +135% versus the pre-fix numbers), more accurate sentence counts.
+- **Note:** The segmentation model is not perfect: it can still misread a dense abbreviation chain as a boundary (e.g. splitting "– finanzielle Mittel i.S.v." from "Art. 24 Abs. 4 Anhang I FZA vorweisen kann;", which belongs in the same sentence). Nevertheless, measuring directly against the naive regex splitter revealed that degenerate ≤3-word sentence fragments dropped from 36.7% of all split output (247/673, affecting 47/60 texts) to 1.2% (4/321, affecting 3/60 texts). This is a large, if imperfect, improvement.
+
+### Second Iteration
+- **Issue:** Manual check against live source URLs revealed verbatim-quoting errors in most corpus entries.
+- **Solution:** Corpus rebuilt (60 texts, all real verbatim subsections from three official Zürich/federal migration and tax directives, using each source document's own subsection boundaries as excerpt boundaries, see [Data](#data)); pipeline and diagnostic analyses re-run against it.
+- **Results:** Full four-model simplification, evaluation, and diagnostic analyses, plus an interactive dashboard (*Text-Explorer* / *Modell-Vergleich* / *Modell-Diagnostik* tabs) built directly from `data/results/*.json` (published via GitHub Pages).
 
 ## Next Iteration
 
 - **Multi-judge panel**: Have all four models judge all four models' outputs and measure inter-judge agreement.
 - **Proxy-model feature importance** (`src/explain.py`, not wired to a CLI command): fits a small model over the diff-tag features to test whether they predict readability improvement.
-- Extend to a second German-speaking canton with a comparably high foreign-resident proportion (Basel-Stadt is the leading candidate), and to the remaining Migrationsamt directives and Quellensteuer guidance not yet included from Zürich.
-- Extend the *Verwaltungsdeutsch* jargon wordlist beyond its current small seed list.
+- **Extend corpus** to a second German-speaking canton with a comparably high foreign-resident proportion (Basel-Stadt is the leading candidate), and to the remaining Migrationsamt directives and Quellensteuer guidance not yet included from Zürich.
+- **Extend the *Verwaltungsdeutsch* jargon wordlist** beyond its current small seed list.
+- **More robust sentence-segmentation preprocessing**: Detect and standardise paragraph formatting (e.g., bullet-point/list formatting: "–"-prefixed items that continue one grammatical sentence) before running the segmentation model, which currently has no notion of paragraph structure and can misjudge sentence boundaries inside one.
 
 ## Disclaimer
 

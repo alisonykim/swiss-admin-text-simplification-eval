@@ -1,1684 +1,1684 @@
 {
-  "pearson_r": 0.245,
+  "pearson_r": 0.263,
   "n": 240,
   "per_row": [
     {
       "text_id": "zh_migrationsamt_anmeldung_einreise",
       "model_id": "claude",
-      "tfidf_similarity": 0.6804,
+      "tfidf_similarity": 0.7276,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_anmeldung_einreise",
       "model_id": "qwen",
-      "tfidf_similarity": 0.3545,
+      "tfidf_similarity": 0.4223,
       "judge_faithfulness": 4,
       "is_self_judged": true
     },
     {
       "text_id": "zh_migrationsamt_anmeldung_einreise",
       "model_id": "mistral",
-      "tfidf_similarity": 0.1696,
+      "tfidf_similarity": 0.188,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_anmeldung_einreise",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.224,
+      "tfidf_similarity": 0.2637,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_1_einfuehrung",
       "model_id": "claude",
-      "tfidf_similarity": 0.5528,
+      "tfidf_similarity": 0.5473,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_1_einfuehrung",
       "model_id": "qwen",
-      "tfidf_similarity": 0.5203,
+      "tfidf_similarity": 0.5254,
       "judge_faithfulness": 4,
       "is_self_judged": true
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_1_einfuehrung",
       "model_id": "mistral",
-      "tfidf_similarity": 0.4747,
+      "tfidf_similarity": 0.4896,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_1_einfuehrung",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.4681,
+      "tfidf_similarity": 0.4721,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_2_adressatenkreis",
       "model_id": "claude",
-      "tfidf_similarity": 0.4212,
+      "tfidf_similarity": 0.4317,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_2_adressatenkreis",
       "model_id": "qwen",
-      "tfidf_similarity": 0.3697,
+      "tfidf_similarity": 0.4094,
       "judge_faithfulness": 5,
       "is_self_judged": true
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_2_adressatenkreis",
       "model_id": "mistral",
-      "tfidf_similarity": 0.3788,
+      "tfidf_similarity": 0.3998,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_1_2_adressatenkreis",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.3823,
+      "tfidf_similarity": 0.3891,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige",
       "model_id": "claude",
-      "tfidf_similarity": 0.4974,
+      "tfidf_similarity": 0.4845,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige",
       "model_id": "qwen",
-      "tfidf_similarity": 0.3381,
+      "tfidf_similarity": 0.3461,
       "judge_faithfulness": 4,
       "is_self_judged": true
     },
     {
       "text_id": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3486,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.5134,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5764,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1882,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2024,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2665,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5064,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.4387,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.534,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.4544,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
-      "model_id": "claude",
-      "tfidf_similarity": 0.6639,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2297,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.479,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.5261,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5591,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1123,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4674,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3427,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3978,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2444,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2411,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2999,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
-      "model_id": "claude",
-      "tfidf_similarity": 0.7423,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2827,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4735,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3702,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
-      "model_id": "claude",
-      "tfidf_similarity": 0.17,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.105,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1277,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.0311,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5389,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.4114,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4443,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3826,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5933,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3079,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4425,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1914,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4758,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2268,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2338,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3306,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
-      "model_id": "claude",
-      "tfidf_similarity": 0.2798,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3147,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1688,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1604,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3635,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3027,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3497,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2234,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4913,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2406,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3865,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2857,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4497,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1826,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3101,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1257,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
-      "model_id": "claude",
-      "tfidf_similarity": 0.6238,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3896,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3607,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.301,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5459,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3681,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.5459,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.4226,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
-      "model_id": "claude",
-      "tfidf_similarity": 0.7518,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.4469,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3317,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1869,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5248,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3466,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3507,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2877,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4026,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2356,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2626,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1748,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4472,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2392,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3712,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3851,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4535,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1374,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2307,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1909,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5411,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.267,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4212,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.4606,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3992,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.0901,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2928,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.293,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5104,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3497,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.5444,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.6241,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4477,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.263,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.5256,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.5674,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
-      "model_id": "claude",
-      "tfidf_similarity": 0.6357,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2259,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.6545,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2575,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4737,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1826,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1378,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.0939,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4987,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.4576,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3185,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.5701,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4093,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3275,
-      "judge_faithfulness": 3,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2298,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.251,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4937,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1872,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3551,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3551,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5141,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.5175,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3789,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.4676,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5174,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2661,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3557,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2473,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4427,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2597,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2338,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3256,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3111,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.0568,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2073,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2657,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
-      "model_id": "claude",
-      "tfidf_similarity": 0.4426,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3668,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2491,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3956,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5719,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.376,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.5719,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.4139,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
-      "model_id": "claude",
-      "tfidf_similarity": 0.6253,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2742,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3004,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2595,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
-      "model_id": "claude",
-      "tfidf_similarity": 0.2423,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3141,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1855,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.0725,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3345,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1612,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2289,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1758,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3175,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2163,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1846,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.241,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3752,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.4247,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4643,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2965,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
-      "model_id": "claude",
-      "tfidf_similarity": 0.6939,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1638,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3325,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2269,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
-      "model_id": "claude",
-      "tfidf_similarity": 0.2712,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.0426,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.112,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.0992,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
-      "model_id": "claude",
-      "tfidf_similarity": 0.2993,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.5256,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.375,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.5387,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
-      "model_id": "claude",
-      "tfidf_similarity": 0.6688,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.4162,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3134,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3184,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
-      "model_id": "claude",
-      "tfidf_similarity": 0.1346,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3787,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.0878,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.0669,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
-      "model_id": "claude",
-      "tfidf_similarity": 0.1827,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.6679,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1869,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1304,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
-      "model_id": "claude",
-      "tfidf_similarity": 0.1697,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.3067,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.1276,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.4005,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
-      "model_id": "claude",
-      "tfidf_similarity": 0.5516,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.5406,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.4255,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.3477,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3218,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2997,
-      "judge_faithfulness": 5,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3641,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2307,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3401,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.1998,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.3386,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.2417,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3685,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.2033,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
-      "model_id": "mistral",
-      "tfidf_similarity": 0.2408,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
-      "model_id": "deepseek",
-      "tfidf_similarity": 0.1713,
-      "judge_faithfulness": 4,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
-      "model_id": "claude",
-      "tfidf_similarity": 0.3563,
-      "judge_faithfulness": 5,
-      "is_self_judged": false
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
-      "model_id": "qwen",
-      "tfidf_similarity": 0.433,
-      "judge_faithfulness": 4,
-      "is_self_judged": true
-    },
-    {
-      "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
       "model_id": "mistral",
       "tfidf_similarity": 0.3265,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
+      "text_id": "zh_migrationsamt_eu_efta_2_1_einreisebestimmungen_eu_efta_staatsangehoerige",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5227,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5953,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1801,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1901,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_2_einreisebestimmungen_familienangehoerige_drittstaaten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2518,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4835,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4004,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.516,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_4_anmeldung_wohnortwechsel",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4076,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7122,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2489,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4989,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_2_5_wochenaufenthalt",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5349,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4487,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.0094,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3222,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_3_3_acht_tage_regelung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1553,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4082,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2735,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2589,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_verbleiberecht_intro",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2936,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7583,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2121,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.384,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_4_2_verbleiberecht_familienangehoerige",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3335,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
+      "model_id": "claude",
+      "tfidf_similarity": 0.1447,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1143,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.134,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_zulassung_ohne_erwerbstaetigkeit_intro",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.0359,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5624,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.453,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4524,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_1_schuelerinnen_studierende",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4131,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6399,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.256,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4139,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_4_aufenthalt_stellensuche",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1895,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4906,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2516,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.269,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_5_5_zulassung_wichtige_gruende",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3454,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
+      "model_id": "claude",
+      "tfidf_similarity": 0.2751,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3396,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1692,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_2_erwerbstaetigkeit_familiennachzug",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1607,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3804,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3103,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3417,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_3_aufenthalt_aufloesung_ehe",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2176,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5584,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2607,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4651,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_6_6_eigenstaendiges_aufenthaltsrecht_kinder",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2576,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4731,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1795,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3021,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_7_4_erloeschen_bewilligungen_auslandaufenthalte",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1123,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6288,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.404,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3656,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_9_gebuehren",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3048,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.592,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3903,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.592,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_eu_efta_10_inkrafttreten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4572,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7581,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4492,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3356,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_1_gegenstand",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1932,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
+      "model_id": "claude",
+      "tfidf_similarity": 0.537,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3219,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.361,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_1_2_begriffe",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2488,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4273,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2468,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2576,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_2_bewilligungspflicht",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1757,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4738,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2475,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3864,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_1_gesuchseinreichung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3989,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4652,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1693,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2388,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_einreiseerlaubnis_anmeldung_intro",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1823,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5308,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2092,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3632,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_1_kurzfristige_erwerbstaetigkeit",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4489,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3874,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.0084,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2754,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_2_2_langfristige_erwerbstaetigkeit",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2757,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5325,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3646,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.5451,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_1_akademische_aus_weiterbildung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.6362,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4064,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2244,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.526,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_3_4_2_auslaendische_aerzte_medizinstudenten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5669,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6756,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1647,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.6838,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_1_hoechstzahlen",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2721,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4832,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1772,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1433,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_kurzaufenthaltsbewilligungen_intro",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.0816,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5366,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4613,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3408,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_1_stellenwechsel_kurzaufenthalt",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5363,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4372,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3214,
+      "judge_faithfulness": 3,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2526,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_2_2_verlaengerung_kurzaufenthaltsbewilligungen",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2307,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4474,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1166,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3092,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_3_aufenthaltsbewilligungen_intro",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3063,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5216,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.5178,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3946,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_2_au_pair_angestellte",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4748,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
+      "model_id": "claude",
+      "tfidf_similarity": 0.5305,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2639,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3505,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_3_fluechtlinge_vorlaeufig_aufgenommene",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2361,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4456,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2372,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1943,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_5_4_asylsuchende",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3215,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3036,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.0601,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1912,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_4_8_nebenbeschaeftigung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2241,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
+      "model_id": "claude",
+      "tfidf_similarity": 0.482,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3762,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.271,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_5_erfuellter_aufenthaltszweck",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4313,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6285,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4042,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.6285,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "zh_migrationsamt_drittstaaten_erwerb_7_inkrafttreten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.4526,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6976,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2975,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3209,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_2_2_1_grundsatz",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2874,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
+      "model_id": "claude",
+      "tfidf_similarity": 0.2705,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3584,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2038,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_grundsaetze",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.0795,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3419,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1535,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2367,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_1_ansaessigkeit_schweiz",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.18,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3585,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2196,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1822,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_1_2_ansaessigkeit_ausland",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2486,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
+      "model_id": "claude",
+      "tfidf_similarity": 0.4083,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4218,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4694,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_2_beschraenkt_steuerbare_einkuenfte",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2922,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7116,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.1705,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3462,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_4_berufskosten",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2363,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
+      "model_id": "claude",
+      "tfidf_similarity": 0.2865,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.0437,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.0798,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_5_spesenzahlungen",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.11,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
+      "model_id": "claude",
+      "tfidf_similarity": 0.2791,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.5236,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3816,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_3_2_8_abgangsentschaedigungen",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.5389,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
+      "model_id": "claude",
+      "tfidf_similarity": 0.7089,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4173,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3107,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_3_tarif_alleinerziehende",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3474,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
+      "model_id": "claude",
+      "tfidf_similarity": 0.1113,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.3688,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.0632,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_8_kirchensteuerpflicht",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.0082,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
+      "model_id": "claude",
+      "tfidf_similarity": 0.1726,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.7392,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.1713,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_4_9_haertefallregelung",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1157,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
+      "model_id": "claude",
+      "tfidf_similarity": 0.0759,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2192,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.0511,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_5_abgrenzungen_intro",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3016,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
+      "model_id": "claude",
+      "tfidf_similarity": 0.6003,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.5582,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.4896,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_1_vorbemerkungen_monatsmodell",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.3932,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3506,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.331,
+      "judge_faithfulness": 5,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3875,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_2_grundsaetze_monatsmodell",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2422,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3618,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2029,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3422,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_6_8_leistungen_vor_antritt",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.2542,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
+      "model_id": "claude",
+      "tfidf_similarity": 0.3556,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.2237,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.2546,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_7_2_grundsaetze_jahresmodell",
+      "model_id": "deepseek",
+      "tfidf_similarity": 0.1685,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
+      "model_id": "claude",
+      "tfidf_similarity": 0.355,
+      "judge_faithfulness": 5,
+      "is_self_judged": false
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
+      "model_id": "qwen",
+      "tfidf_similarity": 0.4114,
+      "judge_faithfulness": 4,
+      "is_self_judged": true
+    },
+    {
+      "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
+      "model_id": "mistral",
+      "tfidf_similarity": 0.3057,
+      "judge_faithfulness": 4,
+      "is_self_judged": false
+    },
+    {
       "text_id": "estv_ks45_quellenbesteuerung_10_1_rechte_arbeitnehmer",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.3685,
+      "tfidf_similarity": 0.3465,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer",
       "model_id": "claude",
-      "tfidf_similarity": 0.2975,
+      "tfidf_similarity": 0.3058,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer",
       "model_id": "qwen",
-      "tfidf_similarity": 0.1591,
+      "tfidf_similarity": 0.1804,
       "judge_faithfulness": 4,
       "is_self_judged": true
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer",
       "model_id": "mistral",
-      "tfidf_similarity": 0.1316,
+      "tfidf_similarity": 0.1576,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_10_2_pflichten_arbeitnehmer",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.1953,
+      "tfidf_similarity": 0.1783,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich",
       "model_id": "claude",
-      "tfidf_similarity": 0.5917,
+      "tfidf_similarity": 0.6012,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich",
       "model_id": "qwen",
-      "tfidf_similarity": 0.5606,
+      "tfidf_similarity": 0.5871,
       "judge_faithfulness": 4,
       "is_self_judged": true
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich",
       "model_id": "mistral",
-      "tfidf_similarity": 0.4505,
+      "tfidf_similarity": 0.4664,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_12_1_wechsel_quellenbesteuerung_zu_ordentlich",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.4923,
+      "tfidf_similarity": 0.5049,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_13_inkrafttreten",
       "model_id": "claude",
-      "tfidf_similarity": 0.5749,
+      "tfidf_similarity": 0.5656,
       "judge_faithfulness": 4,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_13_inkrafttreten",
       "model_id": "qwen",
-      "tfidf_similarity": 0.4394,
+      "tfidf_similarity": 0.4274,
       "judge_faithfulness": 5,
       "is_self_judged": true
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_13_inkrafttreten",
       "model_id": "mistral",
-      "tfidf_similarity": 0.3526,
+      "tfidf_similarity": 0.3296,
       "judge_faithfulness": 5,
       "is_self_judged": false
     },
     {
       "text_id": "estv_ks45_quellenbesteuerung_13_inkrafttreten",
       "model_id": "deepseek",
-      "tfidf_similarity": 0.3883,
+      "tfidf_similarity": 0.3335,
       "judge_faithfulness": 4,
       "is_self_judged": false
     }

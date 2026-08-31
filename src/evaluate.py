@@ -7,6 +7,7 @@ import json
 import re
 from dataclasses import dataclass
 
+from wtpsplit import SaT
 from zix.understandability import get_cefr, get_zix
 
 import config
@@ -15,7 +16,7 @@ from prompts import JUDGE_SYSTEM_PROMPT, build_judge_user_prompt
 
 _VOWELS = 'aeiouyäöü'
 _WORD_RE = re.compile(r'[A-Za-zÄÖÜäöüß]+')
-_SENTENCE_SPLIT_RE = re.compile(r'[.!?]+\s*')
+_SAT = SaT('sat-3l-sm')
 
 
 def _count_syllables(word: str) -> int:
@@ -37,12 +38,14 @@ def tokenize_words(text: str) -> list[str]:
 
 
 def split_sentences(text: str) -> list[str]:
-	"""Splits text into sentences on '.', '!', '?'.
+	"""Splits text into sentences with wtpsplit's SaT model. Unlike a naive '.', '!', '?'
+	regex, this correctly keeps legal-citation abbreviations (Art., Abs., lit.) and
+	ordinals (e.g. '10. Schuljahr') from triggering a false sentence boundary.
 
 	Returns
 		The list of non-empty sentences, in order of appearance
 	"""
-	return [s for s in _SENTENCE_SPLIT_RE.split(text.strip()) if s.strip()]
+	return [s.strip() for s in _SAT.split(text.strip()) if s.strip()]
 
 
 @dataclass

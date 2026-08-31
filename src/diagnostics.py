@@ -17,6 +17,8 @@ import time
 import numpy as np
 from difflib import SequenceMatcher
 
+from spacy.lang.de.stop_words import STOP_WORDS as GERMAN_STOPWORDS
+
 import config
 from evaluate import compute_readability, split_sentences
 from llm_clients import call_huggingface_with_logprobs, extract_json
@@ -27,18 +29,6 @@ from simplify import simplify
 RESULTS_DIR = config.DATA_DIR / 'results'
 MODEL_IDS = ['claude', 'deepseek', 'mistral', 'qwen']
 N_CONSISTENCY_SAMPLES = 3
-
-GERMAN_STOPWORDS = [
-	'der', 'die', 'das', 'den', 'dem', 'des',
-	'diese', 'dieser', 'dieses',
-	'ein', 'eine', 'einer', 'eines', 'einem', 'einen',
-	'und', 'oder', 'ist',
-	'sind', 'war', 'waren', 'wird', 'werden', 'wurde', 'wurden',
-	'für', 'von', 'mit', 'bei', 'im', 'in', 'auf', 'zu', 'zur', 'zum',
-	'als', 'auch', 'nicht', 'kann', 'können', 'muss', 'müssen', 'so', 'wie',
-	'an', 'am', 'um', 'nach', 'durch', 'über', 'unter', 'aus',
-	'sich', 'sie', 'er', 'es', 'ich', 'wir', 'ihr'
-]
 
 
 def _text_similarity(a: str, b: str) -> float:
@@ -169,7 +159,7 @@ def run_tfidf_faithfulness_check(main_results: list[dict]) -> dict:
 	from sklearn.feature_extraction.text import TfidfVectorizer
 	from sklearn.metrics.pairwise import cosine_similarity
 
-	vectorizer = TfidfVectorizer(lowercase=True, stop_words=GERMAN_STOPWORDS)
+	vectorizer = TfidfVectorizer(lowercase=True, stop_words=list(GERMAN_STOPWORDS))
 	corpus = []
 	for r in main_results:
 		corpus.append(r['original_text'])
